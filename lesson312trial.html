@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>3.1.2 Lesson (WebGSIM)</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="assets/img/logoWebGSIMbig-01.png" rel="icon">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+  <script src="assets/vendor/others/vue.min.js"></script>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Topbar&Header -->
+  <script src="./assets/js/header.js"></script>
+  <!-- Title -->
+  <div id="sublesson">
+    <u>
+      <h2>3.1.2 Newton’s Universal
+        Law of Gravitation (Problem Solving)</h2>
+    </u>
+  </div>
+
+  <!-- ======= Content ======= -->
+  <section>
+    <div class="container" data-aos="fade-up">
+      <!-- LESSON 312 IMPORTANT!!!!!!!!!!!!!!!!!!! -->
+      <div id="lesson312">
+        <div class="row videoandtext">
+          <div class="col-sm-8">
+            <div class="videobox text-center" dir="ltr">
+              <div class="neo-video-player" id="popout-video-player">
+                <div class="video-control-part">
+                  <div class="video-control-general-part">
+                    <div class="play-btn video-neu-btn"></div>
+                    <div class="video-neu-btn drop-btn">
+                      <div class="box-sound">
+                        <div class="volume">
+                          <div class="bar-volume"></div>
+                        </div>
+                      </div>
+                      <div class="sound-btn video-neu-btn"></div>
+                    </div>
+                  </div>
+                  <div class="video-control-bar-part">
+                    <div class="bar-bg">
+                      <div class="bar-progress">
+                        <div class="bar-time">
+                          <div class="bar-time-box"><span class="current">00:00</span><span> / </span><span
+                              class="duration">00:00</span></div>
+                          <div class="bar-pin"></div>
+                        </div>
+                      </div>
+                      <div class="bar-buffer"></div>
+                    </div>
+                  </div>
+                  <div class="video-control-nav-part">
+                    <div class="fullscreen-btn video-neu-btn"></div>
+                  </div>
+                </div>
+                <video class="video-element" id="video-element" preload="auto"
+                  poster="./assets/Lesson/312/earthlight.jpg">
+                  <source src="./assets/Lesson/312/earthlighter.mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 infovideo">
+            <h1>
+              <strong>WATCH THIS</strong>
+            </h1>
+            <h2>Mass of Earth is
+              decreasing!</h2>
+            <p>Scientists estimate that the Earth gains about 40,000 tonnes of material each year from the accretion of
+              meteoric dust and debris
+              from space. They also estimate that about 95,000 tonnes of hydrogen gas are lost from the Earth’s
+              atmosphere
+              to outer space each year. Although there are other processes involved, such as the loss of mass due to
+              radioactive decay within the
+              Earth’s core (about 160 tonnes a year), and helium loss from the atmosphere (about 1,600 tonnes a year),
+              these are small effects. Annually, the amount of mass launched into Earth orbit is negligible by
+              comparison, of the order of a few hundred tonnes.
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div>
+      </div>
+    </div>
+    </div>
+  </section><!-- End Content -->
+  <div id="skipback">
+    <div id="back"><button type="input" class="btn" onclick="window.location='lesson.html'"><i class="fa fa-home"></i>
+        BACK</button>
+    </div>
+    <div id="skip"><button type="input" class="btn" id="skipbtn" onclick="changeLesson()">SKIP <i
+          class="fa fa-arrow-right"></i></button>
+    </div>
+  </div>
+  <script src="./assets/js/progressbar.js"></script><audio src="./assets/Lesson/correctaudio.mp3"
+    id="correctaudio"></audio>
+  <audio src="./assets/Lesson/wrongaudio.mp3" id="wrongaudio"></audio>
+  <audio src="./assets/Lesson/clappingaudio.mp3" id="clappingaudio"></audio>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- Template Main JS File -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js'></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/progress312.js"></script>
+  <script src="assets/js/video.js"></script>
+  <script>
+    window.scrollTo({
+      top: 15005,
+      behavior: 'smooth'
+    });
+  </script>
+  <script>
+    document.getElementById('video-element').addEventListener('timeupdate', checkTime);
+    function checkTime() {
+      if (document.getElementById('video-element').currentTime >= document.getElementById('video-element').duration * 0.8) {
+        document.getElementById('skipbtn').innerHTML = `I HAVE FINISHED WATCHING<i class="fa fa-arrow-right"></i>`;
+        document.getElementById('skipbtn').style.color = "white";
+        document.getElementById('skipbtn').style.backgroundColor = "#051367";
+        document.getElementById('skipbtn').addEventListener("mouseover", changeStyle);
+        document.getElementById('skipbtn').addEventListener("mouseout", backStyle);
+      }
+    }
+
+    function changeStyle() {
+      document.getElementById('skipbtn').style.backgroundColor = "green";
+
+    }
+
+    function backStyle() {
+      document.getElementById('skipbtn').style.backgroundColor = "#051367";
+    }
+
+
+  </script>
+
+  <script>
+    let i = 0;
+    let slide312 = ["./assets/Lesson/312/slide1.svg", "./assets/Lesson/312/slide2.jpg", "./assets/Lesson/312/slide3.jpg", "./assets/Lesson/312/slide4.png", "./assets/Lesson/312/slide5.png", "./assets/Lesson/312/slide6.png", "./assets/Lesson/312/slide7.png"]
+    let txt312 = ["Assuming you are a physicist. (Click to continue...)", 'Based on the information given just now, you know that our Earth is lossing 50,000 tones of mass per year. (Click to continue...)'
+      , "Therefore, you are requested to investigate the effect of mass on gravitational force. (Click to continue...)", "First, calculate gravitational force between apple and banana. (Click to continue...)", "Second, calculate gravitational force between apple and banana a year later. (Click to continue...)", "Repeat the calculation for banana and Earth surface. (Click to continue...)", "Repeat the calculation for Earth and Sun. (Click to continue...)"
+      , "Fill in your calculation in this table."];
+    html312 = [];
+
+    let slideNumber = -1;
+    let lessonNumber = 0;
+    function changeLesson() {
+      app.nextStep();
+      lessonNumber++;
+      if (lessonNumber == 1) {
+        document.getElementById('lesson312').innerHTML = `<div class="slideshow-container" id="lesson312slide" onclick="changeSlide()"></div>`;
+        changeSlide();
+        window.addEventListener("keydown", fastSlide);
+      }
+      else if (lessonNumber == 2) {
+        window.removeEventListener("keydown", fastSlide);
+        document.getElementById('lesson312').innerHTML = lesson312_3;
+        $(".neo-video-player").each(function () {
+          // Video
+          var $video_container = $(this);
+          var $video = $(this).find("#video-element");
+
+          // set download link
+          $('#download-video').attr('href', $('#video-element source').attr('src'));
+
+          // Video Controls
+          var $video_controls = $(this).find(".video-control-part");
+          var $progress_bar = $(this).find(".bar-progress");
+          var $progress = $(this).find(".bar-time");
+
+          var $buffer_bar = $(this).find(".bar-buffer");
+          var $play_button = $(this).find(".play-btn");
+          var $sound_button = $(this).find(".sound-btn");
+
+          var $volume_wrapper = $(this).find(".volume");
+          var $volume_bar = $(this).find(".bar-volume");
+
+          var $full_screen_btn = $(this).find(".fullscreen-btn");
+          var $current = $(this).find(".current");
+          var $duration = $(this).find(".duration");
+          var $fast_fwd = $(this).find(".fastFwd");
+
+          // Toggles play/pause for the video
+          function playVideo() {
+            if ($video[0].paused) {
+              $video[0].play();
+              $video_controls.addClass("playing");
+              $play_button.addClass("pause");
+
+              if ($video_container.parents(".video-header").length) {
+                $video_container.parents(".video-header").addClass("playing");
+              }
+            } else {
+              $video[0].pause();
+              $video_controls.removeClass("playing");
+              $play_button.removeClass("pause");
+              $video_container.parents(".video-header").removeClass("playing");
+            }
+          }
+
+          function updateVolume(x, vol) {
+            if (vol) {
+              $percentage = vol * 100;
+            } else {
+              $position = x - $volume_wrapper.offset().left;
+              $percentage = 100 * $position / $volume_wrapper.width();
+            }
+
+            if ($percentage > 100) {
+              $percentage = 100;
+            }
+            if ($percentage < 0) {
+              $percentage = 0;
+            }
+
+            //update volume bar and video volume
+            $volume_bar.css("width", $percentage + "%");
+            $video[0].volume = $percentage / 100;
+
+            if ($video[0].volume == 0) {
+              $sound_button.addClass("mute");
+            } else if ($video[0].volume > 0.5) {
+              $sound_button.removeClass("mute").removeClass("low");
+            } else {
+              $sound_button.removeClass("mute").addClass("low");
+            }
+          }
+
+          function changeSpeed() {
+            if ($video[0].playbackRate === 1) {
+              $video[0].playbackRate = 1.25;
+              $fast_fwd.val("Speed : 1.25x");
+            } else if ($video[0].playbackRate === 1.25) {
+              $video[0].playbackRate = 1.5;
+              $fast_fwd.val("Speed : 1.5x");
+            } else if ($video[0].playbackRate === 1.5) {
+              $video[0].playbackRate = 1.75;
+              $fast_fwd.val("Speed : 1.75x");
+            } else if ($video[0].playbackRate === 1.75) {
+              $video[0].playbackRate = 2;
+              $fast_fwd.val("Speed : 2x");
+            } else if ($video[0].playbackRate === 2) {
+              $video[0].playbackRate = 1;
+              $fast_fwd.val("Speed : 1x");
+            }
+          }
+
+          function launchFullscreen() {
+            if ($video[0].requestFullscreen) {
+              $video[0].requestFullscreen();
+            } else if ($video[0].mozRequestFullScreen) {
+              $video[0].mozRequestFullScreen();
+            } else if ($video[0].webkitRequestFullscreen) {
+              $video[0].webkitRequestFullscreen();
+            } else if ($video[0].msRequestFullscreen) {
+              $video[0].msRequestFullscreen();
+            }
+          }
+
+          function time_format(seconds) {
+            var m = Math.floor(seconds / 60) < 10
+              ? "0" + Math.floor(seconds / 60)
+              : Math.floor(seconds / 60);
+            var s = Math.floor(seconds - m * 60) < 10
+              ? "0" + Math.floor(seconds - m * 60)
+              : Math.floor(seconds - m * 60);
+            return m + ":" + s;
+          }
+
+          function startBuffer() {
+            $current_buffer = $video[0].buffered.end(0);
+            $max_duration = $video[0].duration;
+            $perc = 100 * $current_buffer / $max_duration;
+            $buffer_bar.css("width", $perc + "%");
+
+            if ($current_buffer < $max_duration) {
+              setTimeout(startBuffer, 500);
+            }
+          }
+
+          function updatebar(x) {
+            $position = x - $progress.offset().left;
+            $percentage = 100 * $position / $progress_bar.width();
+            if ($percentage > 100) {
+              $percentage = 100;
+            }
+            if ($percentage < 0) {
+              $percentage = 0;
+            }
+            $progress.css("width", $percentage + "%");
+            $video[0].currentTime = $video[0].duration * $percentage / 100;
+          }
+
+          $video.on("loadedmetadata", function () {
+            $current.text(time_format(0));
+            $duration.text(time_format($video[0].duration));
+            updateVolume(0, 0.7);
+            setTimeout(startBuffer, 150);
+          });
+
+          // Play/pause on video click
+          $video.click(function () {
+            playVideo();
+          });
+
+          // Video duration timer
+          $video.on("timeupdate", function () {
+            $current.text(time_format($video[0].currentTime));
+            $duration.text(time_format($video[0].duration));
+            var currentPos = $video[0].currentTime;
+            var maxduration = $video[0].duration;
+            var perc = 100 * $video[0].currentTime / $video[0].duration;
+            $progress.css("width", perc + "%");
+          });
+
+          /* VIDEO CONTROLS
+            ------------------------------------------------------- */
+
+          // Hide button controls when video is playing
+          $video_container.on("mouseleave", function () {
+            if ($video[0].paused === false) {
+              $video_container.addClass("playing");
+            }
+          });
+
+          // Show button controls on hover
+          $video_container.on("mouseover", function () { });
+
+          // Play/pause on button click
+          $play_button.click(function () {
+            playVideo();
+          });
+
+          // Fast Forward Button
+          $fast_fwd.click(function () {
+            changeSpeed();
+          });
+
+          // Volume Drag
+          var volumeDrag = false;
+          $volume_wrapper.on("mousedown", function (e) {
+            volumeDrag = true;
+            $video[0].muted = false;
+            $sound_button.removeClass("mute");
+            updateVolume(e.pageX);
+          });
+
+          $(document).on("mouseup", function (e) {
+            if (volumeDrag) {
+              volumeDrag = false;
+              updateVolume(e.pageX);
+            }
+          });
+
+          $(document).on("mousemove", function (e) {
+            if (volumeDrag) {
+              updateVolume(e.pageX);
+            }
+          });
+
+          // Mute video on button click
+          $sound_button.click(function () {
+            $video[0].muted = !$video[0].muted;
+            $(this).toggleClass("mute");
+            if ($video[0].muted) {
+              $volume_bar.css("width", 0);
+            } else {
+              $volume_bar.css("width", $video[0].volume * 100 + "%");
+            }
+          });
+
+          // Full Screen Button
+          $full_screen_btn.click(function () {
+            launchFullscreen();
+          });
+
+          // VIDEO PROGRESS BAR
+          //when video timebar clicked
+          var timeDrag = false; /* check for drag event */
+          $progress_bar.on("mousedown", function (e) {
+            timeDrag = true;
+            updatebar(e.pageX);
+          });
+          $(document).on("mouseup", function (e) {
+            if (timeDrag) {
+              timeDrag = false;
+              updatebar(e.pageX);
+            }
+          });
+          $(document).on("mousemove", function (e) {
+            if (timeDrag) {
+              updatebar(e.pageX);
+            }
+          });
+        });
+      }
+
+      else if (lessonNumber == 3) {
+        document.getElementById('lesson312').innerHTML = `<div class="slideshow-container" id="lesson312slide" onclick="changeSlide()"></div>`;
+        changeSlide312d();
+        window.addEventListener("keydown", fastSlide);
+      }
+
+    }
+
+    for (let i = 0; i < slide312.length; i++) {
+      html312[i] = `<div data-aos="fade-in">
+          <img src="${slide312[i]}">
+          <div class="text-box">
+              <h1 id="${i}" class="text-problem">
+              </h1>
+          </div>
+      </div>`;
+    }
+
+    html312[slide312.length] = `<div class="text-box" id="text-box">
+              <h1 id="${slide312.length}" class="text-problem">
+              </h1>
+          </div><table class="table table-bordered table-dark input-table" data-aos="fade-in">
+        <tr class="table-title">
+            <td rowspan="2">&nbsp; Mass of Earth (kg)</td>
+            <td colspan="3">&nbsp;Gravitational Force (N)      <button class="submit submit312" id="submit" onclick="checkAnswer();">Submit</button>   <button class="hint" onclick="giveHint();">Answer</button></td>
+        </tr>
+        <tr class="table-title">
+            <td>&nbsp;Apple & Banana</td>
+            <td>&nbsp;Banana & Earth</td>
+            <td>&nbsp;Earth & Sun</td>
+        </tr>
+        <tr>
+            <td>&nbsp;5.97 &times; 10<sup>27</sup></td>
+            <td>&nbsp; <input type="text" class="newton" placeholder="6.67" id="0">
+                &times; 10<sup>
+                    <input type="text" class="exponent" placeholder="-11" id="0"></sup>
+            </td>
+            <td>&nbsp; <input type="text" class="newton" id="1"> &times; 10<sup> <input type="text" class="exponent" id="1"></sup>
+            </td>
+            <td>&nbsp; <input type="text" class="newton" id="2"> &times; 10<sup> <input type="text" class="exponent" id="2"></sup>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;5.97 &times; 10<sup>27</sup> &minus; 5.00&times; 10<sup>7</sup> (Mass loss)</td>
+            <td>&nbsp; <input type="text" class="newton" id="3"> &times; 10<sup> <input type="text" class="exponent" id="3"></sup>
+            </td>
+            <td>&nbsp; <input type="text" class="newton" id="4"> &times; 10<sup> <input type="text" class="exponent" id="4"></sup>
+            </td>
+            <td>&nbsp; <input type="text" class="newton" id="5"> &times; 10<sup> <input type="text" class="exponent" id="5"></sup>
+            </td>
+        </tr>
+    </table>
+    <div class="infoconstant">
+        <p>G = gravitational constant (6.67 × 10<sup>-11</sup> N m<sup>2</sup>
+            kg<sup>-2</sup>)</p>
+        <p>m = mass of apple or banana (1 kg)</p>
+        <p>M = mass of Sun (1.99 × 10<sup>30</sup> kg)</p>
+        <p>r = distance between apple and banana, banana and Earth surface (1 m)</p>
+        <p>R = distance between Earth and Sun (1.50 × 10<sup>11</sup> m)</p>
+    </div> `;
+
+    let speed = 50;
+    let stop = true;
+    function typeWriter() {
+      if (i < txt312[slideNumber].length) {
+        stop = false;
+        document.getElementById(`${slideNumber}`).innerHTML += txt312[slideNumber].charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+      else {
+        stop = true;
+      }
+    }
+
+    function changeSlide() {
+      if (slideNumber < slide312.length) {
+        if (stop) {
+          i = 0;
+          slideNumber++;
+          if (slideNumber == slide312.length) {
+            document.getElementById('lesson312').innerHTML = html312[slideNumber];
+            console.log(html312[slideNumber])
+            window.removeEventListener("keydown", fastSlide);
+            document.getElementById('text-box').style.position = "relative";
+            document.getElementById('text-box').style.top = "21px";
+          }
+          else {
+            document.getElementById('lesson312slide').innerHTML = html312[slideNumber];
+            console.log(html312[slideNumber])
+          }
+
+          typeWriter();
+        }
+        else {
+          document.getElementById(`${slideNumber}`).innerHTML = txt312[slideNumber];
+          i = txt312[slideNumber].length;
+        }
+
+      }
+    }
+
+    function fastSlide() {
+      stop = true;
+      changeSlide();
+    }
+
+    let ansnewton = [6.67, 9.81, 3.52, 6.67, 9.81, 3.52]
+    let ansexponent = [-11, 0, 22, -11, 0, 22]
+    let correct = 0;
+
+    function checkAnswer() {
+      let newton = document.getElementsByClassName('newton');
+      let exponent = document.getElementsByClassName('exponent');
+      for (let i = 0; i < newton.length; i++) {
+        if (newton[i].value == ansnewton[i] && exponent[i].value == ansexponent[i]) {
+          correct++;
+        }
+      }
+      if (correct == newton.length) {
+        document.getElementById('correctaudio').play();
+        changeLesson();
+
+      }
+
+      else {
+        document.getElementById('wrongaudio').play();
+      }
+      correct = 0;
+    }
+
+    function giveHint() {
+      let newton = document.getElementsByClassName('newton');
+      let exponent = document.getElementsByClassName('exponent');
+      for (let i = 0; i < newton.length; i++) {
+        newton[i].value = ansnewton[i];
+        exponent[i].value = ansexponent[i];
+
+      }
+    }
+    lesson312_3 = `<div class="row videoandtext">
+          <div class="col-sm-8">
+            <div class="videobox text-center" dir="ltr">
+              <div class="neo-video-player" id="popout-video-player">
+                <div class="video-control-part">
+                  <div class="video-control-general-part">
+                    <div class="play-btn video-neu-btn"></div>
+                    <div class="video-neu-btn drop-btn">
+                      <div class="box-sound">
+                        <div class="volume">
+                          <div class="bar-volume"></div>
+                        </div>
+                      </div>
+                      <div class="sound-btn video-neu-btn"></div>
+                    </div>
+                  </div>
+                  <div class="video-control-bar-part">
+                    <div class="bar-bg">
+                      <div class="bar-progress">
+                        <div class="bar-time">
+                          <div class="bar-time-box"><span class="current">00:00</span><span> / </span><span
+                              class="duration">00:00</span></div>
+                          <div class="bar-pin"></div>
+                        </div>
+                      </div>
+                      <div class="bar-buffer"></div>
+                    </div>
+                  </div>
+                  <div class="video-control-nav-part">
+                    <div class="fullscreen-btn video-neu-btn"></div>
+                  </div>
+                </div>
+                <video class="video-element" id="video-element" preload="auto"
+                  poster="./assets/Lesson/312/apogee.jpg">
+                  <source src="./assets/Lesson/312/moonapogee.mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 infovideo">
+            <h1>
+              <strong>WATCH THIS</strong>
+            </h1>
+            <h2>Distance between Earth and Moon is changing!</h2>
+            <p>The Moon's orbit periodically grows rounder and then more oval; it is never a perfect circle.
+
+The point at which it is nearest Earth each month is called its perigee (this varies throughout the year).
+The point at which the Moon is farthest from Earth each month is called its apogee (this varies throughout the year as well).
+In recent times, the news media has taken to calling a full Moon near perigee a “Supermoon” because its nearness to Earth causes the Moon to appear bigger and brighter. This effect can be enhanced by what we call the “Moon Illusion.”
+            </p>
+
+
+          </div>
+        </div>`;
+
+
+    let slide312d = ["./assets/Lesson/312/effectdistance/slide1.png", "./assets/Lesson/312/effectdistance/slide2.png", "./assets/Lesson/312/effectdistance/slide3.png", "./assets/Lesson/312/effectdistance/slide4.png", "./assets/Lesson/312/effectdistance/slide5.png", "./assets/Lesson/312/effectdistance/slide6.png"];
+    let txt312d = ["Assuming you are a scientist.", "You are interested in tidal formation.", "Based on the information just now, you know that distance between Earth and Moon is changing. ", "Therefore, you are requested to investigate the effect of distance on gravitational force. ", "First, calculate the gravitational force between Moon and 1 kg of seawater on Earth when Moon is farthest away from Earth. ", "Second, calculate the gravitational force between Moon and 1 kg of seawater on Earth when Moon is closest to Earth. ", "Fill in your calculation in this table. "];
+
+
+
+  </script>
+
+
+</body>
+
+</html>
