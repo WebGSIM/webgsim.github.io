@@ -14,7 +14,7 @@ quiz322 = [quiz322a, quiz322b, quiz322c, quiz322d, quiz322e, quiz322f, quiz322g,
 html322 = [];
 for (let i = 0; i < quiz322.length; i++) {
     html322[i] = `
-<div class="col-sm-9" >
+<div class="col" >
                             <p id="quiztext"> ${quiz322[i][0]}</p>
                             <div class="row" style="display:flex;
                             justify-content:center;">
