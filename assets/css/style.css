@@ -3269,13 +3269,12 @@ button:hover {
 }
 
 #derive {
-  width: 640px;
-  height: 390px;
-  /* position: relative;
-  top: 30px; */
-  padding-top: 10px;
-  padding-bottom: 55px;
-
+  width: 600px;
+  height: 343px;
+  position: relative;
+  top: 7px;
+  border: 6px solid #966F33;
+  border-radius: 5px;
 }
 
 .quizbutton {
@@ -3323,5 +3322,10 @@ button:hover {
   border-radius: 20px;
   position: relative;
   top: 30px;
-  box-shadow: 10px 10px #cbcccf;
+  box-shadow: 7px 7px #CDCDCD;
 }
+
+/* .deriveformula:hover {
+  transform: translate(7px, 7px);
+  box-shadow: none;
+} */
