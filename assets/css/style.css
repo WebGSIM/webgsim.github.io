@@ -3269,12 +3269,12 @@ button:hover {
 }
 
 #derive {
-  width: 600px;
-  height: 343px;
+  width: 900px;
+  height: 437px;
   position: relative;
-  top: 7px;
-  border: 6px solid #966F33;
-  border-radius: 5px;
+  bottom: 82px;
+  border-radius: 20px;
+
 }
 
 .quizbutton {
@@ -3287,6 +3287,7 @@ button:hover {
   font-size: 16px;
   position: relative;
   bottom: 10px;
+
 }
 
 .quizbutton:hover {
@@ -3312,11 +3313,12 @@ button:hover {
   background-color: black;
   height: 150px;
   border-radius: 20px;
+  z-index: 1;
 }
 
 .deriveformula {
   /* background-image: radial-gradient(circle 588px at 31.7% 40.2%, rgba(225, 200, 239, 1) 21.4%, rgba(163, 225, 233, 1) 57.1%); */
-  background-color: #1B2430;
+  background-color: green;
   height: 505px;
   width: 70%;
   border-radius: 20px;
