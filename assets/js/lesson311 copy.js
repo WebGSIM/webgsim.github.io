@@ -22,147 +22,154 @@ var txt311c = "This section will discuss how to calculate gravitational force be
 var audio311c = ["", "./assets/Lesson/311c/audio0.mp3", "./assets/Lesson/311c/audio1.mp3", "./assets/Lesson/311c/audio2.mp3", "./assets/Lesson/311c/audio3.mp3", "./assets/Lesson/311c/audio4.mp3",
   "./assets/Lesson/311c/audio5.mp3"
 ];
+//<!-- LESSON 311q QUIZ -->
+var quiz311a = ["Question 1: Who formulated the universal law of gravitation?", "Isaac Newton", "Galileo Galilei", "Quah Kah Chun", "Marie Curie", "1"];
+var quiz311b = ["Question 2: Choose the correct statement of Newton's universal law of gravitation?", "When mass of bodies increases, gravitational force increases.", "When distance between two bodies increases, gravitational force increases", "Gravitational force is directly proportional to the product of the distances", "Gravitational force is inversely proportional to the mass", "1"];
+var quiz311c = ["Question 3: Calculate the gravitational force between 3 kg of box and Earth", "10N", "20N", "30N", "SAYA TAK TAHU", "3"];
+
+var lesson311 = [];
+let html311 = [];
+lesson311[0] = [slide311h, txt311h, audio311h];
+lesson311[1] = [slide311t, txt311t, audio311t];
+lesson311[2] = [slide311c, txt311c, audio311c];
+lesson311[3] = [quiz311a, quiz311b, quiz311c];
+let lessonNumber = 0;
 
 
-var arr = [];
-arr[0] = [slide311h, txt311h, audio311h];
-arr[1] = [slide311t, txt311t, audio311t];
-arr[2] = [slide311c, txt311c, audio311c];
-
-let lessonNumber = -1;
-changeLesson(true);
-
-let quiz1 = `<div class="quiz-container" id="quiz" data-aos="fade-in">
-<div class="quiz-header">
-  <h2 id="question">Question 1: Who formulated the universal law of gravitation? </h2>
-  <div class="buttons" id="buttons"> <!--Creating four button element for four options-->
-  <button class="btn0" id="answer"><span id="answer"></span>Isaac Newton</button> <!--populating the choices through javascript-->
-  <button class="btn1"><span id="choice1"></span>
-  Galileo Galilei
-   </button>
-  <button class="btn2"><span id="choice2"></span>Quah Kah Chun</button>
-  <button class="btn3"><span id="choice3"></span>Marie Curie</button>
-</div>
-</div>
-<button class="submit" id="submitq1" >Submit</button>
-</div>
-<div id="skipback" class="skipbacklast">
-<div id="back"><button type="input" class="btn" 
-onclick="changeLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
-</div>
-<div id="skip"><button type="input" class="btn" 
-onclick="window.location='lesson312.html'">END  </button>
-</div>
-</div>`
-
-let quiz2 = `<div class="quiz-container" id="quiz" data-aos="fade-in">
-<div class="quiz-header">
-  <h2 id="question">Question 2: Which statement correctly describes Newton's universal law of gravitation? </h2>
-  <div class="buttons"> <!--Creating four button element for four options-->
-  <button class="btn0" id="answer"><span id="choice0"></span>When mass of bodies increases, gravitational force increases</button> <!--populating the choices through javascript-->
-  <button class="btn1"><span id="choice1">When distance between two bodies increases, gravitational force increases</span>
-  Galileo Galilei
-   </button>
-  <button class="btn2"><span id="choice2"></span>Gravitational force is directly proportional to the product of the distances</button>
-  <button class="btn3"><span id="choice3"></span>Gravitational force is inversely proportional to the mass</button>
-</div>
-</div>
-<button class="submit" id="submitq2" onclick="changeQuiz()">Submit</button>
-</div>
-<div id="skipback" class="skipbacklast">
-<div id="back"><button type="input" class="btn" 
-onclick="changeLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
-</div>
-<div id="skip"><button type="input" class="btn" 
-onclick="window.location='lesson312.html'">END  </button>
-</div>
-</div>`
-
-function lesson311(slide, txt, audio, n) {
-  let script = txt.split('@');
-  var result = `
-  <a href="#myModal" class="trigger-btn" data-toggle="modal">
-  <div><button id="finish" type="input" class="btn btn-success" style="visibility:hidden">I have finished
-      reading</button></div>
-</a><div class="swiper-container swiper" id="portfolio2" data-aos="fade-right">
-  <div class="swiper-wrapper">
-    `;
-  for (let i = 0; i < slide.length; i++) {
-    if (i != slide.length - 1) {
-      result += `<div class="swiper-slide" id="swiper-lesson">
-                            <div class="picture2">
-                              <img src=${slide[i]} alt="">
-                            </div>
-                              <div class="detail">
-                                <h3>${script[i]}</span>
+for (let i = 0; i < lesson311.length; i++) {
+  if (i <= 2) {
+    html311[i] = `<div class="swiper-container swiper" id="portfolio2" data-aos="fade-right">
+    <div class="swiper-wrapper">`;
+    for (let n = 0; n < lesson311[i][0].length; n++) {
+      html311[i] += `<div class="swiper-slide" id="swiper-lesson">
+                              <div class="picture2">
+                                <img src=${lesson311[i][0][n]} alt="">
                               </div>
-                            </div>
-                            <audio class='311' src=${audio[i]}></audio>`;
+                                <div class="detail">
+                                  <h3>${lesson311[i][1].split('@')[n]}</span>
+                                </div>
+                              </div>
+                              <audio class='311' src=${lesson311[i][2][n]}></audio>`;
+    }
+    html311[i] += ` </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    </div>`;
+  }
+
+  else {
+    for (let n = 0; n < lesson311[i].length; n++) {
+      html311[3 + n] = `<div class="quiz-container" id="quiz" data-aos="fade-in">
+      <div class="quiz-header">
+        <h2 id="question">${lesson311[i][n][0]} </h2>
+        <div class="buttons" id="buttons">
+        <button class="btn0" id="1">${lesson311[i][n][1]}</button>
+        <button class="btn0" id="2">${lesson311[i][n][2]}</button>
+        <button class="btn0" id="3">${lesson311[i][n][3]}</button>
+        <button class="btn0" id="4">${lesson311[i][n][4]}</button>
+      </div>
+      </div>
+      <button class="submit" id="submit" onclick="checkAnswer()" >Submit</button>
+      </div>`;
+    }
+  }
+}
+
+
+
+
+function displayLesson311() {
+  document.getElementById('lesson311').innerHTML = html311[lessonNumber];
+  if (lessonNumber == 0) {
+    document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
+      onclick="window.location='lesson.html'"><i class="fa fa-home"></i>    BACK</button>
+      </div>
+      <div id="skip"><button type="input" class="btn" id="skipbtn"
+      onclick="changeLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
+      </div>`
+
+  }
+
+  else if (lessonNumber == 5) {
+    document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
+    onclick="changeLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
+    </div>
+    <a href='skip.php?<?php echo $lesson='311'; ?>'><div id="skip"><button type="input" class="btn">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
+    </div></a>
+    
+   `
+  }
+  else {
+    document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
+  onclick="changeLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
+  </div>
+  <div id="skip"><button type="input" class="btn" id="skipbtn"
+  onclick="changeLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
+  </div>`}
+
+
+  swiper311();
+}
+
+function changeLesson(next) {
+  if (next) {
+    lessonNumber++;
+    if (lessonNumber <= 3) {
+      app.nextStep(next);
+    }
+  }
+  else {
+    lessonNumber--;
+    if (lessonNumber < 3) {
+      app.nextStep(next);
+    }
+  }
+  displayLesson311();
+
+  if (lessonNumber >= 3) {
+    document.getElementById("buttons").addEventListener("click", checkSelection);
+    window.addEventListener("click", checkActiveSelection);
+  }
+}
+
+let correct = false;
+function checkSelection() {
+  if (document.activeElement.id == lesson311[3][lessonNumber - 3][5]) {
+    correct = true;
+  }
+}
+
+function checkActiveSelection() {
+  if (document.activeElement.id != lesson311[3][lessonNumber - 3][5]) {
+    correct = false;
+  }
+}
+
+function checkAnswer() {
+  const audio = document.getElementsByTagName('audio');
+  for (let i = 0; i < audio.length; i++) {
+    audio[i].pause();
+  }
+  if (correct) {
+    correct = false;
+    if (lessonNumber != 5) {
+      document.getElementById('correctaudio').play();
+      changeLesson(true);
     }
     else {
-      result += `<div class="swiper-slide" id="swiper-lesson">
-      <div class="picture2">
-        <img src=${slide[i]} alt="">
-      </div>
-        <div class="detail">
-          <h3>${script[i]}</span>
-          <div style="padding-top:10px">
-          <button class="btn btn-success">I have finished reading</button>
-          </div>
-        </div>
-      </div>
-      <audio class='311' src=${audio[i]}></audio>`;
+      document.getElementById('clappingaudio').play();
+      app.nextStep();
+      displayCongrats();
     }
+  }
+  else {
+    document.getElementById('wrongaudio').play();
+  }
+}
 
-  }
-  result += ` </div>
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-  </div>
-  `;
-  if (n == 0) {
-    result += ` <div id="skipback">
-    <div id="back"><button type="input" class="btn" 
-    onclick="window.location='lesson.html'"><i class="fa fa-home"></i>    BACK</button>
-    </div>
-    <div id="skip"><button type="input" class="btn" 
-    onclick="changeLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
-    </div>
-    </div>`;
-  }
-  else if (n == 1) {
-    result += `<div id="skipback">
-    <div id="back"><button type="input" class="btn" 
-    onclick="changeLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
-    </div>
-    <div id="skip"><button type="input" class="btn" 
-    onclick="changeLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
-    </div>
-    </div>`;
 
-  }
-  else if (n == 2) {
-    result += ` <div id="skipback">
-    <div id="back"><button type="input" class="btn" 
-    onclick="changeLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
-    </div>
-    <div id="skip"><button type="input" class="btn" 
-    onclick="changeLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
-    </div>
-    </div>`;
-  }
-  else if (n == 3) {
-    result += ` <div id="skipback">
-    <div id="back"><button type="input" class="btn" 
-    onclick="changeLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
-    </div>
-    <div id="skip"><button type="input" class="btn" 
-    onclick="changeLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
-    </div>
-    </div>`;
-  }
-  document.getElementById('lesson311').innerHTML = result;
+function swiper311() {
   var swiper = new Swiper(".swiper", {
     effect: "coverflow",
     grabCursor: true,
@@ -191,80 +198,94 @@ function lesson311(slide, txt, audio, n) {
     }
     elements[swiper.realIndex].load();
     elements[swiper.realIndex].play();
-    if (swiper.realIndex == slide.length - 1) {
-      document.getElementById('finish').style.visibility = "visible";
-      if (lessonNumber == 3) {
-        document.getElementById('modal-footer').innerHTML = `<button class="btn btn-success btn-block" data-dismiss="modal" onclick="location.href = 'lesson312.html';">Yes. I
-        am
-        ready to proceed!</button>`
-      }
+    if (swiper.realIndex == lesson311[lessonNumber][0].length - 1) {
+      document.getElementById('skipbtn').innerHTML = `I HAVE FINISHED READING<i class="fa fa-arrow-right"></i>`;
+      document.getElementById('skipbtn').style.color = "white";
+      document.getElementById('skipbtn').style.backgroundColor = "#051367";
+      document.getElementById('skipbtn').addEventListener("mouseover", changeStyle);
+      document.getElementById('skipbtn').addEventListener("mouseout", backStyle);
     }
   });
 }
-function changeLesson(nextlesson) {
-  if (nextlesson) {
-    lessonNumber++;
-    if (lessonNumber < arr.length) {
-      lesson311(arr[lessonNumber][0], arr[lessonNumber][1], arr[lessonNumber][2], lessonNumber);
-    }
-    if (lessonNumber == 1) {
-      app.nextStep(nextlesson);
-    }
-    else if (lessonNumber == 2) {
-      app.nextStep(nextlesson);
-    }
-    else if (lessonNumber == 3) {
-      app.nextStep(nextlesson);
-      document.getElementById('lesson311').innerHTML = quiz1;
-      document.getElementById("buttons").addEventListener("click", checkAnswer);
-      document.getElementById("submitq1").addEventListener("click", changeQuiz);
 
-    }
-    else if (lessonNumber == 4) {
-      app.nextStep(nextlesson);
-
-    }
-  }
-  else {
-    lessonNumber--;
-    if (lessonNumber >= 0) {
-      lesson311(arr[lessonNumber][0], arr[lessonNumber][1], arr[lessonNumber][2], lessonNumber);
-    }
-    if (lessonNumber == 0) {
-      app.nextStep(nextlesson);
-    }
-    else if (lessonNumber == 1) {
-      app.nextStep(nextlesson);
-    }
-    else if (lessonNumber == 2) {
-      app.nextStep(nextlesson);
-    }
-    else if (lessonNumber == 3) {
-      app.nextStep(nextlesson);
-    }
-  }
-}
-
-let correct = false;
-function changeQuiz() {
-
-  if (correct) {
-    if (document.getElementById("submitq2")) {
-      app.nextStep();
-
-    }
-    document.getElementById('lesson311').innerHTML = quiz2;
-    document.getElementById("submitq2").addEventListener("click", changeQuiz);
-  }
+function changeStyle() {
+  document.getElementById('skipbtn').style.backgroundColor = "green";
 
 }
 
-function checkAnswer() {
-  if (document.activeElement.id == 'answer') {
-    correct = true;
-  }
-  else {
-    correct = false;
-  }
+function backStyle() {
+  document.getElementById('skipbtn').style.backgroundColor = "#051367";
 }
 
+
+var congrats = `<div class="js-container container-congrats"></div>
+<div id="congrats">
+  <div class="checkmark-circle">
+    <div class="background"></div>
+    <div class="checkmark draw"></div>
+  </div>
+  <h1>Congratulations!</h1>
+  <p>You have fully mastered <strong>3.1.1 Newton's Universal Law of Gravitation.</strong> Well done!</p>
+  <p>Now you are going to learn <strong>3.1.2 Problem Solving by using Universal Law of Gravitation</strong>, are you ready?</p>
+  <button class="submit-btn" type="submit" onclick="window.location='lesson312.html'">Yes! I am ready to proceed.</button>
+</div>  
+
+`
+function displayCongrats() {
+  document.getElementById('lesson311').innerHTML = congrats;
+  document.getElementById('skipback').style.display = "none";
+  const Confettiful = function (el) {
+    this.el = el;
+    this.containerEl = null;
+
+    this.confettiFrequency = 3;
+    this.confettiColors = ['#EF2964', '#00C09D', '#2D87B0', '#48485E', '#EFFF1D'];
+    this.confettiAnimations = ['slow', 'medium', 'fast'];
+
+    this._setupElements();
+    this._renderConfetti();
+  };
+
+  Confettiful.prototype._setupElements = function () {
+    const containerEl = document.createElement('div');
+    const elPosition = this.el.style.position;
+
+    if (elPosition !== 'relative' || elPosition !== 'absolute') {
+      this.el.style.position = 'relative';
+    }
+
+    containerEl.classList.add('confetti-container');
+
+    this.el.appendChild(containerEl);
+
+    this.containerEl = containerEl;
+  };
+
+  Confettiful.prototype._renderConfetti = function () {
+
+    this.confettiInterval = setInterval(() => {
+      const confettiEl = document.createElement('div');
+      const confettiSize = (Math.floor(Math.random() * 3) + 7) + 'px';
+      const confettiBackground = this.confettiColors[Math.floor(Math.random() * this.confettiColors.length)];
+      const confettiLeft = (Math.floor(Math.random() * this.el.offsetWidth)) + 'px';
+      const confettiAnimation = this.confettiAnimations[Math.floor(Math.random() * this.confettiAnimations.length)];
+
+      confettiEl.classList.add('confetti', 'confetti--animation-' + confettiAnimation);
+      confettiEl.style.left = confettiLeft;
+      confettiEl.style.width = confettiSize;
+      confettiEl.style.height = confettiSize;
+      confettiEl.style.backgroundColor = confettiBackground;
+
+      confettiEl.removeTimeout = setTimeout(function () {
+        confettiEl.parentNode.removeChild(confettiEl);
+      }, 3000);
+
+      this.containerEl.appendChild(confettiEl);
+    }, 25);
+  };
+
+  window.confettiful = new Confettiful(document.querySelector('.js-container'));
+
+
+
+}

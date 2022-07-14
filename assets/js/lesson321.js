@@ -10,12 +10,12 @@ let correct = false;
 let n = 0;
 for (let i = 0; i < quiz321.length; i++) {
     html321[i] = quizGenerator(quiz321[i]);
-    console.log(html321[i])
 }
 
 
 function quizGenerator(quiz) {
     return `<div class="quiz-container" id="quiz" data-aos="fade-in">
+    <div>
     <div class="quiz-header">
       <h2 id="question">${quiz[0]} </h2>
       <div class="buttons" id="buttons">
@@ -24,7 +24,10 @@ function quizGenerator(quiz) {
       <button class="btn0" id="3">${quiz[3]}</button>
     </div>
     </div>
+    <div class="submitquiz">
     <button class="submit" id="submit" onclick="nextQuiz()" >Submit</button>
+    </div>
+    </div>
     </div>`
 }
 function startQuiz() {
@@ -95,7 +98,7 @@ var congrats = `<div class="js-container container-congrats"></div>
   <h1>Congratulations!</h1>
   <p>You have fully mastered <strong>3.2.1 b Kepler's Second Law.</strong> Well done!</p>
   <p>Now you are going to learn <strong>3.2.1 c Kepler's Third Law.</strong>, are you ready?</p>
-  <button class="submit-btn" type="submit" onclick="window.location='lesson312.html'">Yes! I am ready to proceed.</button>
+  <button class="submit-btn" type="submit" onclick="window.location='lesson322.html'">Yes! I am ready to proceed.</button>
 </div>  
 
 `

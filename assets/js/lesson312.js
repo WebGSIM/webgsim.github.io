@@ -2,7 +2,9 @@ slide312m = ["./assets/Lesson/312/slide1.svg", "./assets/Lesson/312/slide2.jpg",
 text312m = ["Assuming you are a physicist. (Click to continue...)", 'Based on the information given just now, you know that our Earth is lossing 50,000 tones of mass per year. (Click to continue...)'
   , "Therefore, you are requested to investigate the effect of mass on gravitational force. (Click to continue...)", "First, calculate gravitational force between apple and banana. (Click to continue...)", "Second, calculate gravitational force between apple and banana a year later. (Click to continue...)", "Repeat the calculation for banana and Earth surface. (Click to continue...)", "Repeat the calculation for Earth and Sun. (Click to continue...)"
   , "Fill in your calculation in this table."];
-quiz312a = `<div class="text-box" id="text-box">
+quiz312a = `
+<div>
+<div class="text-box" id="text-box">
 <h1 id="${slide312m.length}" class="text-problem">
 </h1>
 </div><table class="table table-bordered table-dark input-table" data-aos="fade-in">
@@ -43,14 +45,15 @@ kg<sup>-2</sup>)</p>
 <p>M = mass of Sun (1.99 × 10<sup>30</sup> kg)</p>
 <p>r = distance between apple and banana, banana and Earth surface (1 m)</p>
 <p>R = distance between Earth and Sun (1.50 × 10<sup>11</sup> m)</p>
-</div> `
+</div></div> `
 quiz312b = ["Based on your findings, when mass decreases, gravitational force will ___________", "Decreases", "Increases", "1"];
 quiz312c = ["Based on your findings, Earth is lossing mass, but it has no significant impact to us. ", "True", "False", "1"];
 quiz312m = [quiz312a, quiz312b, quiz312c];
 
 slide312r = ["./assets/Lesson/312/effectdistance/Slide1.png", "./assets/Lesson/312/effectdistance/Slide2.png", "./assets/Lesson/312/effectdistance/Slide3.png", "./assets/Lesson/312/effectdistance/Slide4.png", "./assets/Lesson/312/effectdistance/Slide5.png", "./assets/Lesson/312/effectdistance/Slide6.png"];
 text312r = ["Assuming you are a scientist.", "You are interested in tidal formation.", "Based on the information just now, you know that distance between Earth and Moon is changing. ", "Therefore, you are requested to investigate the effect of distance on gravitational force. ", "First, calculate the gravitational force between Moon and 1 kg of seawater on Earth when Moon is farthest away from Earth. ", "Second, calculate the gravitational force between Moon and 1 kg of seawater on Earth when Moon is closest to Earth. ", "Fill in your calculation in this table. "];
-quiz312d = ` <div class="text-box" id="text-box">
+quiz312d = ` <div>
+<div class="text-box" id="text-box">
 <h1 id="${slide312r.length}" class="text-problem"></h1> </div> <table class="table table-bordered table-dark input-table" data-aos="fade-in">
 <tr class="table-title">
     <td>&nbsp; Distance between Moon and Earth (m)</td>
@@ -80,7 +83,7 @@ quiz312d = ` <div class="text-box" id="text-box">
     kg<sup>-2</sup>)</p>
 <p>m = mass of seawater (1 kg)</p>
 <p>M = mass of Moon (7.35 × 10<sup>22</sup> kg)</p>
-</div>`
+</div></div>`
 quiz312e = ["Based on your findings, when distance decreases, gravitational force will ___________", "Decreases", "Increases", "2"];
 quiz312f = ["Based on your findings, when Moon is closer to Earth, the tides is higher. ", "True", "False", "1"];
 quiz312r = [quiz312d, quiz312e, quiz312f];
@@ -173,6 +176,7 @@ for (let i = 1; i <= 3; i += 2) {
     }
     else {
       html312[i][n] = `<div class="quiz-container" id="quiz" data-aos="fade-in">
+      <div>
       <div class="quiz-header">
         <h2 id="question">${lesson312[i][2][n - lesson312[i][0].length][0]} </h2>
         <div class="buttons" id="buttons">
@@ -180,7 +184,10 @@ for (let i = 1; i <= 3; i += 2) {
         <button class="btn0" id="2">${lesson312[i][2][n - lesson312[i][0].length][2]}</button>
       </div>
       </div>
+      <div class="submitquiz">
       <button class="submit" id="submit" onclick="changeQuiz()" >Submit</button>
+      </div>
+      </div>
       </div>`
     }
   }

@@ -3,7 +3,7 @@ document.writeln(` <div id="gserrors" style="font-family:Verdana;font-size:13px;
 <div>
   <div id='sourcetext' class="split split-horizontal" style="display:none">
   </div>
-  <div id='glows'></div>
+  <div id='glows' ></div>
   <div id='printing' class="split split-horizontal" style="display:none">
   </div>
 </div>`);
@@ -60,12 +60,7 @@ function localCompile(header, compReady, errordiv) {
             return
         }
         compReady(embedScript)
-        console.log(buttonNumber)
-        buttons = document.getElementsByTagName('button')
-        console.log(buttons)
-        for (let i = 0; i < buttons.length - buttonNumber; i++) {
-            buttons[i].setAttribute('id', 'skip1')
-        }
+
     })
 }
 

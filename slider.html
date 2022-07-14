@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://unpkg.com/range-slider-element@latest">
+    </script>
+    <link href="https://unpkg.com/range-slider-element@latest/dist/styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.2/iconfont/material-icons.min.css"
+        rel="stylesheet">
+    </link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    output {
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .modal-delete-title {
+        font-size: 35px;
+    }
+
+    .modal-delete {
+        font-size: 25px;
+    }
+
+
+    .modal-content {
+        background-image: linear-gradient(99deg, rgba(115, 18, 81, 1) 10.6%, rgba(28, 28, 28, 1) 118%);
+        color: white;
+    }
+
+
+
+    #modalnew {
+        background-image: radial-gradient(circle farthest-corner at -1% 57.5%, rgba(19, 170, 82, 1) 0%, rgba(0, 102, 43, 1) 90%);
+        color: white;
+    }
+</style>
+
+<body>
+    <a data-bs-toggle='modal' data-bs-target='#newstudent' class='btn btn-primary'>Set Value</a>
+    <div class='modal fade' id='newstudent' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+        <div class='modal-dialog'>
+            <div class='modal-content' id='modalnew'>
+                <div class='modal-header'>
+                    <h5 class='modal-title modal-delete-title' id='exampleModalLabel'>Set value for simulation</h5>
+                    <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                </div>
+                <div class='modal-body modal-delete'>
+                    <range-slider min="0" max="200" step="1" dir="ltr"></range-slider>
+                    <button style="display:block" class="btn btn-primary">Start Simulation</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div id="printslider">
+        <button onclick="printSlider();">Trial</button>
+    </div>
+
+</body>
+
+<script>
+    const elements = document.querySelectorAll(['range-slider']);
+
+    elements.forEach(element => {
+        element.insertAdjacentHTML('afterend', `
+    <output>Satellite velocity = ${element.value} m/s</output>
+  `);
+        document.getElementById('printslider').innerHTML = `<button onclick="printSlider(${element.value});">Trial</button>`
+    });
+
+    document.addEventListener('input', e => {
+        const input = e.target;
+        const output = input.nextElementSibling;
+        if (output) {
+            output.textContent = "Satellite velocity = " + input.value + " m/s";
+            document.getElementById('printslider').innerHTML = `<button onclick="printSlider(${input.value});">Trial</button>`
+        }
+    });
+
+    function printSlider(slider) {
+        console.log(slider);
+    }
+</script>
+
+</html>

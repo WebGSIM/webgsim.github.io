@@ -163,7 +163,8 @@ while mag(craft2.r)>=R*6/5:
       craft2.update(dt)  
 
 `
-simulation[0] = `G = 6.67e-11
+simulation[0] = `
+G = 6.67e-11
 M = 5.97e24
 R = 6.37e6
 h=2.02e7
@@ -325,3 +326,93 @@ while mag(craft2.r)>=R*6/5:
   rate(4*60*60)
   if running:
       craft2.update(dt) `
+
+
+function displaySimulation(orbital_velocity) {
+    simulation[2] = `
+G = 6.67e-11
+M = 5.97e24
+R = 6.37e6
+h=2.02e7
+w = 7.3e-5
+vc = 3.871277517e3
+t = 0
+dt = 1
+day = 24*3600
+r=R+h
+velocity=${orbital_velocity}
+scene.camera.pos=vec( 2.73721e+7, 2.81051e+7, 5.94081e+7)
+scene.camera.axis=vec( -2.80757e+7, -3.75686e+7, -6.45965e+7)
+stop=True
+running=True
+def Run(b):
+    global running
+    running = not running
+    if running: b.text = "Pause"
+    else: b.text = "Continue"
+def reset(k):
+    global running
+    craft.v=vec(0,0,velocity)
+    craft.a=vec(0,0,0)
+    craft.pos=vec(R+h,0,0)
+    r=craft.pos-earth.pos
+    craft.axis=vec(1,0,0)
+    craft.clear_trail()
+    running= True
+button(text="Pause", bind=Run)
+button(text='Reset', bind=reset)
+earth = sphere(pos=vector(0,0,0), radius=R, texture=textures.earth)
+earth.rotate(angle=pi/2,axis=vector(1,0,0),origin=earth.pos)
+#craft = sphere(pos=vector(r,0,0), radius=R/5, color=vec(2.52, 2.17, 0), make_trail=True)
+rs=R/5
+wingcolor=vec(12, 30, 127)/100
+bodycolor=vec(65, 63, 66)/100
+reflectorcolor=color.white
+antennacolor=vec(250, 217, 161)/100
+body=cylinder(length=5*rs,width=2*rs,radius=rs,color=bodycolor)
+wing1=box(pos=vec(3*rs,3*rs,0),size=vec(2*rs,5*rs,0.1*rs),color=wingcolor,shininess=1)
+wing2=box(pos=vec(3*rs,-3*rs,0),size=vec(2*rs,5*rs,0.1*rs),color=wingcolor,shininess=1)
+curve_path = []
+theta = 0
+while (theta <= 2.2*pi):
+    curve_path.append(vector(cos(theta),sin(theta),0) )
+    theta = theta + 2*pi/100
+ar = shapes.arc(radius=2.5*rs, angle1=0, angle2=pi/2)
+reflector=extrusion(path=curve_path,color=reflectorcolor,shape=ar,axis=vec(0,0,1),pos=vec(-0.5*rs,0,0)) 
+antenna=cylinder(axis=vec(-0.8,1,0),length=3.5*rs,radius=rs/10,color=antennacolor,pos=vec(-1.3*rs,-2.3*rs,0))
+antenna2=cylinder(axis=vec(-0.8,-1,0),length=3.5*rs,radius=rs/10,color=antennacolor,pos=vec(-1.3*rs,2.3*rs,0))
+antenna3=cylinder(axis=vec(-0.8,0,-1),length=3.5*rs,radius=rs/10,color=antennacolor,pos=vec(-1.3*rs,0,2.3*rs))
+antenna4=cylinder(axis=vec(-0.8,0,1),length=3.5*rs,radius=rs/10,color=antennacolor,pos=vec(-1.3*rs,0,-2.3*rs))
+ball=sphere(radius=rs/1.5,pos=vec(-3.5*rs,0,0))
+craft= compound([body, wing1,wing2,reflector,antenna,antenna2,antenna3,antenna4,ball],make_trail=True)
+craft.pos=vector(r,0,0)
+craft.trail_color=vec(2.52, 2.17, 0)
+craft.axis=vec(1,0,0)
+craft.rotate(angle=pi/2.5)
+craft.m = 1000
+#craft.v=vc*vec(0,0,0.66)
+craft.v=vec(0,0,velocity)
+craft.a=vec(0,0,0)
+r=craft.pos-earth.pos
+T = text(text='Satellite velocity = '+velocity+' m/s', align='center', color=color.red, height=R/1.5,pos=vec(0,2*R,0))
+
+while True:
+    rate(4*60*60)
+    if running:
+        ws=mag(craft.v)/mag(r)
+        earth.rotate(angle=w*dt,axis=vector(0,-1,0),origin=earth.pos)
+        if velocity>10:
+            craft.rotate(angle=ws*dt,axis=vector(0,-1,0),origin=craft.pos)
+        r = craft.pos - earth.pos
+        F = -G*M*craft.m*norm(r)/mag(r)**2
+        craft.a = F/craft.m
+        craft.v+=craft.a*dt
+        craft.pos +=craft.v*dt
+        t+=dt
+    if mag(r)<=R*6/5:
+        running=False
+    
+
+    `
+}
+

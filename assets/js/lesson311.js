@@ -61,6 +61,7 @@ for (let i = 0; i < lesson311.length; i++) {
   else {
     for (let n = 0; n < lesson311[i].length; n++) {
       html311[3 + n] = `<div class="quiz-container" id="quiz" data-aos="fade-in">
+      <div>
       <div class="quiz-header">
         <h2 id="question">${lesson311[i][n][0]} </h2>
         <div class="buttons" id="buttons">
@@ -70,7 +71,10 @@ for (let i = 0; i < lesson311.length; i++) {
         <button class="btn0" id="4">${lesson311[i][n][4]}</button>
       </div>
       </div>
+      <div class="submitquiz">
       <button class="submit" id="submit" onclick="checkAnswer()" >Submit</button>
+      </div>
+      </div>
       </div>`;
     }
   }

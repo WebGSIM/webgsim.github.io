@@ -37,7 +37,7 @@ function displayCongrats() {
 <h1>Congratulations!</h1>
 <p>You have fully mastered <strong>3.1.1 Newton's Universal Law of Gravitation.</strong> Well done!</p>
 <p>Now you are going to learn <strong>3.1.2 Problem Solving by using Universal Law of Gravitation</strong>, are you ready?</p>
-<button class="submit-btn" type="submit" onclick="window.location='lesson321.html'">Yes! I am ready to proceed.</button>
+<button class="submit-btn" type="submit" onclick="window.location='lesson331.html'">Yes! I am ready to proceed.</button>
 </div>  
 
 `

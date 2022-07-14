@@ -1252,6 +1252,17 @@ section {
 /*--------------------------------------------------------------
 # Sublesson
 --------------------------------------------------------------*/
+#sublesson {
+  border: solid 2px;
+  border-radius: 10px;
+  box-shadow: 2px 2px black;
+  margin-top: 20px;
+  width: 1000px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #sublesson h2 {
   margin: 0px;
   position: relative;
@@ -1259,6 +1270,7 @@ section {
   font-size: 35px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding-left: 10px;
+  padding-right: 10px;
   font-weight: 1000;
   padding-bottom: 30px;
 }
@@ -1280,22 +1292,9 @@ section {
 }
 
 
-#skip1 {
-  /* float: right; */
-  font-weight: 1000;
-  border-color: black !important;
-  margin-top: 5px;
-  /* font-size: 20px; */
-  position: relative;
-  left: 200px;
 
-}
 
-#skip1:hover {
-  /* float: right; */
-  color: white !important;
-  background: black !important;
-}
+
 
 #back button {
 
@@ -1337,7 +1336,11 @@ section {
   padding: 10px 0 20px 0;
   position: relative;
   top: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 /*--------------------------------------------------------------
 # lesson Details
@@ -2387,11 +2390,11 @@ button:hover {
 }
 
 .progress.progress--3 {
-  width: calc(62%);
+  width: calc(60%);
 }
 
 .progress.progress--4 {
-  width: calc(82%);
+  width: calc(80%);
 }
 
 .progress.progress--5 {
@@ -2504,23 +2507,40 @@ button:hover {
   border-radius: 10px;
   box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
   overflow: auto;
-  width: 100%;
-  max-width: 100%;
-  min-height: 70vh;
-  height: 70vh;
-  /* padding-bottom: 50px; */
-  display: block;
-  /* height: 300px; */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 750px;
+  box-shadow: 5px 5px 5px lightgray;
+  height: auto;
+}
+
+
+
+
+.submitquiz {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz-container .submitquiz button {
+  width: 60px;
+  text-align: center;
 }
 
 .quiz-header {
-  padding: 2rem;
+  padding: 1rem;
+  display: block;
+
 }
 
 .quiz-container h2 {
   padding: 0.5rem;
   text-align: center;
   margin: 0;
+
 }
 
 .quiz-container ul {
@@ -2545,10 +2565,15 @@ button:hover {
   display: block;
   font-family: inherit;
   font-size: 1.1rem;
-  width: 100%;
-  padding: 1.3rem;
+  padding: 1rem;
+
+
+
 }
 
+#buttons {
+  width: 700px;
+}
 
 
 #submitq1,
@@ -2560,6 +2585,8 @@ button:hover {
 
 #submit {
   background-color: #A91079;
+  border-radius: 20px;
+
 }
 
 #submit:hover {
@@ -3246,15 +3273,19 @@ button:hover {
   top: 25px;
 }
 
-#glows {
-  position: relative;
-  top: 25px;
+#glows {}
+
+#glows canvas {
+  border-radius: 10px;
 }
 
 .glowtext {
-  position: relative;
-  top: 25px;
   font-size: 18px;
+}
+
+.simtext {
+
+  padding-left: 10px;
 }
 
 .readybutton {
@@ -3312,7 +3343,7 @@ button:hover {
   /* background-image: linear-gradient(83.2deg, rgba(150, 93, 233, 1) 10.8%, rgba(99, 88, 238, 1) 94.3%); */
   background-color: black;
   height: 150px;
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
   z-index: 1;
 }
 
@@ -3322,12 +3353,194 @@ button:hover {
   height: 505px;
   width: 70%;
   border-radius: 20px;
-  position: relative;
-  top: 30px;
-  box-shadow: 7px 7px #CDCDCD;
+  box-shadow: 7px 7px 7px #CDCDCD;
 }
 
 /* .deriveformula:hover {
   transform: translate(7px, 7px);
   box-shadow: none;
 } */
+
+div[class=disclaimer] {
+
+  display: none;
+}
+
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+  display: none;
+}
+
+output {
+  font-weight: 600;
+  text-align: center;
+}
+
+.modal-delete-title {
+  font-size: 35px;
+}
+
+.modal-delete {
+  font-size: 25px;
+}
+
+
+.modal-content {
+  background-image: linear-gradient(99deg, rgba(115, 18, 81, 1) 10.6%, rgba(28, 28, 28, 1) 118%);
+  color: white;
+}
+
+
+
+#modalnew {
+  background-image: radial-gradient(circle farthest-corner at -1% 57.5%, rgba(19, 170, 82, 1) 0%, rgba(0, 102, 43, 1) 90%);
+  color: white;
+}
+
+#btn-close {
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: 0.25em 0.25em;
+  color: #000;
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+  border: 0;
+  border-radius: 0.25rem;
+  opacity: 0.5;
+}
+
+#btn-close:hover {
+  color: black;
+}
+
+#glows button {
+  /* float: right; */
+  font-weight: 1000;
+  border-color: black !important;
+  margin-top: 5px;
+  /* font-size: 20px; */
+  background: #FCF9C6 !important;
+  border-radius: 0px;
+
+
+}
+
+#glows button:hover {
+  /* float: right; */
+  color: white !important;
+  background: black !important;
+}
+
+range-slider {
+  --element-height: 24px;
+  --track-height: 10px;
+  --thumb-size: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: var(--element-height);
+  width: 100%;
+  min-width: 130px;
+  margin: 2px;
+  overflow: visible;
+  cursor: pointer;
+  touch-action: none
+}
+
+range-slider:focus {
+  outline: 0
+}
+
+range-slider[disabled] {
+  filter: grayscale(1);
+  opacity: .8
+}
+
+range-slider:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: var(--track-height);
+  border-radius: calc(var(--track-height)/2);
+  background: linear-gradient(red, red) 0/var(--value-percent, 0) 100% no-repeat #c6afe5
+}
+
+range-slider:focus .thumb {
+  box-shadow: 0 0 0 .3em rgba(98, 33, 234, .2)
+}
+
+range-slider.touch-active .thumb-wrapper .thumb {
+  box-shadow: none;
+  transform: scale(1.5)
+}
+
+.thumb {
+  background: red;
+  border-radius: 50%;
+  width: var(--thumb-size);
+  height: var(--thumb-size);
+  position: absolute;
+  bottom: calc(var(--element-height)/2 - var(--thumb-size)/2);
+  left: var(--value-percent, 0);
+  margin-left: calc(var(--thumb-size)/2*-1);
+  transition: transform .2s ease;
+  will-change: transform;
+  pointer-events: none
+}
+
+.thumb-wrapper {
+  position: absolute;
+  left: calc(var(--thumb-size)/2);
+  right: calc(var(--thumb-size)/2);
+  bottom: 0;
+  height: 0;
+  overflow: visible
+}
+
+.rangeslider {
+  /* background-image: linear-gradient(109.6deg, rgba(255, 174, 0, 1) 11.2%, rgba(255, 0, 0, 1) 100.2%); */
+  /* background-image: linear-gradient(90.5deg, rgba(255, 207, 139, 0.50) 1.1%, rgba(255, 207, 139, 1) 81.3%); */
+  background-color: #FCF9C6;
+  border-radius: 10px;
+  border: 5px solid;
+  margin-top: 40px;
+  padding: 20px 20px 10px 10px;
+}
+
+output {
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=/styles.css.map */
+
+#img331 {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+#setvalue {
+  display: block;
+  margin-top: 20px;
+  border-radius: 0px;
+
+}
+
+
+
+#glowscript>div:nth-child(4) {
+  background-color: #413F42;
+  border-radius: 0px 0px 10px 10px;
+
+  padding: 5px 5px 5px 5px;
+  width: 640px;
+  position: relative;
+  bottom: 67px;
+  display: flex;
+  justify-content: center;
+}
+
+#lesson331 {
+  height: 595px;
+  padding: 40px 0 20px 0;
+  display: flex;
+  justify-content: center;
+}
