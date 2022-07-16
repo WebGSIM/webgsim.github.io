@@ -1257,10 +1257,10 @@ section {
   border-radius: 10px;
   box-shadow: 2px 2px black;
   margin-top: 20px;
-  width: 1000px;
+  width: 1296px;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+
+
 }
 
 #sublesson h2 {
@@ -1333,7 +1333,7 @@ section {
 #lesson311,
 #lesson312 {
   height: 595px;
-  padding: 10px 0 20px 0;
+  padding: 40px 0 20px 0;
   position: relative;
   top: -50px;
   display: flex;
@@ -1341,6 +1341,32 @@ section {
   align-items: center;
 }
 
+#lesson322 {
+  height: 595px;
+  padding: 40px 0 20px 0;
+  position: relative;
+  top: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lesson331 {
+
+  height: 595px;
+  padding: 40px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -50px;
+}
+
+#lesson331 .col-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /*--------------------------------------------------------------
 # lesson Details
@@ -1906,9 +1932,10 @@ section {
 }
 
 .swiper-container {
-  width: 100%;
+  width: 87%;
   padding-top: 50px;
   padding-bottom: 50px;
+  border-radius: 20px;
 }
 
 .swiper-slide {
@@ -1921,7 +1948,7 @@ section {
 }
 
 .detail {
-  padding: 25px 20px;
+  padding: 15px 10px;
   font-weight: 600;
   text-align: center;
 }
@@ -1942,7 +1969,8 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
+  min-height: 470px;
+  max-height: 470px;
   background: #fff;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -1950,6 +1978,7 @@ section {
   background-color: #212121;
   margin: 0;
   padding: 0;
+
 
 }
 
@@ -2067,7 +2096,7 @@ form .payment-plan input:checked+label:after,
   padding: 15px 60px;
   display: inline-block;
   border: none;
-  margin: 20px 0;
+  margin: 10px 0;
   background-color: #2fcc71;
   color: #fff;
   border: 2px solid #333;
@@ -2214,6 +2243,7 @@ button::-moz-focus-inner {
 
 button {
   outline: 0;
+  font-family: sans-serif;
 }
 
 
@@ -2369,9 +2399,15 @@ button:hover {
 
 #progressbar {
   position: relative;
-  top: -85px;
-  right: 75px;
+  top: -80px;
+  right: 115px;
+
 }
+
+/* .progress322 #progressbar {
+  width: 1296px;
+  right: 205px;
+} */
 
 .progress {
   width: 0%;
@@ -2382,32 +2418,32 @@ button:hover {
 }
 
 .progress.progress--1 {
-  width: calc(20%);
+  width: calc(25%);
 }
 
 .progress.progress--2 {
-  width: calc(40%);
+  width: calc(47%);
 }
 
 .progress.progress--3 {
-  width: calc(60%);
+  width: calc(71%);
 }
 
 .progress.progress--4 {
-  width: calc(80%);
+  width: calc(95%);
 }
 
 .progress.progress--5 {
-  width: calc(102%);
+  width: calc(104%);
 }
 
 .progress.progress--complete {
-  width: 104.558vw;
+  width: 100vw;
 }
 
 .progress__bg {
   position: absolute;
-  width: 104.558vw;
+  width: 1920px;
   height: 10px;
   background-color: #e5e5e5;
   z-index: -1;
@@ -2415,8 +2451,8 @@ button:hover {
 
 .progress__step {
   position: absolute;
-  top: -8px;
-  left: 0;
+  /* top: -8px; */
+  /* left: 0; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2482,8 +2518,8 @@ button:hover {
 
 .progress__label {
   position: absolute;
-  top: 40px;
-  font-weight: 1000;
+  top: 33px;
+  font-weight: 800;
 }
 
 .progress__actions {
@@ -2495,9 +2531,25 @@ button:hover {
   width: max-content;
 }
 
+.progresssteps {
+  position: relative;
+  bottom: 7px;
+}
+
+.topprogressbar {
+  position: relative !important;
+  top: -110px !important;
+}
 
 .btn:nth-child(2) {
   margin: 0 10px;
+}
+
+#quiz321 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -2511,10 +2563,24 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 750px;
+  max-width: 750px;
+  min-width: 610px;
+  width: fit-content;
   box-shadow: 5px 5px 5px lightgray;
   height: auto;
+  max-height: 500px;
+  min-height: 400px;
 }
+
+#lesson331 .quiz-container {
+  min-height: 350px;
+  max-height: 350px;
+}
+
+#quiz321 .quiz-container {
+  height: 400px;
+}
+
 
 
 
@@ -2533,7 +2599,8 @@ button:hover {
 .quiz-header {
   padding: 1rem;
   display: block;
-
+  width: inherit;
+  min-width: 580px;
 }
 
 .quiz-container h2 {
@@ -2572,7 +2639,7 @@ button:hover {
 }
 
 #buttons {
-  width: 700px;
+  width: inherit;
 }
 
 
@@ -2867,21 +2934,26 @@ button:hover {
 .videobox {
   max-width: 600px;
   margin: auto;
-  position: relative;
-  top: 60px;
+}
+
+.videodiv {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .infovideo {
-  position: relative;
-  top: 50px;
+  /* position: relative;
+  top: 50px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .infovideo h1 {
-  margin: 0px;
   box-sizing: border-box;
-  font-weight: 700;
   font-size: 45px;
-  padding-bottom: 40px;
 }
 
 .infovideo p {
@@ -2904,8 +2976,6 @@ button:hover {
   border-radius: 10px;
   box-shadow: 15px 15px 29px #cbcccf,
     -15px -15px 29px #ffffff;
-  position: relative;
-  top: 50px;
 
 }
 
@@ -3089,8 +3159,8 @@ button:hover {
 }
 
 .video-element {
-  width: 100%;
-  min-width: 100%;
+  width: 496px;
+  height: 310px;
 }
 
 .box-sound {
@@ -3194,10 +3264,8 @@ button:hover {
 
 
 #lesson312 .slideshow-container {
-  width: 700px;
+  width: 635px;
   height: 400px;
-  position: relative;
-  top: 60px;
   margin: auto;
 
 }
@@ -3216,6 +3284,11 @@ button:hover {
 
 }
 
+#lesson312 .texttable {
+  position: relative;
+  top: 0px;
+}
+
 #lesson312 .text-problem {
   color: white;
   font-size: 20px;
@@ -3225,8 +3298,10 @@ button:hover {
 }
 
 #lesson312 .slideshow-container img {
-  width: 700px;
+  width: 635px;
   height: 400px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px black;
 }
 
 .input-table {
@@ -3236,24 +3311,28 @@ button:hover {
   right: 270px; */
   vertical-align: middle;
   height: 50%;
-  position: relative;
-  top: 30px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  margin-top: 10px;
 
+}
+
+.infotable {
+  position: relative;
+  top: -20px;
 }
 
 .table-title {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }
 
 .newton {
-  width: 17%;
+  width: 20%;
   text-align: center;
 }
 
 .exponent {
-  width: 10%;
+  width: 15%;
   text-align: center;
 }
 
@@ -3261,6 +3340,7 @@ button:hover {
 
 .hint {
   background-color: white;
+  display: none;
 }
 
 .hint:hover {
@@ -3269,11 +3349,26 @@ button:hover {
 
 .infoconstant {
   line-height: 10px;
-  position: relative;
-  top: 25px;
+  background-color: #212529;
+  color: white;
+  width: fit-content;
+  padding: 10px 10px 10px 10px;
+
 }
 
-#glows {}
+.infoconstant p {
+  text-align: left;
+}
+
+
+.glowscript-canvas-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 43px;
+}
 
 #glows canvas {
   border-radius: 10px;
@@ -3281,6 +3376,7 @@ button:hover {
 
 .glowtext {
   font-size: 18px;
+  padding: 10px 10px 10px 10px;
 }
 
 .simtext {
@@ -3288,11 +3384,20 @@ button:hover {
   padding-left: 10px;
 }
 
+.startsim {
+  display: flex;
+  justify-content: center;
+}
+
 .readybutton {
   position: relative;
   top: 25px;
   background-color: #051367;
   color: white;
+}
+
+#readyobserve {
+  top: 0px;
 }
 
 .readybutton:hover {
@@ -3303,10 +3408,24 @@ button:hover {
   width: 900px;
   height: 437px;
   position: relative;
-  bottom: 82px;
+  bottom: 97px;
   border-radius: 20px;
 
 }
+
+.derivetext {
+  display: flex;
+  justify-content: center;
+
+}
+
+.derivetext button {
+  height: 80px;
+  font-size: 14px;
+  width: 350px;
+}
+
+.derivehead {}
 
 .quizbutton {
   /* height: 700%;
@@ -3327,33 +3446,38 @@ button:hover {
 }
 
 #quiztext {
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
   color: white;
 }
 
 .quizcontainer {
 
-  /* width: 90%;
-  height: 100%; */
-  width: 1290px;
+  width: 100%;
+  /* height: 100%; */
+  /* width: 1290px; */
   display: flex;
   justify-content: center;
   align-self: center;
   /* background-image: linear-gradient(83.2deg, rgba(150, 93, 233, 1) 10.8%, rgba(99, 88, 238, 1) 94.3%); */
   background-color: black;
-  height: 150px;
   border-radius: 20px 20px 0px 0px;
   z-index: 1;
+  height: 130px;
+  min-width: 747px;
 }
+
+
 
 .deriveformula {
   /* background-image: radial-gradient(circle 588px at 31.7% 40.2%, rgba(225, 200, 239, 1) 21.4%, rgba(163, 225, 233, 1) 57.1%); */
   background-color: black;
-  height: 505px;
-  width: 70%;
+  height: 470px;
+  width: 60%;
   border-radius: 20px;
   box-shadow: 7px 7px 7px #CDCDCD;
+  min-width: 777px;
+
 }
 
 /* .deriveformula:hover {
@@ -3433,7 +3557,7 @@ output {
 range-slider {
   --element-height: 24px;
   --track-height: 10px;
-  --thumb-size: 20px;
+  --thumb-size: 27px;
   position: relative;
   display: flex;
   align-items: center;
@@ -3474,7 +3598,8 @@ range-slider.touch-active .thumb-wrapper .thumb {
 }
 
 .thumb {
-  background: red;
+  background: #DBDBE0;
+  border: solid 2px;
   border-radius: 50%;
   width: var(--thumb-size);
   height: var(--thumb-size);
@@ -3533,14 +3658,32 @@ output {
   padding: 5px 5px 5px 5px;
   width: 640px;
   position: relative;
-  bottom: 67px;
+  bottom: 22px;
   display: flex;
   justify-content: center;
 }
 
-#lesson331 {
-  height: 595px;
-  padding: 40px 0 20px 0;
-  display: flex;
-  justify-content: center;
+#lesson312 .row {
+  width: 1296px;
+  height: 485px;
+}
+
+#lesson331 .row {
+  width: 1296px;
+  height: 485px;
+}
+
+/* @media screen and (max-width: 1024px) {
+
+  .deriveformula {
+    min-width: 777px;
+  }
+
+
+} */
+
+@media (min-width: 1200px) {
+  .section322 .container {
+    max-width: 1320px;
+  }
 }

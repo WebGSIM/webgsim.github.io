@@ -37,24 +37,23 @@
     <!-- Topbar&Header -->
     <script src="./assets/js/header.js"></script>
     <!-- Title -->
-    <div id="sublesson">
-        <u>
-            <h2>3.1.2 Newton’s Universal
-                Law of Gravitation (Problem Solving)</h2>
-        </u>
-    </div>
     <!-- ======= Content ======= -->
     <section>
         <div class="container" data-aos="fade-up">
+            <div id="sublesson">
+                <h2>3.1.2 Newton’s Universal
+                    Law of Gravitation (Problem Solving)</h2>
+            </div>
             <!-- LESSON 312 IMPORTANT!!!!!!!!!!!!!!!!!!! -->
             <div id="lesson312">
                 <script src="./assets/js/lesson312.js"></script>
             </div>
+            <div id="skipback">
+            </div>
+            <script src="./assets/js/progressbar.js"></script>
         </div>
     </section><!-- End Content -->
-    <div id="skipback">
-    </div>
-    <script src="./assets/js/progressbar.js"></script>
+
     <audio src="./assets/Lesson/correctaudio.mp3" id="correctaudio"></audio>
     <audio src="./assets/Lesson/wrongaudio.mp3" id="wrongaudio"></audio>
     <audio src="./assets/Lesson/clappingaudio.mp3" id="clappingaudio"></audio>
@@ -72,9 +71,10 @@
     <script src="assets/js/video.js"></script>
 
     <script>
+
+        changeLesson(true);
         window.scrollTo({
-            top: 15005,
+            top: 200,
             behavior: 'smooth'
         });
-        changeLesson(true);
     </script>

@@ -1,5 +1,5 @@
 quiz321a = ["Compare distance (arc) travelled by Moon", "Green region > Red region", "Red region > Green region", "Green region = Red region", "3"]
-quiz321b = ["Compare distance between Earth and Moon", "Green region > Red region", "Red region > Green region", "Green region = Red region", "3"]
+quiz321b = ["Compare distance between Earth & Moon", "Green region > Red region", "Red region > Green region", "Green region = Red region", "3"]
 quiz321c = ["What is your conclusion?", "Green area is larger than red area", "Red area is larger than green area", "Green area is equal to red area", 3]
 quiz321d = ["Compare distance (arc) travelled by Earth", "Green region > Red region", "Red region > Green region", "Green region = Red region", "1"]
 quiz321e = ["Compare distance between Earth and Sun", "Green region > Red region", "Red region > Green region", "Green region = Red region", "2"]
@@ -106,6 +106,12 @@ function displayCongrats() {
     document.getElementById('lesson312').innerHTML = congrats;
     document.getElementById('skipback').style.display = "none";
     document.getElementById('clappingaudio').play();
+    document.getElementById('progressbar').setAttribute('class', 'topprogressbar');
+    document.getElementById('sublesson').setAttribute('style', 'display:none')
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
     const Confettiful = function (el) {
         this.el = el;
         this.containerEl = null;

@@ -3,10 +3,10 @@ var app = new Vue({
     data: {
         currentStep: null,
         steps: [
-            { label: "Orbit" },
             { label: "Zero velocity" },
             { label: "Low velocity" },
-            { label: "Orbital velocity" }
+            { label: "Orbital velocity" },
+            { label: "High velocity" }
         ]
     },
     methods: {
@@ -66,5 +66,4 @@ var app = new Vue({
 });
 
 
-app.nextStep();
 app.nextStep();

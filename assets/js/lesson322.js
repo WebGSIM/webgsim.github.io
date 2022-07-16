@@ -14,10 +14,9 @@ quiz322 = [quiz322a, quiz322b, quiz322c, quiz322d, quiz322e, quiz322f, quiz322g,
 html322 = [];
 for (let i = 0; i < quiz322.length; i++) {
     html322[i] = `
-<div class="col" >
+<div class="col derivehead"  >
                             <p id="quiztext"> ${quiz322[i][0]}</p>
-                            <div class="row" style="display:flex;
-                            justify-content:center;">
+                            <div class="row derivetext">
                                 <div>
                                     <button class="quizbutton" id="1" onclick="changeSegment()"> ${quiz322[i][1]}</button>
                                 </div>
@@ -41,9 +40,19 @@ function displayCongrats() {
 </div>  
 
 `
-    document.getElementById('lesson312').innerHTML = congrats;
+    document.getElementById('lesson322').innerHTML = congrats;
     document.getElementById('skipback').style.display = "none";
     document.getElementById('clappingaudio').play();
+
+
+    document.getElementById('progressbar').setAttribute('class', 'topprogressbar');
+    document.getElementById('sublesson').setAttribute('style', 'display:none');
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
+
     const Confettiful = function (el) {
         this.el = el;
         this.containerEl = null;
@@ -139,7 +148,7 @@ function changeSegment() {
                     onclick="skipSegment(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
                     </div>
                     <div id="skip"><button type="input" class="btn" 
-                    onclick="window.location='lesson311.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
+                    onclick="window.location='lesson331.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
                     </div>
                    `
                 }
@@ -202,7 +211,7 @@ function skipSegment(change) {
       onclick="skipSegment(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
       </div>
       <div id="skip"><button type="input" class="btn" 
-      onclick="window.location='lesson311.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
+      onclick="window.location='lesson331.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
       </div>
      `
     }

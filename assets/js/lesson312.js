@@ -4,13 +4,15 @@ text312m = ["Assuming you are a physicist. (Click to continue...)", 'Based on th
   , "Fill in your calculation in this table."];
 quiz312a = `
 <div>
-<div class="text-box" id="text-box">
+<div class="text-box texttable" id="text-box">
 <h1 id="${slide312m.length}" class="text-problem">
 </h1>
-</div><table class="table table-bordered table-dark input-table" data-aos="fade-in">
+</div>
+<div data-aos="fade-in">
+<table class="table table-bordered table-dark input-table">
 <tr class="table-title">
 <td rowspan="2">&nbsp; Mass of Earth (kg)</td>
-<td colspan="3">&nbsp;Gravitational Force (N)      <button class="submit submit312" id="submit" onclick="checkAnswer();">Submit</button>   <button class="hint" onclick="giveHint();">Answer</button></td>
+<td colspan="3">&nbsp;Gravitational Force (N)      </td>
 </tr>
 <tr class="table-title">
 <td>&nbsp;Apple & Banana</td>
@@ -38,14 +40,21 @@ quiz312a = `
 </td>
 </tr>
 </table>
-<div class="infoconstant">
+<table class="table table-bordered table-dark input-table infotable" >
+<tr>
+<td ><strong>Physical constant and variable</strong></td>
+<td ><div class="infoconstant">
 <p>G = gravitational constant (6.67 × 10<sup>-11</sup> N m<sup>2</sup>
 kg<sup>-2</sup>)</p>
 <p>m = mass of apple or banana (1 kg)</p>
 <p>M = mass of Sun (1.99 × 10<sup>30</sup> kg)</p>
 <p>r = distance between apple and banana, banana and Earth surface (1 m)</p>
 <p>R = distance between Earth and Sun (1.50 × 10<sup>11</sup> m)</p>
-</div></div> `
+</div></td>
+<td ><button class="submit submit312" id="submit" onclick="checkAnswer();">Submit</button>   <button class="hint" onclick="giveHint();">Answer</button></td></tr>
+</table>
+</div>
+</div> `
 quiz312b = ["Based on your findings, when mass decreases, gravitational force will ___________", "Decreases", "Increases", "1"];
 quiz312c = ["Based on your findings, Earth is lossing mass, but it has no significant impact to us. ", "True", "False", "1"];
 quiz312m = [quiz312a, quiz312b, quiz312c];
@@ -53,12 +62,11 @@ quiz312m = [quiz312a, quiz312b, quiz312c];
 slide312r = ["./assets/Lesson/312/effectdistance/Slide1.png", "./assets/Lesson/312/effectdistance/Slide2.png", "./assets/Lesson/312/effectdistance/Slide3.png", "./assets/Lesson/312/effectdistance/Slide4.png", "./assets/Lesson/312/effectdistance/Slide5.png", "./assets/Lesson/312/effectdistance/Slide6.png"];
 text312r = ["Assuming you are a scientist.", "You are interested in tidal formation.", "Based on the information just now, you know that distance between Earth and Moon is changing. ", "Therefore, you are requested to investigate the effect of distance on gravitational force. ", "First, calculate the gravitational force between Moon and 1 kg of seawater on Earth when Moon is farthest away from Earth. ", "Second, calculate the gravitational force between Moon and 1 kg of seawater on Earth when Moon is closest to Earth. ", "Fill in your calculation in this table. "];
 quiz312d = ` <div>
-<div class="text-box" id="text-box">
-<h1 id="${slide312r.length}" class="text-problem"></h1> </div> <table class="table table-bordered table-dark input-table" data-aos="fade-in">
+<div class="text-box texttable" id="text-box">
+<h1 id="${slide312r.length}" class="text-problem"></h1> </div><div data-aos="fade-in"> <table class="table table-bordered table-dark input-table">
 <tr class="table-title">
     <td>&nbsp; Distance between Moon and Earth (m)</td>
-    <td>&nbsp;Gravitational Force (N) <button class="submit submit312" id="submit"
-            onclick="checkAnswer();">Submit</button> <button class="hint" onclick="giveHint();">Answer</button>
+    <td>&nbsp;Gravitational Force (N)
     </td>
 </tr>
 
@@ -75,14 +83,19 @@ quiz312d = ` <div>
     <td>&nbsp; <input type="text" class="newton" id="3"> &times; 10<sup> <input type="text" class="exponent"
                 id="3"></sup>
     </td>
-
 </tr>
 </table>
-<div class="infoconstant">
+<table class="table table-bordered table-dark input-table infotable" >
+<tr>
+<td ><strong>Physical constant and variable</strong></td>
+<td ><div class="infoconstant">
 <p>G = gravitational constant (6.67 × 10<sup>-11</sup> N m<sup>2</sup>
     kg<sup>-2</sup>)</p>
 <p>m = mass of seawater (1 kg)</p>
 <p>M = mass of Moon (7.35 × 10<sup>22</sup> kg)</p>
+</div></td>
+<td ><button class="submit submit312" id="submit" onclick="checkAnswer();">Submit</button>   <button class="hint" onclick="giveHint();">Answer</button></td></tr>
+</table>
 </div></div>`
 quiz312e = ["Based on your findings, when distance decreases, gravitational force will ___________", "Decreases", "Increases", "2"];
 quiz312f = ["Based on your findings, when Moon is closer to Earth, the tides is higher. ", "True", "False", "1"];
@@ -111,7 +124,7 @@ lesson312[3] = [slide312r, text312r, quiz312r];
 
 for (let i = 0; i <= 2; i += 2) {
   html312[i] = `<div class="row videoandtext">
-    <div class="col-sm-8">
+    <div class="col-sm-6 videodiv">
       <div class="videobox text-center" dir="ltr">
         <div class="neo-video-player" id="popout-video-player">
           <div class="video-control-part">
@@ -149,7 +162,7 @@ for (let i = 0; i <= 2; i += 2) {
         </div>
       </div>
     </div>
-    <div class="col-sm-4 infovideo">
+    <div class="col-sm-6 infovideo">
       <h1>
         <strong>WATCH THIS</strong>
       </h1>
@@ -502,8 +515,6 @@ function changeSlide() {
       if (slideNumber == lesson312[lessonNumber][0].length) {
         document.getElementById('lesson312').innerHTML = html312[lessonNumber][slideNumber];
         window.removeEventListener("keydown", fastSlide);
-        document.getElementById('text-box').style.position = "relative";
-        document.getElementById('text-box').style.top = "21px";
       }
 
       else {
@@ -607,6 +618,12 @@ function displayCongrats() {
   document.getElementById('lesson312').innerHTML = congrats;
   document.getElementById('skipback').style.display = "none";
   document.getElementById('clappingaudio').play();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+  document.getElementById('progressbar').setAttribute('class', 'topprogressbar');
+  document.getElementById('sublesson').setAttribute('style', 'display:none')
   const Confettiful = function (el) {
     this.el = el;
     this.containerEl = null;
@@ -698,7 +715,7 @@ function displayButton() {
     onclick="changeLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
     </div>
     <div id="skip"><button type="input" class="btn" 
-    onclick="window.location='lesson311.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
+    onclick="window.location='lesson321.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
     </div>
    `
   }

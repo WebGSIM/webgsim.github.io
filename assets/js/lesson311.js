@@ -38,7 +38,7 @@ let lessonNumber = 0;
 
 for (let i = 0; i < lesson311.length; i++) {
   if (i <= 2) {
-    html311[i] = `<div class="swiper-container swiper" id="portfolio2" data-aos="fade-right">
+    html311[i] = `<div class="swiper-container swiper" id="portfolio2" data-aos="fade-in">
     <div class="swiper-wrapper">`;
     for (let n = 0; n < lesson311[i][0].length; n++) {
       html311[i] += `<div class="swiper-slide" id="swiper-lesson">
@@ -238,6 +238,14 @@ var congrats = `<div class="js-container container-congrats"></div>
 function displayCongrats() {
   document.getElementById('lesson311').innerHTML = congrats;
   document.getElementById('skipback').style.display = "none";
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+  document.getElementById('progressbar').setAttribute('class', 'topprogressbar');
+  document.getElementById('sublesson').setAttribute('style', 'display:none')
+
+
   const Confettiful = function (el) {
     this.el = el;
     this.containerEl = null;

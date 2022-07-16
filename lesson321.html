@@ -54,14 +54,12 @@
 
     <!-- ======= Header ======= -->
     <script src="./assets/js/header.js"></script>
-    <div id="sublesson">
-        <u>
-            <h2>3.2.1 b Kepler's Second Law</h2>
-        </u>
-    </div>
 
     <section>
         <div class="container" data-aos="fade-up">
+            <div id="sublesson">
+                <h2>3.2.1 b Kepler's Second Law</h2>
+            </div>
             <!-- LESSON 312 IMPORTANT!!!!!!!!!!!!!!!!!!! -->
             <div id="lesson312">
                 <div class="row">
@@ -72,10 +70,6 @@
 
                         <p class="glowtext">
                             <strong style="font-size:35px">OBSERVE THIS SIMULATION</strong><br><br>
-                            <strong>Kepler's Second Law:</strong><br> A line that connects a planet to the Sun sweeps
-                            out
-                            equal areas in
-                            equal times.<br><br>
                             This simulation shows that Moon is orbiting the Earth
                             in <strong>CIRCULAR ORBIT</strong>. Moon sweeps out
                             green region and red region in a time interval of 5 days. <br><br>
@@ -84,21 +78,23 @@
                             2) Compare distance (white line) between Moon and Sun in green & red region.<br>
                             3) According to formula area of sector, is green area equals to red area?
                         </p>
-                        <button onclick="startQuiz()" class="readybutton"> I am ready to record my observation</button>
+                        <button onclick="startQuiz()" class="readybutton" id="readyobserve"> I am ready to record my
+                            observation</button>
 
                     </div>
                 </div>
             </div>
+            <script src="./assets/js/lesson321.js"></script>
+
+            <div id="skipback">
+            </div>
+            <script src="./assets/js/progressbar.js"></script>
         </div>
     </section><!-- End Content -->
-    <script src="./assets/js/lesson321.js"></script>
 
-
-    <div id="skipback">
-    </div>
     <!-- <button onclick="runCode('1')">Sim1</button>
     <button onclick="runCode('0')">Sim0</button> -->
-    <script src="./assets/js/progressbar.js"></script>
+
     <audio src="./assets/Lesson/correctaudio.mp3" id="correctaudio"></audio>
     <audio src="./assets/Lesson/wrongaudio.mp3" id="wrongaudio"></audio>
     <audio src="./assets/Lesson/clappingaudio.mp3" id="clappingaudio"></audio>
@@ -131,6 +127,10 @@
     var buttonNumber = existingButtons.length;
     runCode('0')
     app.nextStep();
+    window.scrollTo({
+        top: 200,
+        behavior: 'smooth'
+    });
 </script>
 
 </html>

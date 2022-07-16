@@ -39,26 +39,27 @@
   <!-- Topbar -->
   <script src="./assets/js/header.js"></script>
   <!-- Title -->
-  <div id="sublesson">
-    <u>
-      <h2>3.1.1 Newton’s Universal
-        Law of Gravitation</h2>
-    </u>
-  </div>
+
   <main>
     <!-- ======= Content ======= -->
     <section>
       <div class="container" data-aos="fade-up">
+        <div id="sublesson">
+          <h2>3.1.1 Newton’s Universal
+            Law of Gravitation</h2>
+        </div>
         <!-- LESSON 311 IMPORTANT!!!!!!!!!!!!!!!!!!! -->
         <div id="lesson311">
           <script src="./assets/js/lesson311.js"></script>
         </div>
+        <div id="skipback">
+        </div>
+        <script src="./assets/js/progressbar.js"></script>
       </div>
+
     </section><!-- End Content -->
     <!-- Progress bar -->
-    <div id="skipback">
-    </div>
-    <script src="./assets/js/progressbar.js"></script>
+
   </main><!-- End #main -->
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
@@ -73,11 +74,12 @@
 <script src="assets/js/progress.js"></script>
 
 <script>
+
+  displayLesson311();
   window.scrollTo({
     top: 200,
     behavior: 'smooth'
   });
-  displayLesson311();
 </script>
 
 </html>

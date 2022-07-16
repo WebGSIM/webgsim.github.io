@@ -11,7 +11,6 @@ quiz331 = [quiz331a, quiz331b, quiz331c, quiz331d, quiz331e, quiz331f, quiz331g,
 html331 = [];
 for (let i = 0; i < quiz331.length; i++) {
     html331[i] = quizGenerator(quiz331[i]);
-    console.log(html331[i])
 }
 function quizGenerator(quiz) {
     return `<div class="quiz-container " id="quiz" data-aos="fade-in">
@@ -29,7 +28,9 @@ function quizGenerator(quiz) {
     </div>
     </div>`
 }
-html331[8] = `<div class="row" id="lesson331">
+
+
+html331[8] = `<div class="row">
 <div class="col-6">
     <img src="./assets/img/satelliteimg.png" id="img331">
 </div>
@@ -47,7 +48,7 @@ html331[8] = `<div class="row" id="lesson331">
         </p>
         <div class="rangeslider" id="opacityslider">
             <range-slider min="0" max="10" step="1" dir="ltr"></range-slider>
-            <div style="display:flex;justify-content:center">
+            <div class="startsim">
                 <button onclick="startSimulation();" id="setvalue">Run
                     Simulation</button>
             </div>
@@ -56,7 +57,7 @@ html331[8] = `<div class="row" id="lesson331">
 </div>
 </div>`;
 
-html331[9] = ` <div class="row" id="lesson331">
+html331[9] = ` <div class="row">
 <div class="col-6">
     <img src="./assets/img/satelliteimg.png" id="img331">
     <div id="gserrors" style="font-family:Verdana;font-size:13px;color:#c00">
@@ -83,7 +84,81 @@ html331[9] = ` <div class="row" id="lesson331">
         </p>
         <div class="rangeslider" id="opacityslider">
             <range-slider min="1000" max="2000" step="1" dir="ltr"></range-slider>
-            <div style="display:flex;justify-content:center">
+            <div class="startsim">
+                <button onclick="startSimulation();" id="setvalue">Run
+                    Simulation</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+`;
+
+html331[10] = ` <div class="row">
+<div class="col-6">
+    <img src="./assets/img/satelliteimg.png" id="img331">
+    <div id="gserrors" style="font-family:Verdana;font-size:13px;color:#c00">
+</div>
+<div>
+  <div id='sourcetext' class="split split-horizontal" style="display:none">
+  </div>
+  <div id='glows' ></div>
+  <div id='printing' class="split split-horizontal" style="display:none">
+  </div>
+</div>
+</div>
+<div class="col-6" id="quiz321">
+    <div class="simtext">
+        <p class="glowtext">
+            <strong style="font-size:35px">Situation 4: High velocity</strong><br><br>
+            This satellite is <strong>2.657 x 10<sup>7</sup> m</strong> away from Earth. Initially,
+            the
+            satellite is
+            moving at high velocity. What will happen to the satellite? Set the initial linear
+            speed
+            of satellite in between <strong>3800ms<sup>-1</sup> and 3900 ms<sup>-1</sup></strong> to
+            figure it out. Adjust the value using range slider and click "Run Simulation".
+        </p>
+        <div class="rangeslider" id="opacityslider">
+            <range-slider min="3800" max="3900" step="1" dir="ltr"></range-slider>
+            <div class="startsim">
+                <button onclick="startSimulation();" id="setvalue">Run
+                    Simulation</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+`;
+
+html331[11] = ` <div class="row">
+<div class="col-6">
+    <img src="./assets/img/satelliteimg.png" id="img331">
+    <div id="gserrors" style="font-family:Verdana;font-size:13px;color:#c00">
+</div>
+<div>
+  <div id='sourcetext' class="split split-horizontal" style="display:none">
+  </div>
+  <div id='glows' ></div>
+  <div id='printing' class="split split-horizontal" style="display:none">
+  </div>
+</div>
+</div>
+<div class="col-6" id="quiz321">
+    <div class="simtext">
+        <p class="glowtext">
+            <strong style="font-size:35px">Situation 2: Low velocity</strong><br><br>
+            This satellite is <strong>2.657 x 10<sup>7</sup> m</strong> away from Earth. Initially,
+            the
+            satellite is
+            moving at low velocity. What will happen to the satellite? Set the initial linear
+            speed
+            of satellite in between <strong>8000 ms<sup>-1</sup> and 9000 ms<sup>-1</sup></strong> to
+            figure it out. Adjust the value using range slider and click "Run Simulation".
+        </p>
+        <div class="rangeslider" id="opacityslider">
+            <range-slider min="8000" max="9000" step="1" dir="ltr"></range-slider>
+            <div class="startsim">
                 <button onclick="startSimulation();" id="setvalue">Run
                     Simulation</button>
             </div>
@@ -155,7 +230,7 @@ let n = 0;
 let correct = false;
 function startQuiz() {
 
-    document.getElementById('lesson331').innerHTML = html331[n];
+    document.getElementById('quiz321').innerHTML = html331[n];
     document.getElementById("buttons").addEventListener("click", checkSelection);
     window.addEventListener("click", checkActiveSelection);
 }
@@ -165,7 +240,7 @@ function nextQuiz() {
         document.getElementById('correctaudio').play();
         n++;
         if (n < 3) {
-            document.getElementById('lesson331').innerHTML = html331[n];
+            document.getElementById('quiz321').innerHTML = html331[n];
         }
         else {
             document.getElementById('lesson331').innerHTML = html331[9];

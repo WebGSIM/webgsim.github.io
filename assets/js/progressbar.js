@@ -2,6 +2,7 @@ document.writeln(`<div id="progressbar">
 <div id="app" :class="progressClasses">
   <div class="progress__bg"></div>
   <template v-for="(step, index) in steps">
+  <div class="progresssteps">
     <div :class="stepClasses(index)">
       <div class="progress__indicator">
         <i class="fa fa-check"></i>
@@ -9,6 +10,7 @@ document.writeln(`<div id="progressbar">
       <div class="progress__label" id="progress__label">
         {{step.label}}
       </div>
+    </div>
     </div>
   </template>
 </div>
