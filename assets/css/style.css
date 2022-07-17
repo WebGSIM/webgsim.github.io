@@ -116,6 +116,16 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+@media (max-width:660px) {
+  #header {
+    height: 106px !important;
+  }
+
+  #header .logo img {
+    height: 113px;
+  }
+}
+
 #header {
   background: #0d1117;
   transition: all 0.5s;
@@ -126,6 +136,7 @@ h6 {
   width: 100%;
   z-index: 1030;
 }
+
 
 
 
@@ -966,6 +977,8 @@ section {
   width: 50%;
   color: #c9d1d9;
   min-width: 430px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media (max-width: 600px) {
