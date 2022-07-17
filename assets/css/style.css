@@ -117,7 +117,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: black;
+  background: #0d1117;
   transition: all 0.5s;
   height: 140px;
   display: inline-block;
@@ -438,7 +438,7 @@ h6 {
 
 #intro:before {
   content: "";
-  background: black;
+  background: #0d1117;
   position: absolute;
   bottom: 0;
   top: 0;
@@ -592,6 +592,11 @@ section {
 .portal .row {
   width: inherit;
 } */
+
+#mainindex {
+  background-color: #161b22;
+}
+
 @media (min-width: 992px) {
   .portal .col-lg-2 {
     width: 20%;
@@ -613,6 +618,7 @@ section {
   padding-top: 0;
   position: relative;
   bottom: -20px;
+
 }
 
 
@@ -671,7 +677,7 @@ section {
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
-  color: white;
+  color: #c9d1d9;
   ;
 }
 
@@ -916,15 +922,23 @@ section {
 /*--------------------------------------------------------------
 # About 
 --------------------------------------------------------------*/
+#about {
+  background-color: #161b22;
+  margin-top: 60px;
+
+}
+
 #about h3 {
   font-weight: 400;
   font-size: 34px;
+  color: white;
 }
 
 #about h4 {
   font-size: 20px;
   font-weight: 700;
   margin-top: 5px;
+
 }
 
 #about p {
@@ -938,17 +952,30 @@ section {
 
 #about #kc {
   display: inline-block;
-  width: 30%;
+
 }
 
 #about #kc img {
-  width: 50%;
-  height: 50%;
+  width: 217px;
+  height: 289px;
+  display: inline-block;
 }
 
 #about #kcinfo {
   display: inline-block;
   width: 50%;
+  color: #c9d1d9;
+  min-width: 430px;
+}
+
+@media (max-width: 600px) {
+  #about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 
@@ -956,12 +983,12 @@ section {
 # Clients (footer)
 --------------------------------------------------------------*/
 .clients .swiper-slide img {
-  opacity: 0.5;
+  /* opacity: 0.5; */
   transition: 0.3s;
 }
 
 .clients .swiper-slide:hover img {
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 .clients .swiper-pagination {
@@ -979,6 +1006,7 @@ section {
 
 .clients .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #0880e8;
+
 }
 
 .clients .owl-item {
@@ -990,12 +1018,13 @@ section {
 
 .clients .owl-item img {
   width: 60%;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   transition: 0.3s;
+
 }
 
 .clients .owl-item img:hover {
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 .clients .owl-nav,
@@ -1015,6 +1044,16 @@ section {
 
 .clients .owl-dot.active {
   background-color: #0880e8 !important;
+}
+
+#clients {
+  background-color: #0d1117;
+
+
+}
+
+#swiper-wrapper-633ca888fe8101e10 {
+  background-color: #0d1117;
 }
 
 /*--------------------------------------------------------------
@@ -1043,7 +1082,7 @@ section {
 }
 
 #contact .contact-info i {
-  color: #f6b024;
+  color: blue;
   line-height: 0;
   margin-right: 5px;
 }

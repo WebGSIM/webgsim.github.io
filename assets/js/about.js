@@ -1,4 +1,4 @@
-document.writeln(` <section id="about" style="background-color: #f1f8ff;margin-top:60px;margin-bottom:60px;" data-aos="fade-up">
+document.writeln(` <section id="about"  data-aos="fade-up">
 <div id="kc">
   <img src="./assets/img/KC.png">
 </div>
