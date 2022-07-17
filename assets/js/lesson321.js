@@ -30,8 +30,83 @@ function quizGenerator(quiz) {
     </div>
     </div>`
 }
+html321[5] = `  <p class="glowtext">
+<strong style="font-size:35px">OBSERVE THIS SIMULATION</strong><br><br>
+This simulation shows that Moon is orbiting the Earth
+in <strong>CIRCULAR ORBIT</strong>. Moon sweeps out
+green region and red region in a time interval of 5 days. <br><br>
+Please record your <strong>OBSERVATION</strong> and <strong>CONCLUSION</strong>. <br>
+1) Compare arc length (blue points) swept by Moon in green & red region.<br>
+2) Compare distance (white line) between Moon and Sun in green & red region.<br>
+3) According to formula area of sector, is green area equals to red area?
+</p>
+<button onclick="startQuiz()" class="readybutton" id="readyobserve"> I am ready to record my
+observation</button>`;
+
+html321[6] = `<p class="glowtext">
+<strong style="font-size:35px">OBSERVE ANOTHER SIMULATION</strong><br><br>
+This simulation shows that Earth is orbiting the sun
+in <strong>ELLIPTICAL ORBIT</strong>. <br>
+Earth sweeps out
+green region and red region in a time interval of 5 days. <br><br>
+Please record your <strong>OBSERVATION</strong> and <strong>CONCLUSION</strong>. <br>
+1) Compare arc length (blue points) swept by Earth in green & red region.<br>
+2) Compare distance (white line) between Earth and Sun in green & red region.<br>
+3) According to formula area of sector, is green area equals to red area?
+</p>
+<button onclick="startQuiz()" class="readybutton"> I am ready to record my observation</button>`;
+
+let lesson = 0;
+function changeLesson(change) {
+    app.nextStep(change);
+    if (change) {
+        lesson++;
+    }
+    else {
+        lesson--;
+    }
+    if (lesson == 0 || lesson == 2) {
+        document.getElementById('quiz321').innerHTML = html321[5 + lesson / 2];
+        if (lesson == 0) {
+            document.getElementById('glowframe').innerHTML = `<iframe name="iframe1" id="glowsim" src="sim1.html"></iframe>`
+        }
+        else {
+            document.getElementById('glowframe').innerHTML = `<iframe name="iframe1" id="glowsim" src="sim2.html"></iframe>`
+        }
+    }
+    else {
+        startQuiz();
+    }
+    if (lesson == 0) {
+        document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
+          onclick="window.location='lesson.html'"><i class="fa fa-home"></i>    BACK</button>
+          </div>
+          <div id="skip"><button type="input" class="btn" id="skipbtn"
+          onclick="changeLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
+          </div>`
+
+    }
+    else if (lesson == 3) {
+        document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
+        onclick="changeLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
+        </div>
+        <div id="skip"><button type="input" class="btn" 
+        onclick="window.location='lesson322.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
+        </div>
+       `
+    }
+    else {
+        document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
+      onclick="changeLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
+      </div>
+      <div id="skip"><button type="input" class="btn" id="skipbtn"
+      onclick="changeLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
+      </div>`}
+
+
+}
+
 function startQuiz() {
-    app.nextStep();
     document.getElementById('quiz321').innerHTML = html321[n];
     document.getElementById("buttons").addEventListener("click", checkSelection);
     window.addEventListener("click", checkActiveSelection);

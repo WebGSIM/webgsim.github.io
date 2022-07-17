@@ -684,21 +684,11 @@ function displayCongrats() {
 function checkTime() {
   if (document.getElementById('video-element').currentTime >= document.getElementById('video-element').duration * 0.8) {
     document.getElementById('skipbtn').innerHTML = `I HAVE FINISHED WATCHING<i class="fa fa-arrow-right"></i>`;
-    document.getElementById('skipbtn').style.color = "white";
-    document.getElementById('skipbtn').style.backgroundColor = "#051367";
-    document.getElementById('skipbtn').addEventListener("mouseover", changeStyle);
-    document.getElementById('skipbtn').addEventListener("mouseout", backStyle);
+    document.getElementById('skipbtn').setAttribute('class', 'btn answerquestion');
   }
 }
 
-function changeStyle() {
-  document.getElementById('skipbtn').style.backgroundColor = "green";
 
-}
-
-function backStyle() {
-  document.getElementById('skipbtn').style.backgroundColor = "#051367";
-}
 
 function displayButton() {
   if (lessonNumber == 0) {

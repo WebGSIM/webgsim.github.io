@@ -1,13 +1,17 @@
 quiz331a = ["1) What is your observation?", "Satellite moves towards Earth", "Satellite moves away from Earth", "1"];
 quiz331b = ["2) Why satellite moves towards Earth?", "Because Earth attracts satellite", "Because satellite propels towards Earth", "1"];
 quiz331c = ["3) Why Earth attracts satellite?", "Because there exists magnetic force", "Because there exists gravitational force", "2"];
-quiz331d = ["4) What is your observation?", "Satellite still moves towards Earth", "", "1"];
+quiz331d = ["4) What is your observation?", "Satellite still moves towards Earth", "Satellite moves away from Earth", "1"];
 quiz331e = ["5) Why satellite still move towards Earth?", "Because Earth's gravitational force is getting stronger", "Because the satellite velocity is too small", "2"];
 quiz331f = ["6) What is the trajectory of the satellite?", "Straight line", "A little bit curved", "2"];
 quiz331g = ["7) What is your observation?", "Satellite is getting closer to Earth", "Satellite moves in circular orbit", "2"];
-quiz331h = ["8) Why satellite moves in circular orbit?", "Centripetal force is the same as gravitational force to maintain satellite in circular orbit", "Because satellite likes circle", "1"];
-quiz331i = ["9) Calculate the orbital velocity for this satellite", "3870 m/s", "5000 m/s", "1"];
-quiz331 = [quiz331a, quiz331b, quiz331c, quiz331d, quiz331e, quiz331f, quiz331g, quiz331h, quiz331i];
+quiz331h = ["8) Why satellite moves in circular orbit?", "Centripetal force is same as gravitational force", "Because satellite likes circle", "1"];
+quiz331i = ["9) What is the orbital velocity for this satellite", "3870 m/s", "1870 m/s", "1"];
+quiz331j = ["10) What is your observation?", "Satellite orbits Earth", "Satellite escape from Earth", "2"];
+quiz331k = ["11) Why satellite escapes from Earth?", "Earth gravitational force become weaker", "Satellite velocity exceeds orbital velocity", "2"];
+quiz331l = ["12 What is your conclusion?", "Satellite moving with orbital velocity will maintain in circular orbit", "Earth's gravity is getting weaker", "1"]
+
+quiz331 = [quiz331a, quiz331b, quiz331c, quiz331d, quiz331e, quiz331f, quiz331g, quiz331h, quiz331i, quiz331j, quiz331k, quiz331l];
 html331 = [];
 for (let i = 0; i < quiz331.length; i++) {
     html331[i] = quizGenerator(quiz331[i]);
@@ -30,7 +34,7 @@ function quizGenerator(quiz) {
 }
 
 
-html331[8] = `<div class="row">
+html331[12] = `<div class="row">
 <div class="col-6">
     <img src="./assets/img/satelliteimg.png" id="img331">
 </div>
@@ -57,7 +61,7 @@ html331[8] = `<div class="row">
 </div>
 </div>`;
 
-html331[9] = ` <div class="row">
+html331[13] = ` <div class="row">
 <div class="col-6">
     <img src="./assets/img/satelliteimg.png" id="img331">
     <div id="gserrors" style="font-family:Verdana;font-size:13px;color:#c00">
@@ -94,7 +98,7 @@ html331[9] = ` <div class="row">
 </div>
 `;
 
-html331[10] = ` <div class="row">
+html331[14] = ` <div class="row">
 <div class="col-6">
     <img src="./assets/img/satelliteimg.png" id="img331">
     <div id="gserrors" style="font-family:Verdana;font-size:13px;color:#c00">
@@ -110,7 +114,7 @@ html331[10] = ` <div class="row">
 <div class="col-6" id="quiz321">
     <div class="simtext">
         <p class="glowtext">
-            <strong style="font-size:35px">Situation 4: High velocity</strong><br><br>
+            <strong style="font-size:35px">Situation 3: Orbital velocity</strong><br><br>
             This satellite is <strong>2.657 x 10<sup>7</sup> m</strong> away from Earth. Initially,
             the
             satellite is
@@ -131,7 +135,7 @@ html331[10] = ` <div class="row">
 </div>
 `;
 
-html331[11] = ` <div class="row">
+html331[15] = ` <div class="row">
 <div class="col-6">
     <img src="./assets/img/satelliteimg.png" id="img331">
     <div id="gserrors" style="font-family:Verdana;font-size:13px;color:#c00">
@@ -147,17 +151,17 @@ html331[11] = ` <div class="row">
 <div class="col-6" id="quiz321">
     <div class="simtext">
         <p class="glowtext">
-            <strong style="font-size:35px">Situation 2: Low velocity</strong><br><br>
+            <strong style="font-size:35px">Situation 4: High velocity</strong><br><br>
             This satellite is <strong>2.657 x 10<sup>7</sup> m</strong> away from Earth. Initially,
             the
             satellite is
             moving at low velocity. What will happen to the satellite? Set the initial linear
             speed
-            of satellite in between <strong>8000 ms<sup>-1</sup> and 9000 ms<sup>-1</sup></strong> to
+            of satellite in between <strong>5500 ms<sup>-1</sup> and 10000 ms<sup>-1</sup></strong> to
             figure it out. Adjust the value using range slider and click "Run Simulation".
         </p>
         <div class="rangeslider" id="opacityslider">
-            <range-slider min="8000" max="9000" step="1" dir="ltr"></range-slider>
+            <range-slider min="5500" max="10000" step="1" dir="ltr"></range-slider>
             <div class="startsim">
                 <button onclick="startSimulation();" id="setvalue">Run
                     Simulation</button>
@@ -167,7 +171,6 @@ html331[11] = ` <div class="row">
 </div>
 </div>
 `;
-
 
 
 function displaySlider() {
@@ -185,10 +188,7 @@ function displaySlider() {
         const output = input.nextElementSibling;
         if (output) {
             output.textContent = "Satellite velocity = " + input.value + " m/s";
-            displaySimulation(input.value)
-            // let opacityslider = 0.5;
-            // opacityslider += input.value / 8000;
-            // document.getElementById('opacityslider').setAttribute('style', "opacity:" + opacityslider);
+            displaySimulation(input.value);
         }
     });
 
@@ -199,38 +199,64 @@ displaySlider();
 
 function startSimulation() {
     document.getElementById('img331').setAttribute('style', 'display:none');
-    document.getElementById('skipbtn').innerHTML = `ANSWER SOME QUESTIONS<i class="fa fa-arrow-right"></i>`;
-    document.getElementById('skipbtn').style.color = "white";
-    document.getElementById('skipbtn').style.backgroundColor = "#051367";
-    document.getElementById('skipbtn').addEventListener("mouseover", changeStyle);
-    document.getElementById('skipbtn').addEventListener("mouseout", backStyle);
-
-
+    document.getElementById('skip').innerHTML = `<button type="input" class="btn" id="skipbtn"
+    onclick="startQuiz()">ANSWER SOME QUESTIONS<i class="fa fa-arrow-right"></i></button>
+    </div>
+    `;
+    document.getElementById('skipbtn').setAttribute('class', 'btn answerquestion');
     runCode('2');
 }
 
 
-function changeStyle() {
-    document.getElementById('skipbtn').style.backgroundColor = "green";
 
-}
-
-function backStyle() {
-    document.getElementById('skipbtn').style.backgroundColor = "#051367";
-}
-
-
-document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn"
-onclick="window.location='lesson.html'"><i class="fa fa-home"></i>    BACK</button>
-</div>
-<div id="skip"><button type="input" class="btn" id="skipbtn"
-onclick="startQuiz();">SKIP    <i class="fa fa-arrow-right"></i></button>
-</div>`
 let n = 0;
+let lesson = 0;
 let correct = false;
-function startQuiz() {
+function nextLesson(change) {
+    if (change) {
+        lesson++;
+    }
+    else {
+        lesson--;
+    }
+    n = 0;
+    document.getElementById('lesson331').innerHTML = html331[12 + lesson];
+    app.nextStep(change);
+    displaySlider();
+    if (lesson == 0) {
+        document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
+          onclick="window.location='lesson.html'"><i class="fa fa-home"></i>    BACK</button>
+          </div>
+          <div id="skip"><button type="input" class="btn" id="skipbtn"
+          onclick="nextLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
+          </div>`
 
-    document.getElementById('quiz321').innerHTML = html331[n];
+    }
+    else if (lesson == 3) {
+        document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
+        onclick="nextLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
+        </div>
+        <div id="skip"><button type="input" class="btn" 
+        onclick="window.location='lesson312.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
+        </div>
+       `
+    }
+    else {
+        document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
+      onclick="nextLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
+      </div>
+      <div id="skip"><button type="input" class="btn" id="skipbtn"
+      onclick="nextLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
+      </div>`}
+}
+
+function startQuiz() {
+    document.getElementById('skipbtn').setAttribute('class', 'btn');
+    document.getElementById('skip').innerHTML = `<button type="input" class="btn" id="skipbtn"
+    onclick="nextLesson(true)">SKIP<i class="fa fa-arrow-right"></i></button>
+    </div>
+    `;
+    document.getElementById('quiz321').innerHTML = html331[3 * lesson + n];
     document.getElementById("buttons").addEventListener("click", checkSelection);
     window.addEventListener("click", checkActiveSelection);
 }
@@ -240,12 +266,10 @@ function nextQuiz() {
         document.getElementById('correctaudio').play();
         n++;
         if (n < 3) {
-            document.getElementById('quiz321').innerHTML = html331[n];
+            document.getElementById('quiz321').innerHTML = html331[3 * lesson + n];
         }
         else {
-            document.getElementById('lesson331').innerHTML = html331[9];
-            app.nextStep();
-            displaySlider();
+            nextLesson(true);
         }
     }
     else {
@@ -259,7 +283,7 @@ function nextQuiz() {
 
 
 function checkSelection() {
-    if (document.activeElement.id == quiz331[n][3]) {
+    if (document.activeElement.id == quiz331[3 * lesson + n][3]) {
         correct = true;
     }
     else {
@@ -269,8 +293,14 @@ function checkSelection() {
 }
 
 function checkActiveSelection() {
-    if (document.activeElement.id != quiz331[n][3]) {
+    if (document.activeElement.id != quiz331[3 * lesson + n][3]) {
         correct = false;
     }
 }
+document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn"
+onclick="window.location='lesson.html'"><i class="fa fa-home"></i>    BACK</button>
+</div>
+<div id="skip"><button type="input" class="btn" id="skipbtn"
+onclick="nextLesson(true);">SKIP    <i class="fa fa-arrow-right"></i></button>
+</div>`;
 // runCode('2')

@@ -204,22 +204,11 @@ function swiper311() {
     elements[swiper.realIndex].play();
     if (swiper.realIndex == lesson311[lessonNumber][0].length - 1) {
       document.getElementById('skipbtn').innerHTML = `I HAVE FINISHED READING<i class="fa fa-arrow-right"></i>`;
-      document.getElementById('skipbtn').style.color = "white";
-      document.getElementById('skipbtn').style.backgroundColor = "#051367";
-      document.getElementById('skipbtn').addEventListener("mouseover", changeStyle);
-      document.getElementById('skipbtn').addEventListener("mouseout", backStyle);
+      document.getElementById('skipbtn').setAttribute('class', 'btn answerquestion');
     }
   });
 }
 
-function changeStyle() {
-  document.getElementById('skipbtn').style.backgroundColor = "green";
-
-}
-
-function backStyle() {
-  document.getElementById('skipbtn').style.backgroundColor = "#051367";
-}
 
 
 var congrats = `<div class="js-container container-congrats"></div>

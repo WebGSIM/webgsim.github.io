@@ -107,45 +107,7 @@ function parseVersionHeader(source) {
 
 
 function getHeader(exporting, fileExp) {
-    // var text = GSedit.getValue()
-    // $.get("./Demos/" + fileExp, function (r) {
-    //     text = r;
-    // })
-    // for (let i = 0; i < text.length; i++) {
-    //     if(i==parseInt(fileExp)){ }
-    //     var text = text[i];
-    // }
     var text = simulation[fileExp]
-    // if (fileExp === "1") {
-    //     var text = text1
-    // }
-    // if (fileExp === "2") {
-    //     const newline = "\n"
-    //     const mass = prompt("Please enter the mass", "m=1").concat(newline);
-    //     const spring = prompt("Please enter the spring constant", "k=3").concat(newline);
-    //     var text = mass.concat(spring.concat(text2))
-    //     console.log(text)
-
-    // }
-    // if (fileExp === "3") {
-    //     var text = text3
-
-
-
-    // }
-    // // if (fileExp === "4") {
-    // //   var text = text4
-    // // }
-    // if (fileExp === "4") {
-    //     // let radius_text = '2.02e7';
-    //     radius_text = prompt('enter radius')
-    //     var text = displayText(radius_text);
-    // }
-    // if (fileExp === "6") {
-    //     var text = text6
-    // }
-
-
     var end = text.indexOf('\n')
     var i = text.slice(0, end).indexOf("GlowScript") // Look for "GlowScipt" in first line
     var j = text.slice(0, end).indexOf("vpython")    // Look for "vpython" in first line

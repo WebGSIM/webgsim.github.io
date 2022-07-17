@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/framestyle.css" rel="stylesheet">
+</head>
+<style>
+    
+</style>
+<body>
+    <div id="glowscript" class="glowscript">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link type="text/css" href="glowscript_libraries/jquery-ui.custom.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="glowscript_libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="glowscript_libraries/jquery-ui.custom.min.js"></script>
+    <script type="text/javascript" src="glowscript_libraries/editor.js"></script>
+    <script type="text/javascript" src="glowscript_libraries/RSrun.3.2.min.js"></script>
+    <script type="text/javascript" src="glowscript_libraries/glow.3.2.min.js" charset="UTF-8"></script>
+        <script type="text/javascript">
+           
+                (function() {;
+        var ρσ_modules = {};
+        var running;
+        ρσ_modules.pythonize = {};
+        
+        (function(){
+            function strings() {
+                var string_funcs, exclude, name;
+                string_funcs = set("capitalize strip lstrip rstrip islower isupper isspace lower upper swapcase center count endswith startswith find rfind index rindex format join ljust rjust partition rpartition replace split rsplit splitlines zfill".split(" "));
+                if (!arguments.length) {
+                    exclude = (function(){
+                        var s = ρσ_set();
+                        s.jsset.add("split");
+                        s.jsset.add("replace");
+                        return s;
+                    })();
+                } else if (arguments[0]) {
+                    exclude = Array.prototype.slice.call(arguments);
+                } else {
+                    exclude = null;
+                }
+                if (exclude) {
+                    string_funcs = string_funcs.difference(set(exclude));
+                }
+                var ρσ_Iter0 = string_funcs;
+                ρσ_Iter0 = ((typeof ρσ_Iter0[Symbol.iterator] === "function") ? (ρσ_Iter0 instanceof Map ? ρσ_Iter0.keys() : ρσ_Iter0) : Object.keys(ρσ_Iter0));
+                for (var ρσ_Index0 of ρσ_Iter0) {
+                    name = ρσ_Index0;
+                    (ρσ_expr_temp = String.prototype)[(typeof name === "number" && name < 0) ? ρσ_expr_temp.length + name : name] = (ρσ_expr_temp = ρσ_str.prototype)[(typeof name === "number" && name < 0) ? ρσ_expr_temp.length + name : name];
+                }
+            };
+            if (!strings.__module__) Object.defineProperties(strings, {
+                __module__ : {value: "pythonize"}
+            });
+        
+            ρσ_modules.pythonize.strings = strings;
+        })();
+        async function __main__() {
+        "use strict";
+            var display = canvas;
+            var scene = canvas();
+        
+            var version, print, arange, __name__, type, ρσ_ls, G, M, R, h, w, vc, t, dt, day, r, t1, t2, timeinterval, speed, greencolor, redcolor, yellowcolor, g, earth, deltatimea, deltatimeb, n, timearea, running, line, point, area, area2, _GS_1, craft2, timelabela, timelabelb;
+            version = ρσ_list_decorate([ "3.2", "glowscript" ]);
+            Array.prototype['+'] = function(r) {return this.concat(r)}
+            Array.prototype['*'] = function(r) {return __array_times_number(this, r)}
+            window.__GSlang = "vpython";
+            print = GSprint;
+            arange = range;
+            __name__ = "__main__";
+            type = pytype;
+            var strings = ρσ_modules.pythonize.strings;
+        
+            strings();
+            "2";
+            G = 6.67e-11;
+            "3";
+            M = 5.97e24;
+            "4";
+            R = 637e4;
+            "5";
+            h = 202e5;
+            "6";
+            w = 73e-6;
+            "7";
+            vc = 3871.277517;
+            "8";
+            t = 0;
+            "9";
+            dt = 1;
+            "10";
+            day = 24["*"](3600);
+            "11";
+            r = R["+"](h);
+            "12";
+            t = 0;
+            "13";
+            t1 = 15;
+            "14";
+            t2 = 37;
+            "15";
+            timeinterval = 5;
+            "16";
+            speed = 1;
+            "17";
+            greencolor = vec(6, 255, 0)["/"](100);
+            "18";
+            redcolor = vec(255, 24, 24)["/"](100);
+            "19";
+            yellowcolor = vec(2.52, 2.17, 0);
+            "21";
+            scene.camera.pos = vec(21246600, 20294400, 42618900);
+            "22";
+            scene.camera.axis = vec(1["-u"]()["*"](28075700), 1["-u"]()["*"](37568600), 1["-u"]()["*"](64596500));
+            "23";
+            g = ρσ_interpolate_kwargs.call(this, graph, [ρσ_desugar_kwargs({title: "<b>Graph of Distance vs Time<b>", xtitle: "Time(hour)", ytitle: "Distance(km)", background: color.black})]);
+            "24";
+            g = gcurve();
+            "25";
+            earth = ρσ_interpolate_kwargs.call(this, sphere, [ρσ_desugar_kwargs({pos: vector(0, 0, 0), radius: R, texture: textures.earth})]);
+            "26";
+            ρσ_interpolate_kwargs.call(earth, earth.rotate, [ρσ_desugar_kwargs({angle: pi["/"](2), axis: vector(1, 0, 0), origin: earth.pos})]);
+            "27";
+            deltatimea = 0;
+            "28";
+            deltatimeb = 0;
+            "29";
+            n = 500;
+            "30";
+            timearea = timeinterval["/"](n["-"](1["*"](2)));
+            "31";
+            running = true;
+            "32";
+            line = ρσ_list_decorate([]);
+            "33";
+            point = ρσ_list_decorate([]);
+            "34";
+            area = ρσ_list_decorate([]);
+            "35";
+            area2 = ρσ_list_decorate([]);
+            "36";
+            async function Run(b) {
+                "37";
+                "38";
+                running = !running;
+                "39";
+                if (running) {
+                    b.text = "Pause";
+                } else {
+                    b.text = "Continue";
+                }
+            };
+            if (!Run.__argnames__) Object.defineProperties(Run, {
+                __argnames__ : {value: ["b"]},
+                __module__ : {value: null}
+            });
+        
+            "42";
+            async function reset(r) {
+                "43";
+                (await craft2.reset());
+            };
+            if (!reset.__argnames__) Object.defineProperties(reset, {
+                __argnames__ : {value: ["r"]},
+                __module__ : {value: null}
+            });
+        
+            "46";
+            ρσ_interpolate_kwargs.call(this, button, [ρσ_desugar_kwargs({text: "Pause", bind: Run})]);
+            "47";
+            ρσ_interpolate_kwargs.call(this, button, [ρσ_desugar_kwargs({text: "Reset", bind: reset})]);
+            "50";
+            function Craft() {;
+            }
+            Craft.prototype.__init__ = async function __init__(position, radius, color, trail, mass, velocity, acceleration, deltatimea, deltatimeb) {
+                var self = this;
+                "52";
+                self.pos = position;
+                "53";
+                self.radius = radius;
+                "54";
+                self.color = color;
+                "55";
+                self.trail = true;
+                "56";
+                self.m = mass;
+                "57";
+                self.v = velocity;
+                "58";
+                self.a = acceleration;
+                "59";
+                self.r = position["-"](1["*"](earth.pos));
+                "60";
+                self.craft = ρσ_interpolate_kwargs.call(this, sphere, [ρσ_desugar_kwargs({pos: self.pos, radius: self.radius, trail_color: self.color, make_trail: self.trail, m: self.m, v: self.v, r: self.r, F: self.F, texture: "glowscript_data/moon_texture.jpg"})]);
+                "61";
+                self.n = n;
+                "62";
+                self.t = t;
+                "63";
+                self.deltatimea = deltatimea;
+                "64";
+                self.deltatimeb = deltatimeb;
+                "65";
+                self.i = 0;
+                "66";
+                self.p = 0;
+            };
+            if (!Craft.prototype.__init__.__argnames__) Object.defineProperties(Craft.prototype.__init__, {
+                __argnames__ : {value: ["position", "radius", "color", "trail", "mass", "velocity", "acceleration", "deltatimea", "deltatimeb"]},
+                __module__ : {value: null}
+            });
+            Craft.__argnames__ = Craft.prototype.__init__.__argnames__;
+            Craft.__handles_kwarg_interpolation__ = Craft.prototype.__init__.__handles_kwarg_interpolation__;
+            Craft.prototype.update = async function update(dt) {
+                var self = this;
+                "69";
+                self.dt = dt;
+                "70";
+                self.r = self.craft.pos["-"](1["*"](earth.pos));
+                "71";
+                self.F = 1["-u"]()["*"](G)["*"](M)["*"](self.m)["*"](norm(self.r))["/"](Math.pow(mag(self.r), 2));
+                "72";
+                self.a = self.F["/"](self.m);
+                "73";
+                self.v=self.v["+"](self.a["*"](self.dt));
+                "74";
+                self.craft.pos=self.craft.pos["+"](self.v["*"](self.dt));
+                "75";
+                ρσ_interpolate_kwargs.call(earth, earth.rotate, [ρσ_desugar_kwargs({angle: w["*"](self.dt), axis: vector(0, 1["-u"]()["*"](1), 0), origin: earth.pos})]);
+                "77";
+                if (self.t[">="](t1) & self.t["<"](t1["+"](.001)) | self.t[">="](t1["+"](timeinterval)) & self.t["<"](t1["+"](timeinterval)["+"](.001)) | (self.t[">="](t2) & self.t["<"](t2["+"](.001)) | self.t[">="](t2["+"](timeinterval)) & self.t["<"](t2["+"](timeinterval)["+"](.001)))) {
+                    "78";
+                    ρσ_setitem(line, self.i, ρσ_interpolate_kwargs.call(this, cylinder, [ρσ_desugar_kwargs({axis: self.craft.pos["-"](1["*"](earth.pos))})]));
+                    "79";
+                    ρσ_getitem(line, self.i).length = mag(self.craft.pos["-"](1["*"](earth.pos)));
+                    "80";
+                    ρσ_getitem(line, self.i).radius = R["/"](15);
+                    "81";
+                    self.i=self.i["+"](1);
+                    "83";
+                }
+                if (self.t[">="](t1) & self.t["<"](t1["+"](.001)) | self.t[">="](t1["+"](timeinterval)) & self.t["<"](t1["+"](timeinterval)["+"](.001)) | self.t[">="](t2) & self.t["<"](t2["+"](.001)) | self.t[">="](t2["+"](timeinterval)) & self.t["<"](t2["+"](timeinterval)["+"](.001))) {
+                    "84";
+                    ρσ_setitem(point, self.p, ρσ_interpolate_kwargs.call(this, sphere, [ρσ_desugar_kwargs({pos: self.craft.pos, radius: .15["*"](R), color: color.blue})]));
+                    "85";
+                    if (self.t[">="](t2)) {
+                        "86";
+                        self.n = n;
+                    }
+                    "87";
+                    self.p=self.p["+"](1);
+                    "89";
+                }
+                if (self.t[">="](t1) & self.t["<="](t1["+"](timeinterval)) & ρσ_equals(round(self.t["-"](1["*"](n["-"](1["*"](self.n)))["*"](timearea))), t1)) {
+                    "90";
+                    ρσ_setitem(area, n["-"](1["*"](self.n)), ρσ_interpolate_kwargs.call(this, cylinder, [ρσ_desugar_kwargs({axis: self.craft.pos["-"](1["*"](earth.pos)), color: greencolor})]));
+                    "91";
+                    ρσ_getitem(area, n["-"](1["*"](self.n))).length = mag(self.craft.pos["-"](1["*"](earth.pos)));
+                    "92";
+                    ρσ_getitem(area, n["-"](1["*"](self.n))).radius = R["/"](20);
+                    "93";
+                    self.n = self.n["-"](1["*"](1));
+                    "96";
+                }
+                if (self.t[">="](t2) & self.t["<="](t2["+"](timeinterval)) & ρσ_equals(round(self.t["-"](1["*"](n["-"](1["*"](self.n)))["*"](timearea))), t2)) {
+                    "97";
+                    ρσ_setitem(area2, n["-"](1["*"](self.n)), ρσ_interpolate_kwargs.call(this, cylinder, [ρσ_desugar_kwargs({axis: self.craft.pos["-"](1["*"](earth.pos)), color: redcolor})]));
+                    "98";
+                    ρσ_getitem(area2, n["-"](1["*"](self.n))).length = mag(self.craft.pos["-"](1["*"](earth.pos)));
+                    "99";
+                    ρσ_getitem(area2, n["-"](1["*"](self.n))).radius = R["/"](20);
+                    "100";
+                    self.n = self.n["-"](1["*"](1));
+                    "102";
+                }
+                if (self.t[">="](t1) & self.t["<"](t1["+"](.001))) {
+                    "103";
+                    timelabela.visible = true;
+                    "104";
+                }
+                if (self.t[">="](t2) & self.t["<"](t2["+"](.001))) {
+                    "105";
+                    timelabelb.visible = true;
+                    "106";
+                }
+                if (self.t[">="](t1) & self.t["<="](t1["+"](timeinterval))) {
+                    "107";
+                    timelabela.text = round(self.deltatimea)["+"](" days");
+                    "108";
+                    self.deltatimea=self.deltatimea["+"](dt["/"](1e3));
+                    "109";
+                    timelabela.pos = (await self.updateLocation());
+                    "110";
+                }
+                if (self.t[">="](t2) & self.t["<="](t2["+"](timeinterval))) {
+                    "111";
+                    timelabelb.text = round(self.deltatimeb)["+"](" days");
+                    "112";
+                    self.deltatimeb=self.deltatimeb["+"](dt["/"](1e3));
+                    "113";
+                    timelabelb.pos = (await self.updateLocation());
+                }
+                "116";
+                ρσ_interpolate_kwargs.call(self.craft, self.craft.rotate, [ρσ_desugar_kwargs({angle: 5["*"](w)["*"](self.dt), axis: vector(0, 1, 0), origin: self.craft.pos})]);
+                "117";
+                self.t=self.t["+"](self.dt["/"](1e3));
+            };
+            if (!Craft.prototype.update.__argnames__) Object.defineProperties(Craft.prototype.update, {
+                __argnames__ : {value: ["dt"]},
+                __module__ : {value: null}
+            });
+            Craft.prototype.updateLocation = async function updateLocation() {
+                var self = this;
+                "120";
+                return self.craft.pos;
+            };
+            if (!Craft.prototype.updateLocation.__module__) Object.defineProperties(Craft.prototype.updateLocation, {
+                __module__ : {value: null}
+            });
+            Craft.prototype.reset = async function reset() {
+                var self = this;
+                var ρσ_ls, o;
+                "124";
+                o = 0;
+                "125";
+                while (o["<"](line.length)) {
+                    "126";
+                    ρσ_getitem(line, o).visible = false;
+                    "127";
+                    o=o["+"](1);
+                }
+                "128";
+                o = 0;
+                "129";
+                while (o["<"](point.length)) {
+                    "130";
+                    ρσ_getitem(point, o).visible = false;
+                    "131";
+                    o=o["+"](1);
+                }
+                "132";
+                o = 0;
+                "133";
+                while (o["<"](area.length)) {
+                    "134";
+                    ρσ_getitem(area, o).visible = false;
+                    "135";
+                    o=o["+"](1);
+                }
+                "136";
+                o = 0;
+                "137";
+                while (o["<"](area2.length)) {
+                    "138";
+                    ρσ_getitem(area2, o).visible = false;
+                    "139";
+                    o=o["+"](1);
+                }
+                "140";
+                self.t = 0;
+                "141";
+                self.deltatimea = 0;
+                "142";
+                self.deltatimeb = 0;
+                "143";
+                self.craft.pos = vec(R["+"](h), 0, 0);
+                "144";
+                self.craft.clear_trail();
+                "145";
+                self.craft.trail = true;
+                "146";
+                self.v = vc["*"](vec(0, 0, speed));
+                "147";
+                self.a = vec(0, 0, 0);
+                "148";
+                self.r = self.craft.pos["-"](1["*"](earth.pos));
+                "149";
+                self.n = n;
+                "150";
+                self.dt = dt;
+                "151";
+                timelabela.visible = false;
+                "152";
+                timelabelb.visible = false;
+            };
+            if (!Craft.prototype.reset.__module__) Object.defineProperties(Craft.prototype.reset, {
+                __module__ : {value: null}
+            });
+            Craft.prototype.__repr__ = async function __repr__() {
+                        return "<"["+"](__name__)["+"](".")["+"](this.constructor.name)["+"](" #")["+"](this.ρσ_object_id)["+"](">");
+            };
+            Craft.prototype.__str__ = async function __str__() {
+                return this.__repr__();
+            };
+            Object.defineProperty(Craft.prototype, "__bases__", {value: []});
+            
+            
+            
+            
+        
+            "155";
+            _GS_1 = new Craft;
+            (await _GS_1.__init__(vec(R["+"](h), 0, 0), R["/"](2.5), yellowcolor, true, 1e3, vc["*"](vec(0, 0, speed)), vec(0, 0, 0), deltatimea, deltatimeb));
+            craft2 = _GS_1;
+            "157";
+            timelabela = ρσ_interpolate_kwargs.call(this, label, [ρσ_desugar_kwargs({pos: (await craft2.updateLocation()), xoffset: 50, yoffset: 50, visible: false, background: color.green, height: 20, linewidth: 3})]);
+            "158";
+            timelabelb = ρσ_interpolate_kwargs.call(this, label, [ρσ_desugar_kwargs({pos: (await craft2.updateLocation()), xoffset: 50, yoffset: 50, visible: false, background: color.red, height: 20, linewidth: 3})]);
+            "160";
+            while (mag(craft2.r)[">="](R["*"](6)["/"](5))) {
+                "161";
+                (await rate(4["*"](60)["*"](60)));
+                "162";
+                if (running) {
+                    "163";
+                    (await craft2.update(dt));
+                }
+            }
+        };
+        if (!__main__.__module__) Object.defineProperties(__main__, {
+            __module__ : {value: null}
+        });
+        
+        ;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; __main__() })})()
+        
+      
+        // END JAVASCRIPT
+        
+        //--><!]]></script>
+        </div>
+   
+</body>
+</html>

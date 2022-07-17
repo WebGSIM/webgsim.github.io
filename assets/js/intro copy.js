@@ -1,5 +1,5 @@
-document.writeln(`<div id="intro" class="d-flex justify-cntent-center align-items-center">
-<div id="introCarousel" data-bs-interval="4000" class="container carousel carousel-fade" data-bs-ride="carousel">
+document.writeln(`<section id="intro" class="d-flex justify-cntent-center align-items-center">
+<div id="introCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
   <div class="carousel-item active">
     <div class="carousel-container">
       <div data-ptr-size="200x200" data-ptr-pattern="assets/img/texture-saturn.jpg" data-ptr-ring="true" class="saturn planet">
@@ -17,28 +17,35 @@ document.writeln(`<div id="intro" class="d-flex justify-cntent-center align-item
         data-ptr-pattern="assets/img/texture-earth.jpg" class="earth planet"></div>
       <h2 class="animate__animated animate__fadeInDown">Purpose of WebGSIM</h2>
       <p class="animate__animated animate__fadeInUp">This web application is only for educational research purpose.
-        </p>
+        (Final
+        Year Project
+        in UPSI)</p>
     </div>
   </div>
   <div class="carousel-item">
     <div class="carousel-container">
-      <div data-ptr-autospin="30000ms" data-ptr-angle="0deg"
+      <div data-ptr-autospin="600ms" data-ptr-angle="40deg"
         data-ptr-glow="0 0 50px rgba(236,206,20,0.35), inset 33px 20px 50px rgba(0,0,0,0.5)" data-ptr-size="200x200"
-        data-ptr-pattern="assets/img/suntexture.png" class="jupiter planet"></div>
+        data-ptr-pattern="assets/img/texture-jupiter.jpg" class="jupiter planet"></div>
       <h2 class="animate__animated animate__fadeInDown">Supervision of WebGSIM</h2>
-      <p class="animate__animated animate__fadeInUp">This research project is under the
+      <p class="animate__animated animate__fadeInUp">This research project (web Application) is under the
         supervision of Dr. Tho Siew
         Wei</p>
     </div>
   </div>
-  
+  <a class="carousel-control-prev" href="#introCarousel" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+  </a>
+  <a class="carousel-control-next" href="#introCarousel" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+  </a>
 </div>
 <div class="group-container" id="getstarted">
   <div class="multi-button skin3">
-    <button onclick="window.location='lesson311.html'">Get Started</button>
+    <button>Get Started</button>
   </div>
 </div>
-</div>`);
+</section>`);
 
 /* ===========================================================
  * jquery-planetarium.js v1.0

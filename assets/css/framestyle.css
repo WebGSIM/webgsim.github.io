@@ -1,0 +1,46 @@
+.glowscript {
+    background-color: black;
+    width: 640px;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.glowscript button {
+    /* float: right; */
+    font-weight: 1000;
+    border-color: black !important;
+    margin-top: 5px;
+    /* font-size: 20px; */
+    background: #FCF9C6 !important;
+    border-radius: 0px;
+    margin-bottom: 10px;
+
+
+}
+
+.glowscript button:hover {
+    /* float: right; */
+    color: white !important;
+    background: black !important;
+}
+
+body {
+    width: 640px;
+    height: 400px;
+    background: white !important;
+    overflow: hidden;
+}
+
+.glowscript canvas {
+    border-radius: 10px;
+    bottom: 59px;
+}
+
+html {
+    background-color: white;
+}
+
+.glowscript-canvas-wrapper {
+    bottom: 59px;
+}

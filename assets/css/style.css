@@ -425,7 +425,7 @@ h6 {
 --------------------------------------------------------------*/
 #intro {
   width: 100%;
-  height: 82vh;
+  height: 615px;
   overflow: hidden;
   position: relative;
   /* background: url("../img/gravity.jpg") top center; */
@@ -468,10 +468,16 @@ h6 {
 
 #intro p {
   width: 80%;
+  max-height: 30%;
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
   margin: 0 auto 30px auto;
   color: #fff;
+}
+
+#intro .group-container {
+  position: absolute;
+  top: 480px
 }
 
 #intro .carousel-control-prev,
@@ -505,6 +511,7 @@ h6 {
   border: 2px solid #f6b024;
   /* position: relative;
   top: -300px; */
+
 }
 
 #intro .btn-get-started:hover {
@@ -513,7 +520,7 @@ h6 {
   text-decoration: none;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   #intro p {
     width: 60%;
   }
@@ -534,7 +541,7 @@ h6 {
   #intro h2 {
     font-size: 28px;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Sections General
@@ -570,31 +577,67 @@ section {
 /*--------------------------------------------------------------
 # Portal
 --------------------------------------------------------------*/
+/* .portal .col-lg-2 {
+  width: 20%;
+}
+
+.portal .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1500px;
+}
+
+.portal .row {
+  width: inherit;
+} */
+@media (min-width: 992px) {
+  .portal .col-lg-2 {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portal .container {
+    max-width: 1500px;
+  }
+
+  .portal .portalbox {
+    width: 20%;
+  }
+
+}
+
 .portal {
   padding-top: 0;
   position: relative;
   bottom: -20px;
 }
 
+
 .portal .icon-box {
   padding: 40px 30px;
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(181deg, rgba(225, 109, 245, 1) 6.9%, rgba(78, 248, 231, 1) 112.8%);
+  background-color: #0d1117;
   box-shadow: 5px 10px 29px 0 rgba(68, 88, 144, 0.2);
   transition: all 0.3s ease-in-out;
   border-radius: 10px;
   cursor: pointer;
+  box-shadow: 5px 5px black;
 }
 
 .portal .icon-box:hover {
   padding: 40px 30px;
   position: relative;
   overflow: hidden;
-  background-image: radial-gradient(circle 685.3px at 47.8% 55.1%, rgba(255, 99, 152, 1) 0%, rgba(251, 213, 149, 1) 90.1%);
+  /* background-image: radial-gradient(circle 685.3px at 47.8% 55.1%, rgba(255, 99, 152, 1) 0%, rgba(251, 213, 149, 1) 90.1%); */
   box-shadow: 5px 10px 29px 0 rgba(68, 88, 144, 0.2);
   transition: all 0.3s ease-in-out;
   border-radius: 10px;
+  transform: translate(5px, 5px);
+  box-shadow: none;
 }
 
 
@@ -607,7 +650,7 @@ section {
 .portal .icon i {
   font-size: 36px;
   line-height: 1;
-  color: red;
+  color: blue;
 }
 
 .portal .title {
@@ -617,7 +660,11 @@ section {
 }
 
 .portal .title a {
-  color: black;
+  color: white;
+}
+
+.portal .title a:hover {
+  color: white;
 }
 
 .portal .description {
@@ -632,7 +679,8 @@ section {
 # gravity
 --------------------------------------------------------------*/
 .gravity {
-  background: #f1f8ff;
+  /* background: #f1f8ff; */
+  background-color: #0d1117;
   padding: 0;
   position: relative;
   top: 50px;
@@ -645,17 +693,22 @@ section {
 .gravity .content h3 {
   font-weight: 400;
   font-size: 34px;
+  color: white;
+  padding-bottom: 10px;
 }
+
 
 .gravity .content h4 {
   font-size: 20px;
   font-weight: 700;
   margin-top: 5px;
+
 }
 
 .gravity .content p {
   font-size: 15px;
-  color: #848484;
+  color: #c9d1d9;
+  line-height: 26px;
 }
 
 .gravity .video-box {
@@ -682,7 +735,7 @@ section {
 
 .gravity .accordion-list li {
   padding: 20px;
-  background: #fff;
+  background: #161b22;
   border-radius: 4px;
 }
 
@@ -696,6 +749,11 @@ section {
   padding-right: 30px;
   outline: none;
   cursor: pointer;
+
+}
+
+.gravity .accordion-list li a {
+  color: #f0f6fc;
 }
 
 .gravity .accordion-list span {
@@ -715,6 +773,7 @@ section {
 .gravity .accordion-list p {
   margin-bottom: 0;
   padding: 10px 0 0 0;
+  color: #c9d1d9;
 }
 
 .gravity .accordion-list .icon-show {
@@ -722,7 +781,7 @@ section {
 }
 
 .gravity .accordion-list a.collapsed {
-  color: #343a40;
+  color: white;
 }
 
 .gravity .accordion-list a.collapsed:hover {
@@ -3554,6 +3613,8 @@ output {
   background: black !important;
 }
 
+
+
 range-slider {
   --element-height: 24px;
   --track-height: 10px;
@@ -3663,6 +3724,24 @@ output {
   justify-content: center;
 }
 
+div.glowscript-canvas-wrapper+div {
+  background-color: #413F42;
+  border-radius: 0px 0px 10px 10px;
+  padding: 5px 5px 5px 5px;
+  width: 640px;
+  position: relative;
+  bottom: 74px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.lesson321 .col-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #lesson312 .row {
   width: 1296px;
   height: 485px;
@@ -3686,4 +3765,21 @@ output {
   .section322 .container {
     max-width: 1320px;
   }
+}
+
+.answerquestion {
+  color: white !important;
+  background-color: #051367 !important;
+}
+
+.answerquestion:hover {
+  background-color: green !important;
+
+}
+
+iframe {
+  border: 0;
+  width: 647px;
+  height: 408px;
+  overflow: hidden;
 }

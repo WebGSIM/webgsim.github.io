@@ -394,7 +394,7 @@ craft.m = 1000
 craft.v=vec(0,0,velocity)
 craft.a=vec(0,0,0)
 r=craft.pos-earth.pos
-T = text(text='Satellite velocity = '+velocity+' m/s', align='center', color=color.red, height=R/1.5,pos=vec(0,2*R,0))
+T = text(text='Satellite velocity = '+velocity+' m/s', align='center', color=color.green, height=R/1.5,pos=vec(0,2*R,0))
 
 while True:
     rate(4*60*60)
