@@ -5,7 +5,7 @@ document.writeln(`<div id="intro" class="d-flex justify-cntent-center align-item
       <div data-ptr-size="200x200" data-ptr-pattern="assets/img/texture-saturn.jpg" data-ptr-ring="true" class="saturn planet">
       </div>
       <h2 class="animate__animated animate__fadeInDown">Welcome to <span>WebGSIM</span></h2>
-      <p class="animate__animated animate__fadeInUp">WebGSIM stands for Web Gravitation Simulation Interactive
+      <p class="animate__animated animate__fadeInDown">WebGSIM stands for Web Gravitation Simulation Interactive
         Module.
       </p>
     </div>
@@ -16,7 +16,7 @@ document.writeln(`<div id="intro" class="d-flex justify-cntent-center align-item
         data-ptr-glow="0 0 50px rgba(0,252,255,0.35), inset 33px 20px 50px rgba(0,0,0,0.5)" data-ptr-size="200x200"
         data-ptr-pattern="assets/img/texture-earth.jpg" class="earth planet"></div>
       <h2 class="animate__animated animate__fadeInDown">Purpose of WebGSIM</h2>
-      <p class="animate__animated animate__fadeInUp">This web application is only for educational research purpose.
+      <p class="animate__animated animate__fadeInDown">This web application is only for educational research purpose.
         </p>
     </div>
   </div>
@@ -26,7 +26,7 @@ document.writeln(`<div id="intro" class="d-flex justify-cntent-center align-item
         data-ptr-glow="0 0 50px rgba(236,206,20,0.35), inset 33px 20px 50px rgba(0,0,0,0.5)" data-ptr-size="200x200"
         data-ptr-pattern="assets/img/suntexture.png" class="jupiter planet"></div>
       <h2 class="animate__animated animate__fadeInDown">Supervision of WebGSIM</h2>
-      <p class="animate__animated animate__fadeInUp">This research project is under the
+      <p class="animate__animated animate__fadeInDown">This research project is under the
         supervision of Dr. Tho Siew
         Wei</p>
     </div>
