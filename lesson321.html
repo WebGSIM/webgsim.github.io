@@ -8,6 +8,7 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
     <!-- <link type="text/css" href="glowscript_libraries/ide.css" rel="stylesheet" /> -->
+    <script src="assets/js/loading.js"></script>
     <link type="text/css" href="glowscript_libraries/jquery-ui.custom.css" rel="stylesheet" />
 
     <script type="text/javascript" src="glowscript_libraries/jquery.min.js"></script>
@@ -56,7 +57,7 @@
     <script src="./assets/js/header.js"></script>
 
     <section>
-        <div class="container" data-aos="fade-up">
+        <div class="container containerlesson" data-aos="fade-up">
             <div id="sublesson">
                 <h2>3.2.1 Kepler's Second Law</h2>
             </div>
@@ -66,6 +67,7 @@
                     <div class="col-6">
                         <div id="glowframe"><iframe name="iframe1" id="glowsim" src="sim1.html"></iframe></div>
                     </div>
+
                     <div class="col-6" id="quiz321">
 
                         <p class="glowtext">
@@ -78,7 +80,8 @@
                             2) Compare distance (white line) between Moon and Sun in green & red region.<br>
                             3) According to formula area of sector, is green area equals to red area?
                         </p>
-                        <button onclick="startQuiz()" class="readybutton" id="readyobserve"> I am ready to record my
+                        <button onclick="changeLesson(true)" class="readybutton" id="readyobserve"> I am ready to record
+                            my
                             observation</button>
 
                     </div>
@@ -110,6 +113,7 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/progress321.js"></script>
+
 </body>
 <script>
 
@@ -123,12 +127,21 @@
       </div>`
     var existingButtons = document.getElementsByTagName('button');
     var buttonNumber = existingButtons.length;
-    runCode('0')
+    // runCode('0')
     app.nextStep();
     window.scrollTo({
         top: 200,
         behavior: 'smooth'
     });
+    document.getElementById('glowsim').addEventListener('mouseover', function () {
+        document.getElementById('glowsim').focus();
+    });
+    document.getElementById('glowsim').addEventListener('mouseleave', function () {
+        document.getElementById('glowsim').blur();
+    })
+
+
+
 </script>
 
 </html>

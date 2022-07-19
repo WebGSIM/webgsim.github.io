@@ -11,7 +11,8 @@ let n = 0;
 for (let i = 0; i < quiz321.length; i++) {
     html321[i] = quizGenerator(quiz321[i]);
 }
-
+// 1   (0,1,2) 0 +n
+// 3   (3,4,5) 3 +n
 
 function quizGenerator(quiz) {
     return `<div class="quiz-container" id="quiz" data-aos="fade-in">
@@ -30,7 +31,9 @@ function quizGenerator(quiz) {
     </div>
     </div>`
 }
-html321[5] = `  <p class="glowtext">
+glowframe = [], glowtext = [];
+glowframe[0] = `<iframe name="iframe1" id="glowsim" src="sim1.html"></iframe>`;
+glowtext[0] = `  <p class="glowtext">
 <strong style="font-size:35px">OBSERVE THIS SIMULATION</strong><br><br>
 This simulation shows that Moon is orbiting the Earth
 in <strong>CIRCULAR ORBIT</strong>. Moon sweeps out
@@ -40,10 +43,11 @@ Please record your <strong>OBSERVATION</strong> and <strong>CONCLUSION</strong>.
 2) Compare distance (white line) between Moon and Sun in green & red region.<br>
 3) According to formula area of sector, is green area equals to red area?
 </p>
-<button onclick="startQuiz()" class="readybutton" id="readyobserve"> I am ready to record my
+<button onclick="changeLesson(true)" class="readybutton" id="readyobserve"> I am ready to record my
 observation</button>`;
 
-html321[6] = `<p class="glowtext">
+glowframe[2] = `<iframe name="iframe1" id="glowsim" src="sim2.html"></iframe>`;
+glowtext[2] = `<p class="glowtext">
 <strong style="font-size:35px">OBSERVE ANOTHER SIMULATION</strong><br><br>
 This simulation shows that Earth is orbiting the sun
 in <strong>ELLIPTICAL ORBIT</strong>. <br>
@@ -54,36 +58,53 @@ Please record your <strong>OBSERVATION</strong> and <strong>CONCLUSION</strong>.
 2) Compare distance (white line) between Earth and Sun in green & red region.<br>
 3) According to formula area of sector, is green area equals to red area?
 </p>
-<button onclick="startQuiz()" class="readybutton"> I am ready to record my observation</button>`;
+<button onclick="changeLesson(true)" class="readybutton" id="readyobserve"> I am ready to record my observation</button>`;
+
 
 let lesson = 0;
 function changeLesson(change) {
     app.nextStep(change);
     if (change) {
         lesson++;
+        if (lesson == 0 || lesson == 2) {
+            document.getElementById('glowframe').innerHTML = glowframe[lesson];
+            document.getElementById('quiz321').innerHTML = glowtext[lesson];
+            document.getElementById('glowsim').addEventListener('mouseover', function () {
+                document.getElementById('glowsim').focus();
+            });
+            document.getElementById('glowsim').addEventListener('mouseleave', function () {
+                document.getElementById('glowsim').blur();
+            });
+        }
+        else {
+            startQuiz();
+        }
     }
     else {
         lesson--;
-    }
-    if (lesson == 0 || lesson == 2) {
-        document.getElementById('quiz321').innerHTML = html321[5 + lesson / 2];
-        if (lesson == 0) {
-            document.getElementById('glowframe').innerHTML = `<iframe name="iframe1" id="glowsim" src="sim1.html"></iframe>`
+        if (lesson == 0 || lesson == 2) {
+            document.getElementById('quiz321').innerHTML = glowtext[lesson];
         }
         else {
-            document.getElementById('glowframe').innerHTML = `<iframe name="iframe1" id="glowsim" src="sim2.html"></iframe>`
+            document.getElementById('glowframe').innerHTML = glowframe[lesson - 1];
+            document.getElementById('glowsim').addEventListener('mouseover', function () {
+                document.getElementById('glowsim').focus();
+            });
+            document.getElementById('glowsim').addEventListener('mouseleave', function () {
+                document.getElementById('glowsim').blur();
+            });
+            startQuiz();
         }
     }
-    else {
-        startQuiz();
-    }
+
     if (lesson == 0) {
         document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
           onclick="window.location='lesson.html'"><i class="fa fa-home"></i>    BACK</button>
           </div>
           <div id="skip"><button type="input" class="btn" id="skipbtn"
           onclick="changeLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
-          </div>`
+          </div>`;
+
 
     }
     else if (lesson == 3) {
@@ -93,7 +114,8 @@ function changeLesson(change) {
         <div id="skip"><button type="input" class="btn" 
         onclick="window.location='lesson322.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
         </div>
-       `
+       `;
+
     }
     else {
         document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
@@ -103,11 +125,11 @@ function changeLesson(change) {
       onclick="changeLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
       </div>`}
 
-
+    n = 0;
 }
 
 function startQuiz() {
-    document.getElementById('quiz321').innerHTML = html321[n];
+    document.getElementById('quiz321').innerHTML = html321[1.5 * lesson - 1.5];
     document.getElementById("buttons").addEventListener("click", checkSelection);
     window.addEventListener("click", checkActiveSelection);
 }
@@ -116,28 +138,15 @@ function nextQuiz() {
     if (correct) {
         document.getElementById('correctaudio').play();
         n++;
-        if (n == 3) {
-            app.nextStep();
-            runCode('1');
-            document.getElementById('quiz321').innerHTML = `<p class="glowtext">
-            <strong style="font-size:35px">OBSERVE ANOTHER SIMULATION</strong><br><br>
-            This simulation shows that Earth is orbiting the sun
-            in <strong>ELLIPTICAL ORBIT</strong>. <br>
-            Earth sweeps out
-            green region and red region in a time interval of 5 days. <br><br>
-            Please record your <strong>OBSERVATION</strong> and <strong>CONCLUSION</strong>. <br>
-            1) Compare arc length (blue points) swept by Earth in green & red region.<br>
-            2) Compare distance (white line) between Earth and Sun in green & red region.<br>
-            3) According to formula area of sector, is green area equals to red area?
-        </p>
-        <button onclick="startQuiz()" class="readybutton"> I am ready to record my observation</button>`;
+        if (1.5 * lesson - 1.5 + n == 3) {
+            changeLesson(true);
         }
-        else if (n == 6) {
+        else if (1.5 * lesson - 1.5 + n == 6) {
             app.nextStep();
             displayCongrats();
         }
         else {
-            document.getElementById('quiz321').innerHTML = html321[n];
+            document.getElementById('quiz321').innerHTML = html321[1.5 * lesson - 1.5 + n];
             document.getElementById("buttons").addEventListener("click", checkSelection);
             window.addEventListener("click", checkActiveSelection);
         }
@@ -151,7 +160,7 @@ function nextQuiz() {
 }
 
 function checkSelection() {
-    if (document.activeElement.id == quiz321[n][4]) {
+    if (document.activeElement.id == quiz321[1.5 * lesson - 1.5 + n][4]) {
         correct = true;
     }
     else {
@@ -160,7 +169,7 @@ function checkSelection() {
 }
 
 function checkActiveSelection() {
-    if (document.activeElement.id != quiz321[n][4]) {
+    if (document.activeElement.id != quiz321[1.5 * lesson - 1.5 + n][4]) {
         correct = false;
     }
 }

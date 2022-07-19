@@ -3,10 +3,10 @@ var app = new Vue({
     data: {
         currentStep: null,
         steps: [
-            { label: "Concrete Experience" },
-            { label: "Reflective Observation" },
-            { label: "Abstract Conceptualization" },
-            { label: "Active Experimentation" }
+            { label: "Circular orbit" },
+            { label: "Observation one" },
+            { label: "Elliptical orbit" },
+            { label: "Observation two" }
         ]
     },
     methods: {

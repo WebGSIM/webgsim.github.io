@@ -87,7 +87,7 @@ function displayLesson311() {
   document.getElementById('lesson311').innerHTML = html311[lessonNumber];
   if (lessonNumber == 0) {
     document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
-      onclick="window.location='lesson.html'"><i class="fa fa-home"></i>    BACK</button>
+      onclick="window.location='index.html'"><i class="fa fa-home"></i>    BACK</button>
       </div>
       <div id="skip"><button type="input" class="btn" id="skipbtn"
       onclick="changeLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
@@ -95,7 +95,7 @@ function displayLesson311() {
 
   }
 
-  else if (lessonNumber == 5) {
+  else if (lessonNumber >= 3) {
     document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
     onclick="changeLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
     </div>

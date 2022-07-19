@@ -237,7 +237,7 @@ function nextLesson(change) {
         onclick="nextLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
         </div>
         <div id="skip"><button type="input" class="btn" 
-        onclick="window.location='lesson312.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
+        onclick="window.location='lesson311.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
         </div>
        `
     }

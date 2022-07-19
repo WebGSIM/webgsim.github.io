@@ -173,34 +173,19 @@ function changeSegment() {
     }
 
 }
-
+skip_segment = [0, 7, 8, 10];
+seg = 0;
 function skipSegment(change) {
     deriveVideo.pause();
     document.getElementById('writingaudio').pause();
+    app.nextStep(change);
     if (change) {
-        segment += 1;
-        if (segment == 7) {
-            app.nextStep();
-        }
-        else if (segment == 8) {
-            app.nextStep();
-        }
-        else if (segment == 9) {
-            app.nextStep();
-        }
+        seg++;
     }
     else {
-        segment -= 1;
-        if (segment == 6) {
-            app.nextStep(false);
-        }
-        else if (segment == 7) {
-            app.nextStep(false);
-        }
-        else if (segment == 8) {
-            app.nextStep(false);
-        }
+        seg--;
     }
+    segment = skip_segment[seg];
 
     deriveVideo.currentTime = 2.5 + segment * 3;
 
