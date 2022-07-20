@@ -152,6 +152,7 @@ function checkSelection() {
 
 function checkActiveSelection() {
   selectbtn.focus();
+  document.getElementById('skip').innerText = `triggered`
 }
 
 function checkAnswer() {
