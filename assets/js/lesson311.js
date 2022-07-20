@@ -133,21 +133,25 @@ function changeLesson(next) {
 
   if (lessonNumber >= 3) {
     document.getElementById("buttons").addEventListener("click", checkSelection);
-    window.addEventListener("click", checkActiveSelection);
+
   }
 }
 
 let correct = false;
+let selectbtn = "";
 function checkSelection() {
+  selectbtn = document.activeElement;
+  window.addEventListener("click", checkActiveSelection);
   if (document.activeElement.id == lesson311[3][lessonNumber - 3][5]) {
     correct = true;
+  }
+  else {
+    correct = false;
   }
 }
 
 function checkActiveSelection() {
-  if (document.activeElement.id != lesson311[3][lessonNumber - 3][5]) {
-    correct = false;
-  }
+  selectbtn.focus();
 }
 
 function checkAnswer() {
