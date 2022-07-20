@@ -132,27 +132,32 @@ function changeLesson(next) {
   displayLesson311();
 
   if (lessonNumber >= 3) {
-    document.getElementById("buttons").addEventListener("click", checkSelection);
-
+    selectedbutton = -1;
+    for (let i = 0; i < 4; i++) {
+      if (i == lesson311[3][lessonNumber - 3][5] - 1) {
+        document.getElementsByClassName("btn0")[i].addEventListener("click", function () {
+          correct = true;
+          selectedbutton = i;
+        });
+      }
+      else {
+        document.getElementsByClassName("btn0")[i].addEventListener("click", function () {
+          correct = false;
+          selectedbutton = i;
+        });
+      }
+    }
+    window.addEventListener('click', maintainfocus)
   }
 }
 
 let correct = false;
-let selectbtn = "";
-function checkSelection() {
-  selectbtn = document.activeElement;
-  window.addEventListener("click", checkActiveSelection);
-  if (document.activeElement.id == lesson311[3][lessonNumber - 3][5]) {
-    correct = true;
-  }
-  else {
-    correct = false;
-  }
-}
+let selectedbutton = -1;
 
-function checkActiveSelection() {
-  selectbtn.focus();
-  document.getElementById('skip').innerText += selectbtn.innerHTML
+
+function maintainfocus() {
+  console.log(selectedbutton)
+  document.getElementsByClassName("btn0")[selectedbutton].focus();
 }
 
 function checkAnswer() {
