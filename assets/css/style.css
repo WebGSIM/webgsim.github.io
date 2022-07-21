@@ -2128,6 +2128,12 @@ section {
   #swiper-lesson {
     width: inherit
   }
+
+  .swiper-container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    width: 350px;
+  }
 }
 
 #portfolio2 {
