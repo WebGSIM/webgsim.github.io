@@ -176,7 +176,7 @@ extraslide312[3] = ["./assets/Lesson/312/effectdistances/slide1.jpg", "./assets/
 for (let i = 1; i <= 3; i += 2) {
   for (let n = 0; n < lesson312[i][0].length + lesson312[i][2].length; n++) {
     if (n < lesson312[i][0].length) {
-      html312[i][n] = `<div data-aos="fade-in">
+      html312[i][n] = `<div data-aos="fade-in" class="centerstory">
       <picture>
       <source media="(max-width:670px)" srcset=${extraslide312[i][n]}>
       <img src="${lesson312[i][0][n]}">

@@ -3445,7 +3445,7 @@ button:hover {
   #lesson312slide .text-box {
     left: 0px !important;
     height: 4rem !important;
-    width: 94%;
+    width: 330px;
   }
 
   .lesson312 .text-problem {
@@ -3487,6 +3487,12 @@ button:hover {
     padding: 0.35rem;
   }
 
+  .centerstory {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 
