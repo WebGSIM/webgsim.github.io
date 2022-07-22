@@ -59,7 +59,7 @@ quiz312b = ["Based on your findings, when mass decreases, gravitational force wi
 quiz312c = ["Based on your findings, Earth is lossing mass, but it has no significant impact to us. ", "True", "False", "1"];
 quiz312m = [quiz312a, quiz312b, quiz312c];
 
-slide312r = ["./assets/Lesson/312/effectdistance/Slide1.png", "./assets/Lesson/312/effectdistance/Slide2.png", "./assets/Lesson/312/effectdistance/Slide3.png", "./assets/Lesson/312/effectdistance/Slide4.png", "./assets/Lesson/312/effectdistance/Slide5.png", "./assets/Lesson/312/effectdistance/Slide6.png"];
+slide312r = ["./assets/Lesson/312/effectdistance/slide1.jpg", "./assets/Lesson/312/effectdistance/slide2.jpg", "./assets/Lesson/312/effectdistance/slide3.jpg", "./assets/Lesson/312/effectdistance/slide4.jpg", "./assets/Lesson/312/effectdistance/slide5.jpg", "./assets/Lesson/312/effectdistance/slide6.jpg"];
 text312r = ["Assuming you are a scientist.", "You are interested in tidal formation.", "Based on the information just now, you know that distance between Earth and Moon is changing. ", "Therefore, you are requested to investigate the effect of distance on gravitational force. ", "First, calculate the gravitational force between Moon and 1 kg of seawater on Earth when Moon is farthest away from Earth. ", "Second, calculate the gravitational force between Moon and 1 kg of seawater on Earth when Moon is closest to Earth. ", "Fill in your calculation in this table. "];
 quiz312d = ` <div>
 <div class="text-box texttable" id="text-box">
@@ -170,15 +170,15 @@ for (let i = 0; i <= 2; i += 2) {
     </div>
     </div>`
 }
-
-extraslide312 = ["./assets/Lesson/312s/slide1.jpg", "./assets/Lesson/312s/slide2.jpg", "./assets/Lesson/312s/slide3.jpg", "./assets/Lesson/312s/slide4.jpg", "./assets/Lesson/312s/slide5.jpg", "./assets/Lesson/312s/slide6.jpg", "./assets/Lesson/312s/slide7.jpg"];
-
+extraslide312 = [];
+extraslide312[1] = ["./assets/Lesson/312s/slide1.jpg", "./assets/Lesson/312s/slide2.jpg", "./assets/Lesson/312s/slide3.jpg", "./assets/Lesson/312s/slide4.jpg", "./assets/Lesson/312s/slide5.jpg", "./assets/Lesson/312s/slide6.jpg", "./assets/Lesson/312s/slide7.jpg"];
+extraslide312[3] = ["./assets/Lesson/312/effectdistances/slide1.jpg", "./assets/Lesson/312/effectdistances/slide2.jpg", "./assets/Lesson/312/effectdistances/slide3.jpg", "./assets/Lesson/312/effectdistances/slide4.jpg", "./assets/Lesson/312/effectdistances/slide5.jpg", "./assets/Lesson/312/effectdistances/slide6.jpg"];
 for (let i = 1; i <= 3; i += 2) {
   for (let n = 0; n < lesson312[i][0].length + lesson312[i][2].length; n++) {
     if (n < lesson312[i][0].length) {
       html312[i][n] = `<div data-aos="fade-in">
       <picture>
-      <source media="(max-width:670px)" srcset=${extraslide312[n]}>
+      <source media="(max-width:670px)" srcset=${extraslide312[i][n]}>
       <img src="${lesson312[i][0][n]}">
       </picture>
       <div class="text-box">
