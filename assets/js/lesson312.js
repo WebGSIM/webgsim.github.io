@@ -1,5 +1,5 @@
-slide312m = ["./assets/Lesson/312/slide1.svg", "./assets/Lesson/312/slide2.jpg", "./assets/Lesson/312/slide3.jpg", "./assets/Lesson/312/slide4.png", "./assets/Lesson/312/slide5.png", "./assets/Lesson/312/slide6.png", "./assets/Lesson/312/slide7.png"];
-text312m = ["Assuming you are a physicist. (Click to continue...)", 'Based on the information given just now, you know that our Earth is lossing 50,000 tones of mass per year. (Click to continue...)'
+slide312m = ["./assets/Lesson/312/slide1.svg", "./assets/Lesson/312/slide2.jpg", "./assets/Lesson/312/slide3.jpg", "./assets/Lesson/312/slide4.jpg", "./assets/Lesson/312/slide5.jpg", "./assets/Lesson/312/slide6.jpg", "./assets/Lesson/312/slide7.jpg"];
+text312m = ["Assuming you are a physicist. (Click to continue...)", 'Based on the information given, you know that our Earth is lossing 50,000 tones of mass per year. (Click to continue...)'
   , "Therefore, you are requested to investigate the effect of mass on gravitational force. (Click to continue...)", "First, calculate gravitational force between apple and banana. (Click to continue...)", "Second, calculate gravitational force between apple and banana a year later. (Click to continue...)", "Repeat the calculation for banana and Earth surface. (Click to continue...)", "Repeat the calculation for Earth and Sun. (Click to continue...)"
   , "Fill in your calculation in this table."];
 quiz312a = `
@@ -163,9 +163,7 @@ for (let i = 0; i <= 2; i += 2) {
       </div>
     </div>
     <div class="col-sm-6 infovideo">
-      <h1>
-        <strong>WATCH THIS</strong>
-      </h1>
+     
       <h2>${lesson312[i][2]}</h2>
       <p>${lesson312[i][3]}
       </p>
@@ -173,11 +171,16 @@ for (let i = 0; i <= 2; i += 2) {
     </div>`
 }
 
+extraslide312 = ["./assets/Lesson/312s/slide1.jpg", "./assets/Lesson/312s/slide2.jpg", "./assets/Lesson/312s/slide3.jpg", "./assets/Lesson/312s/slide4.jpg", "./assets/Lesson/312s/slide5.jpg", "./assets/Lesson/312s/slide6.jpg", "./assets/Lesson/312s/slide7.jpg"];
+
 for (let i = 1; i <= 3; i += 2) {
   for (let n = 0; n < lesson312[i][0].length + lesson312[i][2].length; n++) {
     if (n < lesson312[i][0].length) {
       html312[i][n] = `<div data-aos="fade-in">
+      <picture>
+      <source media="(max-width:670px)" srcset=${extraslide312[n]}>
       <img src="${lesson312[i][0][n]}">
+      </picture>
       <div class="text-box">
           <h1 id="${n}" class="text-problem">
           </h1>
@@ -469,12 +472,12 @@ function changeLesson(next) {
         }
       });
     });
-    window.removeEventListener("keydown", fastSlide);
+    // window.removeEventListener("keydown", fastSlide);
   }
   else if (lessonNumber == 1 || lessonNumber == 3) {
     document.getElementById('lesson312').innerHTML = `<div class="slideshow-container" id="lesson312slide" onclick="changeSlide()"></div>`;
     changeSlide();
-    window.addEventListener("keydown", fastSlide);
+    // window.addEventListener("keydown", fastSlide);
   }
 
   else {
@@ -514,7 +517,7 @@ function changeSlide() {
       slideNumber++;
       if (slideNumber == lesson312[lessonNumber][0].length) {
         document.getElementById('lesson312').innerHTML = html312[lessonNumber][slideNumber];
-        window.removeEventListener("keydown", fastSlide);
+        // window.removeEventListener("keydown", fastSlide);
       }
 
       else {
@@ -530,10 +533,10 @@ function changeSlide() {
   }
 }
 
-function fastSlide() {
-  stop = true;
-  changeSlide();
-}
+// function fastSlide() {
+//   stop = true;
+//   changeSlide();
+// }
 
 function checkAnswer() {
   correct = true;

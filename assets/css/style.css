@@ -3173,6 +3173,10 @@ button:hover {
   font-size: 45px;
 }
 
+.infovideo h2 {
+  font-weight: 700;
+}
+
 .infovideo p {
   margin: 0px;
   padding-top: 5px;
@@ -3377,8 +3381,114 @@ button:hover {
 
 .video-element {
   width: 496px;
-  height: 310px;
+  height: inherit;
 }
+
+@media (max-width:1030px) {
+  .video-element {
+    width: 400px;
+    height: inherit;
+  }
+}
+
+@media (max-width:880px) {
+  .videodiv {
+    width: inherit;
+  }
+
+  .video-element {
+    width: 300px;
+    height: inherit;
+  }
+
+  #lesson312 .videoandtext {
+    width: inherit;
+  }
+
+  .infovideo {
+    width: inherit;
+  }
+
+  .videoandtext {
+    width: inherit !important;
+  }
+
+  .infovideo h1 {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    display: none;
+  }
+
+  .infovideo h2 {
+    font-size: 20px;
+
+  }
+
+  .infovideo p {
+    line-height: 1rem;
+    font-size: 14px;
+  }
+}
+
+@media (max-width:660px) {
+  #lesson312slide img {
+    width: 330px !important;
+    height: 350px !important;
+  }
+
+  #lesson312 .texttable {
+    height: fit-content;
+    left: 20px;
+  }
+
+  #lesson312slide .text-box {
+    left: 0px !important;
+    height: 4rem !important;
+    width: 94%;
+  }
+
+  .lesson312 .text-problem {
+    font-size: 12px !important;
+  }
+
+
+  .lesson312>div:first-child {
+    width: inherit;
+  }
+
+  .table-title {
+    font-size: 13px !important;
+  }
+
+  .input-table {
+    font-size: 10px !important;
+  }
+
+  .input-table .submit {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .infoconstant p {
+    margin-bottom: 0.5rem !important;
+    line-height: 14px;
+  }
+
+  .input-table .newton {
+    width: 37%;
+  }
+
+  .input-table .exponent {
+    width: 22%;
+  }
+
+  .input-table>:not(caption)>*>* {
+    padding: 0.35rem;
+  }
+
+}
+
 
 .box-sound {
   width: 0px;
@@ -3489,7 +3599,7 @@ button:hover {
 
 
 
-#lesson312 .text-box {
+.lesson312 .text-box {
   background-color: black;
   opacity: 0.7;
   bottom: 70px;

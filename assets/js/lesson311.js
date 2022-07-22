@@ -262,7 +262,7 @@ var congrats = `<div class="js-container container-congrats"></div>
   </div>
   <h1>Congratulations!</h1>
   <p>You have fully mastered <strong>3.1.1 Newton's Universal Law of Gravitation.</strong> Well done!</p>
-  <p>Now you are going to learn <strong>3.1.2 Problem Solving by using Universal Law of Gravitation</strong>, are you ready?</p>
+  <p>Now you are going to learn <strong>3.1.2 Newton's Universal Law of Gravitation (Problem Solving)</strong>, are you ready?</p>
   <button class="submit-btn" type="submit" onclick="window.location='lesson312.html'">Yes! I am ready to proceed.</button>
 </div>  
 
