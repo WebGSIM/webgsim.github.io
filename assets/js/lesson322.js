@@ -144,13 +144,7 @@ function changeSegment() {
                 if (segment == html322.length - 1) {
                     app.nextStep();
                     displayCongrats();
-                    document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
-                    onclick="skipSegment(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
-                    </div>
-                    <div id="skip"><button type="input" class="btn" 
-                    onclick="window.location='lesson331.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
-                    </div>
-                   `
+
                 }
 
                 if (segment == 7) {
@@ -173,7 +167,7 @@ function changeSegment() {
     }
 
 }
-skip_segment = [0, 7, 8, 10];
+skip_segment = [0, 8, 9, 10];
 seg = 0;
 function skipSegment(change) {
     deriveVideo.pause();
@@ -190,19 +184,19 @@ function skipSegment(change) {
     deriveVideo.currentTime = 2.5 + segment * 3;
 
     console.log(deriveVideo.currentTime);
-    document.getElementById('quizcontainer').innerHTML = html322[segment + 1];
+    document.getElementById('quizcontainer').innerHTML = html322[segment];
     if (segment == html322.length - 2) {
         document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
       onclick="skipSegment(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
       </div>
       <div id="skip"><button type="input" class="btn" 
-      onclick="window.location='lesson331.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
+      onclick="window.location='lesson331.html'">NEXT<i class="fa fa-arrow-right"></i> </button>
       </div>
      `
     }
     else if (segment == 0) {
-        document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" onclick="window.location='lesson.html'"><i class="fa fa-home"></i>
-    BACK</button>
+        document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" onclick="window.location='lesson321.html'"><i class="fa fa-arrow-left"></i>
+        PREV</button>
 </div>
 <div id="skip"><button type="input" class="btn" id="skipbtn" onclick="skipSegment(true)">SKIP <i
       class="fa fa-arrow-right"></i></button>

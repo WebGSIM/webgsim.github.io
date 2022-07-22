@@ -20,6 +20,6 @@ document.onreadystatechange = function () {
             top: 200,
             behavior: 'smooth'
         });
-
+        mediaSimulation();
     }
 };

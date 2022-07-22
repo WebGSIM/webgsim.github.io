@@ -695,8 +695,8 @@ function checkTime() {
 
 function displayButton() {
   if (lessonNumber == 0) {
-    document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" onclick="window.location='lesson.html'"><i class="fa fa-home"></i>
-    BACK</button>
+    document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" onclick="window.location='lesson311.html'"><i class="fa fa-arrow-left"></i>
+    PREV</button>
 </div>
 <div id="skip"><button type="input" class="btn" id="skipbtn" onclick="changeLesson(true)">SKIP <i
       class="fa fa-arrow-right"></i></button>
@@ -708,7 +708,7 @@ function displayButton() {
     onclick="changeLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
     </div>
     <div id="skip"><button type="input" class="btn" 
-    onclick="window.location='lesson321.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
+    onclick="window.location='lesson321.html'">NEXT<i class="fa fa-arrow-right"></i> </button>
     </div>
    `
   }

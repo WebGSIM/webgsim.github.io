@@ -75,6 +75,7 @@ function changeLesson(change) {
             document.getElementById('glowsim').addEventListener('mouseleave', function () {
                 document.getElementById('glowsim').blur();
             });
+            mediaSimulation();
         }
         else {
             startQuiz();
@@ -84,6 +85,7 @@ function changeLesson(change) {
         lesson--;
         if (lesson == 0 || lesson == 2) {
             document.getElementById('quiz321').innerHTML = glowtext[lesson];
+
         }
         else {
             document.getElementById('glowframe').innerHTML = glowframe[lesson - 1];
@@ -93,17 +95,18 @@ function changeLesson(change) {
             document.getElementById('glowsim').addEventListener('mouseleave', function () {
                 document.getElementById('glowsim').blur();
             });
+            mediaSimulation();
             startQuiz();
         }
     }
 
     if (lesson == 0) {
-        document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
-          onclick="window.location='lesson.html'"><i class="fa fa-home"></i>    BACK</button>
-          </div>
-          <div id="skip"><button type="input" class="btn" id="skipbtn"
-          onclick="changeLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
-          </div>`;
+        document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" onclick="window.location='lesson311.html'"><i class="fa fa-arrow-left"></i>
+    PREV</button>
+</div>
+<div id="skip"><button type="input" class="btn" id="skipbtn" onclick="changeLesson(true)">SKIP <i
+      class="fa fa-arrow-right"></i></button>
+</div>`
 
 
     }
@@ -112,7 +115,7 @@ function changeLesson(change) {
         onclick="changeLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
         </div>
         <div id="skip"><button type="input" class="btn" 
-        onclick="window.location='lesson322.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
+        onclick="window.location='lesson322.html'">NEXT<i class="fa fa-arrow-right"></i> </button>
         </div>
        `;
 
@@ -127,11 +130,27 @@ function changeLesson(change) {
 
     n = 0;
 }
-
+function focusQuiz() {
+    selectedbutton = -1;
+    for (let i = 0; i < 3; i++) {
+        if (i == quiz321[1.5 * lesson - 1.5 + n][4] - 1) {
+            document.getElementsByClassName("btn0")[i].addEventListener("click", function () {
+                correct = true;
+                selectedbutton = i;
+            });
+        }
+        else {
+            document.getElementsByClassName("btn0")[i].addEventListener("click", function () {
+                correct = false;
+                selectedbutton = i;
+            });
+        }
+    }
+    window.addEventListener('click', maintainfocus)
+}
 function startQuiz() {
     document.getElementById('quiz321').innerHTML = html321[1.5 * lesson - 1.5];
-    document.getElementById("buttons").addEventListener("click", checkSelection);
-    window.addEventListener("click", checkActiveSelection);
+    focusQuiz();
 }
 
 function nextQuiz() {
@@ -139,6 +158,7 @@ function nextQuiz() {
         document.getElementById('correctaudio').play();
         n++;
         if (1.5 * lesson - 1.5 + n == 3) {
+            window.removeEventListener('click', maintainfocus)
             changeLesson(true);
         }
         else if (1.5 * lesson - 1.5 + n == 6) {
@@ -147,8 +167,9 @@ function nextQuiz() {
         }
         else {
             document.getElementById('quiz321').innerHTML = html321[1.5 * lesson - 1.5 + n];
-            document.getElementById("buttons").addEventListener("click", checkSelection);
-            window.addEventListener("click", checkActiveSelection);
+            focusQuiz();
+
+
         }
 
 
@@ -159,20 +180,17 @@ function nextQuiz() {
     correct = false;
 }
 
-function checkSelection() {
-    if (document.activeElement.id == quiz321[1.5 * lesson - 1.5 + n][4]) {
-        correct = true;
-    }
-    else {
-        correct = false;
-    }
+let selectedbutton = -1;
+
+
+function maintainfocus() {
+    console.log(selectedbutton)
+    document.getElementsByClassName("btn0")[selectedbutton].focus();
 }
 
-function checkActiveSelection() {
-    if (document.activeElement.id != quiz321[1.5 * lesson - 1.5 + n][4]) {
-        correct = false;
-    }
-}
+
+
+
 var congrats = `<div class="js-container container-congrats"></div>
 <div id="congrats">
   <div class="checkmark-circle">
@@ -251,3 +269,29 @@ function displayCongrats() {
 
 
 }
+
+function mediaSimulation() {
+    const mediaQuery = window.matchMedia('(max-width: 670px)')
+    if (mediaQuery.matches) {
+        var iframe = document.getElementById("glowsim");
+        iframe.style.visibility = "hidden";
+        setTimeout(function () {
+            iframe.contentWindow.document.getElementsByTagName("BODY")[0].classList.add('glowsnone');
+            iframe.style.visibility = "visible";
+        }, '50')
+
+    }
+}
+mediaQuery = window.matchMedia('(max-width: 670px)')
+mediaQuery.onchange = (e) => {
+    if (e.matches) {
+        var iframe = document.getElementById("glowsim");
+        iframe.contentWindow.document.getElementsByTagName("BODY")[0].classList.add('glowsnone');
+    } else {
+        var iframe = document.getElementById("glowsim");
+        iframe.contentWindow.document.getElementsByTagName("BODY")[0].classList.remove('glowsnone');
+    }
+}
+
+
+

@@ -65,24 +65,11 @@
             <div id="lesson312" class="lesson321">
                 <div class="row">
                     <div class="col-6">
-                        <div id="glowframe"><iframe name="iframe1" id="glowsim" src="sim1.html"></iframe></div>
+                        <div id="glowframe"></div>
                     </div>
 
                     <div class="col-6" id="quiz321">
 
-                        <p class="glowtext">
-                            <strong style="font-size:35px">OBSERVE THIS SIMULATION</strong><br><br>
-                            This simulation shows that Moon is orbiting the Earth
-                            in <strong>CIRCULAR ORBIT</strong>. Moon sweeps out
-                            green region and red region in a time interval of 5 days. <br><br>
-                            Please record your <strong>OBSERVATION</strong> and <strong>CONCLUSION</strong>. <br>
-                            1) Compare arc length (blue points) swept by Moon in green & red region.<br>
-                            2) Compare distance (white line) between Moon and Sun in green & red region.<br>
-                            3) According to formula area of sector, is green area equals to red area?
-                        </p>
-                        <button onclick="changeLesson(true)" class="readybutton" id="readyobserve"> I am ready to record
-                            my
-                            observation</button>
 
                     </div>
                 </div>
@@ -119,12 +106,14 @@
 
 </script>
 <script>
-    document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn"
-      onclick="window.location='lesson.html'"><i class="fa fa-home"></i>    BACK</button>
-      </div>
-      <div id="skip"><button type="input" class="btn" id="skipbtn"
-      onclick="changeLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
-      </div>`
+    document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" onclick="window.location='lesson312.html'"><i class="fa fa-arrow-left"></i>
+    PREV</button>
+</div>
+<div id="skip"><button type="input" class="btn" id="skipbtn" onclick="changeLesson(true)">SKIP <i
+      class="fa fa-arrow-right"></i></button>
+</div>`;
+    document.getElementById('glowframe').innerHTML = glowframe[0];
+    document.getElementById('quiz321').innerHTML = glowtext[0];
     var existingButtons = document.getElementsByTagName('button');
     var buttonNumber = existingButtons.length;
     // runCode('0')

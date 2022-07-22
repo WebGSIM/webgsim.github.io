@@ -4170,3 +4170,37 @@ iframe {
     content: "Loading...";
   }
 }
+
+
+.glowsnone canvas {
+  width: 320px;
+}
+
+.glowsnone .glowscript {
+  width: 320px;
+  height: 200px;
+}
+
+.glowsnone body {
+  width: 320px;
+  height: 200px;
+}
+
+.glowsnone {
+  width: 320px;
+  height: 200px;
+}
+
+.glowsnone div.glowscript-canvas-wrapper+div {
+  width: 320px;
+}
+
+@media (max-width:670px) {
+  #glowsim {
+    width: 340px;
+  }
+
+  .lesson321 .col-6 {
+    width: inherit;
+  }
+}

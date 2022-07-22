@@ -225,7 +225,8 @@ function nextLesson(change) {
     displaySlider();
     if (lesson == 0) {
         document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
-          onclick="window.location='lesson.html'"><i class="fa fa-home"></i>    BACK</button>
+          onclick="window.location='lesson322.html'"><i class="fa fa-arrow-left"></i>
+          PREV</button>
           </div>
           <div id="skip"><button type="input" class="btn" id="skipbtn"
           onclick="nextLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
@@ -237,7 +238,7 @@ function nextLesson(change) {
         onclick="nextLesson(false)"><i class="fa fa-arrow-left"></i>    BACK</button>
         </div>
         <div id="skip"><button type="input" class="btn" 
-        onclick="window.location='lesson311.html'">SKIP LESSON <i class="fa fa-arrow-right"></i> </button>
+        onclick="window.location='index.html'">HOME<i class="fa fa-home"></i> </button>
         </div>
        `
     }
@@ -297,10 +298,10 @@ function checkActiveSelection() {
         correct = false;
     }
 }
-document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn"
-onclick="window.location='lesson.html'"><i class="fa fa-home"></i>    BACK</button>
-</div>
-<div id="skip"><button type="input" class="btn" id="skipbtn"
-onclick="nextLesson(true);">SKIP    <i class="fa fa-arrow-right"></i></button>
-</div>`;
-// runCode('2')
+document.getElementById('skipback').innerHTML = `<div id="back"><button type="input" class="btn" 
+          onclick="window.location='lesson322.html'"><i class="fa fa-arrow-left"></i>
+          PREV</button>
+          </div>
+          <div id="skip"><button type="input" class="btn" id="skipbtn"
+          onclick="nextLesson(true)">SKIP    <i class="fa fa-arrow-right"></i></button>
+          </div>`
