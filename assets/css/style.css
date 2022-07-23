@@ -3709,7 +3709,19 @@ button:hover {
 
 .glowtext {
   font-size: 18px;
-  padding: 10px 10px 10px 10px;
+  padding-left: 10px;
+}
+
+.glowtext h1 {
+  padding-bottom: 15px;
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.glowtext ul {
+  font-size: 18px;
+  font-weight: 650;
 }
 
 .simtext {
@@ -3730,7 +3742,7 @@ button:hover {
 }
 
 #readyobserve {
-  top: 0px;
+  top: -10px;
 }
 
 .readybutton:hover {
@@ -4202,6 +4214,7 @@ iframe {
 
   .lesson321 .col-6 {
     width: inherit;
+    height: 200px;
   }
 
   .lesson321 .row {
@@ -4220,7 +4233,51 @@ iframe {
     height: inherit;
   }
 
-  .col-6 {
-    height: 280px;
+  .glowtext h1 {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .glowtext p {
+    margin-bottom: 0px;
+  }
+
+  .glowtext ul {
+    font-size: 12px;
+  }
+
+  .lesson321 #readyobserve {
+    font-size: 12px;
+  }
+
+  .lesson321 #quiz321 .quiz-container {
+    height: inherit;
+    min-height: 260px;
+    overflow: hidden;
+  }
+
+  .lesson321 #quiz321 .quiz-container .quiz-header #question {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+
+
+  .lesson321 #quiz321 .quiz-container .quiz-header .btn0 {
+    font-size: 12px;
+    padding: 0.5rem;
+  }
+
+  .lesson321 #quiz321 .submitquiz {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+
+  .lesson321 #quiz321 .submitquiz #submit {
+    height: 50px;
+    position: relative;
+    top: -10px;
+    padding: 0px;
   }
 }

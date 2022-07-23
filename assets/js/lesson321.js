@@ -33,32 +33,36 @@ function quizGenerator(quiz) {
 }
 glowframe = [], glowtext = [];
 glowframe[0] = `<iframe name="iframe1" id="glowsim" src="sim1.html"></iframe>`;
-glowtext[0] = `  <p class="glowtext">
-<strong style="font-size:35px">OBSERVE THIS SIMULATION</strong><br><br>
-This simulation shows that Moon is orbiting the Earth
-in <strong>CIRCULAR ORBIT</strong>. Moon sweeps out
-green region and red region in a time interval of 5 days. <br><br>
-Please record your <strong>OBSERVATION</strong> and <strong>CONCLUSION</strong>. <br>
-1) Compare arc length (blue points) swept by Moon in green & red region.<br>
-2) Compare distance (white line) between Moon and Sun in green & red region.<br>
-3) According to formula area of sector, is green area equals to red area?
-</p>
+glowtext[0] = `  <div class="glowtext">
+<h1><strong style="font-size:35px">OBSERVE THIS SIMULATION</strong></h1>
+<p>This simulation shows that Moon is orbiting the Earth
+in circular orbit. Moon sweeps out
+green region and red region in a time interval of 5 days. </p>
+<p>Please record your observation and conclusion:</p>
+<ul>
+<li>Compare arc length (blue points) swept by Moon in green & red region.</li>
+<li>Compare distance (white line) between Earth and Moon in green & red region.</li>
+<li>According to formula area of sector, is green area equals to red area?</li>
+</ul>
+</div>
 <button onclick="changeLesson(true)" class="readybutton" id="readyobserve"> I am ready to record my
 observation</button>`;
 
 glowframe[2] = `<iframe name="iframe1" id="glowsim" src="sim2.html"></iframe>`;
-glowtext[2] = `<p class="glowtext">
-<strong style="font-size:35px">OBSERVE ANOTHER SIMULATION</strong><br><br>
-This simulation shows that Earth is orbiting the sun
-in <strong>ELLIPTICAL ORBIT</strong>. <br>
-Earth sweeps out
-green region and red region in a time interval of 5 days. <br><br>
-Please record your <strong>OBSERVATION</strong> and <strong>CONCLUSION</strong>. <br>
-1) Compare arc length (blue points) swept by Earth in green & red region.<br>
-2) Compare distance (white line) between Earth and Sun in green & red region.<br>
-3) According to formula area of sector, is green area equals to red area?
-</p>
-<button onclick="changeLesson(true)" class="readybutton" id="readyobserve"> I am ready to record my observation</button>`;
+glowtext[2] = `  <div class="glowtext">
+<h1><strong style="font-size:35px">OBSERVE ANOTHER SIMULATION</strong></h1>
+<p>This simulation shows that Earth is orbiting Sun
+in elliptical orbit. Earth sweeps out
+green region and red region in a time interval of 5 days. </p>
+<p>Please record your observation and conclusion:</p>
+<ul>
+<li>Compare arc length (blue points) swept by Earth in green & red region.</li>
+<li>Compare distance (white line) between Earth and Sun in green & red region.</li>
+<li>According to formula area of sector, is green area equals to red area?</li>
+</ul>
+</div>
+<button onclick="changeLesson(true)" class="readybutton" id="readyobserve"> I am ready to record my
+observation</button>`;
 
 
 let lesson = 0;
