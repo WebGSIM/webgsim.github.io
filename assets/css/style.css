@@ -4203,4 +4203,24 @@ iframe {
   .lesson321 .col-6 {
     width: inherit;
   }
+
+  .lesson321 .row {
+    width: inherit !important;
+  }
+
+  .glowtext {
+    font-size: 12px;
+  }
+
+  .glowtext strong {
+    font-size: 20px !important;
+  }
+
+  #glowframe {
+    height: inherit;
+  }
+
+  .col-6 {
+    height: 280px;
+  }
 }
