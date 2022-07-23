@@ -4205,6 +4205,7 @@ iframe {
 
 .glowsnone div.glowscript-canvas-wrapper+div {
   width: 320px;
+  bottom: 70px;
 }
 
 @media (max-width:670px) {
@@ -4279,5 +4280,9 @@ iframe {
     position: relative;
     top: -10px;
     padding: 0px;
+  }
+
+  #glowsim {
+    height: 210px;
   }
 }
