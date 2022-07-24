@@ -4286,3 +4286,39 @@ iframe {
     height: 210px;
   }
 }
+
+@media (max-width:670px) {
+  #lesson322 {
+    width: inherit;
+  }
+
+  .deriveformula {
+    width: inherit;
+    min-width: 0px;
+  }
+
+  .quizcontainer {
+    min-width: 0px;
+    width: 400px;
+    height: 220px;
+  }
+
+  #derive {
+    width: 382px;
+    object-fit: fill;
+    bottom: 50px;
+    height: 300px;
+  }
+
+  #quiztext {
+    font-size: 16px;
+  }
+
+  .quizbutton {
+    width: 180px !important;
+    height: 180px !important;
+    margin: 0px;
+  }
+
+
+}
