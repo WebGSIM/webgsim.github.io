@@ -4304,7 +4304,7 @@ iframe {
   }
 
   #derive {
-    width: 382px;
+    width: 100%;
     object-fit: fill;
     bottom: 50px;
     height: 300px;
@@ -4315,10 +4315,13 @@ iframe {
   }
 
   .quizbutton {
-    width: 180px !important;
+    width: 100% !important;
     height: 180px !important;
     margin: 0px;
   }
 
+  div.derivetext>* {
+    width: 49%;
+  }
 
 }

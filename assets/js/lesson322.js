@@ -111,6 +111,7 @@ function displayCongrats() {
 
 let segment = 0;
 let deriveVideo = document.getElementById('derive');
+deriveVideo.load();
 function changeSegment(answer) {
     if (answer == quiz322[segment][3]) {
         console.log(answer, quiz322[segment][3])
@@ -209,7 +210,6 @@ function skipSegment(change) {
     //     seg = 3;
     // }
 
-    document.getElementById('trial').innerText = `${segment}`;
     if (change) {
         seg++;
 
@@ -220,8 +220,6 @@ function skipSegment(change) {
     }
     segment = skip_segment[seg];
     deriveVideo.currentTime = 2.5 + (segment - 1) * 3;
-
-    document.getElementById('trial').innerText += `${segment}`;
     if (segment == 0) {
         deriveVideo.currentTime = 0;
     }
@@ -256,3 +254,4 @@ function skipSegment(change) {
 }
 
 document.getElementById('quizcontainer').innerHTML = html322[segment];
+
