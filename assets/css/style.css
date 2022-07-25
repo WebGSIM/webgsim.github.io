@@ -3987,6 +3987,8 @@ output {
 #img331 {
   border-radius: 10px;
   box-shadow: 5px 5px 5px grey;
+  width: 85%;
+  height: 300px;
 }
 
 #setvalue {
@@ -4324,4 +4326,105 @@ iframe {
     width: 49%;
   }
 
+}
+
+
+@media (max-width:670px) {
+  #lesson331 {
+    width: inherit;
+  }
+
+  #lesson331 .row {
+    width: inherit;
+  }
+
+  #lesson331 .col-6 {
+    width: inherit;
+    height: 200px;
+  }
+
+  .simtext {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .simtext .glowtext strong {
+    font-size: 12px !important;
+  }
+
+  .simtext #situation {
+    font-size: 20px !important;
+    text-align: center;
+  }
+
+  .simtext output {
+    font-size: 16px;
+  }
+
+  #img331 {
+    height: 150px;
+  }
+
+  .rangeslider {
+    margin-top: 10px;
+    padding: 10px 10px 5px 5px
+  }
+
+  #lesson331 .glowtext h1 {
+    margin-top: 0px;
+  }
+
+  #setvalue {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  #lesson331 .glowscript canvas {
+    width: 320px;
+  }
+
+  #lesson331 #glowscript>div:nth-child(4) {
+    width: 320px;
+  }
+
+  range-slider {
+    --element-height: 10px;
+    --thumb-size: 17px;
+  }
+
+  #lesson331 #quiz321 .quiz-container {
+    min-height: 255px;
+    overflow: hidden;
+  }
+
+  #lesson331 .quiz-container #question {
+    font-size: 16px;
+  }
+
+  #lesson331 .quiz-container #submit {
+    position: relative;
+    bottom: 10px;
+  }
+
+
+}
+
+#situation {
+  font-size: 35px;
+}
+
+range-slider.special0:before {
+  background: linear-gradient(red, red) 0/var(--value-percent, 0) 100% no-repeat #c6afe5
+}
+
+range-slider.special1:before {
+  background: linear-gradient(#FAC213, #FAC213) 0/var(--value-percent, 0) 100% no-repeat #c6afe5
+}
+
+range-slider.special2:before {
+  background: linear-gradient(green, green) 0/var(--value-percent, 0) 100% no-repeat #c6afe5
+}
+
+range-slider.special3:before {
+  background: linear-gradient(blue, blue) 0/var(--value-percent, 0) 100% no-repeat #c6afe5
 }

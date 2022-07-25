@@ -328,7 +328,20 @@ while mag(craft2.r)>=R*6/5:
       craft2.update(dt) `
 
 
-function displaySimulation(orbital_velocity) {
+function displaySimulation(orbital_velocity, color) {
+    if (color == 0) {
+        color = 'color.red'
+    }
+    else if (color == 1) {
+        color = 'color.yellow'
+    }
+    else if (color == 2) {
+        color = 'color.green'
+    }
+
+    else {
+        color = 'color.blue'
+    }
     simulation[2] = `
 G = 6.67e-11
 M = 5.97e24
@@ -358,7 +371,7 @@ def reset(k):
     r=craft.pos-earth.pos
     craft.axis=vec(1,0,0)
     craft.clear_trail()
-    running= True
+    
 button(text="Pause", bind=Run)
 button(text='Reset', bind=reset)
 earth = sphere(pos=vector(0,0,0), radius=R, texture=textures.earth)
@@ -386,7 +399,7 @@ antenna4=cylinder(axis=vec(-0.8,0,1),length=3.5*rs,radius=rs/10,color=antennacol
 ball=sphere(radius=rs/1.5,pos=vec(-3.5*rs,0,0))
 craft= compound([body, wing1,wing2,reflector,antenna,antenna2,antenna3,antenna4,ball],make_trail=True)
 craft.pos=vector(r,0,0)
-craft.trail_color=vec(2.52, 2.17, 0)
+craft.trail_color=${color}
 craft.axis=vec(1,0,0)
 craft.rotate(angle=pi/2.5)
 craft.m = 1000
@@ -394,7 +407,7 @@ craft.m = 1000
 craft.v=vec(0,0,velocity)
 craft.a=vec(0,0,0)
 r=craft.pos-earth.pos
-T = text(text='Satellite velocity = '+velocity+' m/s', align='center', color=color.green, height=R/1.5,pos=vec(0,2*R,0))
+T = text(text='Satellite velocity = '+velocity+' m/s', align='center', color=${color}, height=R/1.5,pos=vec(0,2*R,0))
 
 while True:
     rate(4*60*60)
