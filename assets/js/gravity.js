@@ -2,7 +2,7 @@ document.writeln(`<section id="gravity" class="gravity">
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg-5 align-items-stretch position-relative video-box" data-aos="fade-right">
-      <a href="https://www.youtube.com/watch?v=uqT9bIBpkzw&t=875s" class="glightbox play-btn mb-4"></a>
+      <a href="https://www.youtube.com/watch?v=Kw51KiZhm0I" class="glightbox play-btn mb-4"></a>
     </div>
     <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch" data-aos="fade-left">
       <div class="content">

@@ -1037,8 +1037,8 @@ section {
 }
 
 .clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   background-color: #fff;
   opacity: 1;
   border: 1px solid #0880e8;
@@ -1088,7 +1088,7 @@ section {
 
 #clients {
   background-color: #161b22;
-
+  padding-top: 40px;
 
 }
 
@@ -4451,12 +4451,18 @@ range-slider.special3:before {
 .innovation {
   margin-top: 50px;
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .innovation h1 {
   color: white;
   text-align: center;
   font-weight: 650;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 45px;
 }
 
 .innovations {
@@ -4465,14 +4471,16 @@ range-slider.special3:before {
   justify-content: left;
   align-items: center;
   margin-bottom: 20px;
+  width: 1400px;
+  border-radius: 10px;
 }
 
 .innovations img {
-  min-width: 450px;
-  max-width: 450px;
+  min-width: 470px;
+  max-width: 470px;
   height: 250px;
   border-radius: 20px;
-  object-fit: fill;
+  object-fit: cover;
   margin: 50px 20px 50px 20px;
   box-shadow: 5px 5px grey;
 }
@@ -4480,6 +4488,7 @@ range-slider.special3:before {
 .innovationtext {
   color: white;
   padding-left: 15px;
+  width: 400px;
 }
 
 .innovationtext h2 {
@@ -4495,7 +4504,48 @@ range-slider.special3:before {
 }
 
 .innovations>img:nth-child(1) {
-  max-width: 380px;
-  min-width: 380px;
-  height: 200px;
+  max-width: 300px;
+  min-width: 300px;
+  height: 180px;
+  object-fit: fill;
+}
+
+
+
+@media (max-width:670px) {
+
+  .innovation {
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .innovations {
+    width: 95vw;
+    flex-direction: column;
+  }
+
+  .innovationtext {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 90vw;
+  }
+
+  .innovations>img:nth-child(1) {
+    display: none;
+  }
+
+  .innovation .bx-right-arrow-alt:before {
+    display: none;
+  }
+
+  .innovations img {
+    min-width: 90vw;
+    max-width: 90vw;
+    height: 185px;
+    margin-bottom: 20px;
+  }
+
 }
