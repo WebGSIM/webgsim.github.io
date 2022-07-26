@@ -1,9 +1,9 @@
-quiz321a = ["Compare distance (arc) travelled by Moon", "Green region > Red region", "Red region > Green region", "Green region = Red region", "3"]
-quiz321b = ["Compare distance between Earth & Moon", "Green region > Red region", "Red region > Green region", "Green region = Red region", "3"]
-quiz321c = ["What is your conclusion?", "Green area is larger than red area", "Red area is larger than green area", "Green area is equal to red area", 3]
-quiz321d = ["Compare distance (arc) travelled by Earth", "Green region > Red region", "Red region > Green region", "Green region = Red region", "1"]
-quiz321e = ["Compare distance between Earth and Sun", "Green region > Red region", "Red region > Green region", "Green region = Red region", "2"]
-quiz321f = ["What is your conclusion?", "Green area is larger than red area", "Red area is larger than green area", "Green area is equal to red area", 3]
+quiz321a = ["Q1: Compare distance (arc) travelled by Moon", "Green region > Red region", "Red region > Green region", "Green region = Red region", "3"]
+quiz321b = ["Q2: Compare distance between Earth & Moon", "Green region > Red region", "Red region > Green region", "Green region = Red region", "3"]
+quiz321c = ["Q3: What is your conclusion?", "Green area is larger than red area", "Red area is larger than green area", "Green area is equal to red area", 3]
+quiz321d = ["Q4: Compare distance (arc) travelled by Earth", "Green region > Red region", "Red region > Green region", "Green region = Red region", "1"]
+quiz321e = ["Q5: Compare distance between Earth and Sun", "Green region > Red region", "Red region > Green region", "Green region = Red region", "2"]
+quiz321f = ["Q6: What is your conclusion?", "Green area is larger than red area", "Red area is larger than green area", "Green area is equal to red area", 3]
 quiz321 = [quiz321a, quiz321b, quiz321c, quiz321d, quiz321e, quiz321f]
 html321 = []
 let correct = false;
@@ -215,8 +215,8 @@ var congrats = `<div class="js-container container-congrats"></div>
     <div class="checkmark draw"></div>
   </div>
   <h1>Congratulations!</h1>
-  <p>You have fully mastered <strong>3.2.1 b Kepler's Second Law.</strong> Well done!</p>
-  <p>Now you are going to learn <strong>3.2.1 c Kepler's Third Law.</strong>, are you ready?</p>
+  <p>You have fully mastered <strong>3.2.1 Kepler's Second Law.</strong> Well done!</p>
+  <p>Now you are going to learn <strong>3.2.2 Expressing Kepler's Third Law.</strong>, are you ready?</p>
   <button class="submit-btn" type="submit" onclick="window.location='lesson322.html'">Yes! I am ready to proceed.</button>
 </div>  
 

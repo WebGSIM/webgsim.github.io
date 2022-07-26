@@ -51,12 +51,13 @@ kg<sup>-2</sup>)</p>
 <p>r = distance between apple and banana, banana and Earth surface (1 m)</p>
 <p>R = distance between Earth and Sun (1.50 × 10<sup>11</sup> m)</p>
 </div></td>
-<td ><button class="submit submit312" id="submit" onclick="checkAnswer();">Submit</button>   <button class="hint" onclick="giveHint();">Answer</button></td></tr>
+<td ><button class="submit submit312" id="submit" onclick="checkAnswer();">Submit</button></td></tr>
 </table>
 </div>
-</div> `
-quiz312b = ["Based on your findings, when mass decreases, gravitational force will ___________", "Decreases", "Increases", "1"];
-quiz312c = ["Based on your findings, Earth is lossing mass, but it has no significant impact to us. ", "True", "False", "1"];
+</div> 
+<button class="hint" onclick="giveHint();">Answer</button>`
+quiz312b = ["Q1: Based on your findings, when mass decreases, gravitational force will ___________", "Decreases", "Increases", "1"];
+quiz312c = ["Q2: Based on your findings, Earth is lossing mass, but it has no significant impact to us. ", "True", "False", "1"];
 quiz312m = [quiz312a, quiz312b, quiz312c];
 
 slide312r = ["./assets/Lesson/312/effectdistance/slide1.jpg", "./assets/Lesson/312/effectdistance/slide2.jpg", "./assets/Lesson/312/effectdistance/slide3.jpg", "./assets/Lesson/312/effectdistance/slide4.jpg", "./assets/Lesson/312/effectdistance/slide5.jpg", "./assets/Lesson/312/effectdistance/slide6.jpg"];
@@ -97,8 +98,8 @@ quiz312d = ` <div>
 <td ><button class="submit submit312" id="submit" onclick="checkAnswer();">Submit</button>   <button class="hint" onclick="giveHint();">Answer</button></td></tr>
 </table>
 </div></div>`
-quiz312e = ["Based on your findings, when distance decreases, gravitational force will ___________", "Decreases", "Increases", "2"];
-quiz312f = ["Based on your findings, when Moon is closer to Earth, the tides is higher. ", "True", "False", "1"];
+quiz312e = ["Q3: Based on your findings, when distance decreases, gravitational force will ___________", "Decreases", "Increases", "2"];
+quiz312f = ["Q4: Based on your findings, when Moon is closer to Earth, the tides is higher. ", "True", "False", "1"];
 quiz312r = [quiz312d, quiz312e, quiz312f];
 
 lesson312 = [];
@@ -486,7 +487,6 @@ function changeLesson(next) {
   if (lessonNumber == 3) {
     ansnewton = [2.97, 3.85];
     ansexponent = [-5, -5];
-    window.removeEventListener("click", checkActiveSelection);
   }
   else {
     ansnewton = [6.67, 9.81, 3.52, 6.67, 9.81, 3.52];
@@ -573,11 +573,9 @@ function changeQuiz() {
     slideNumber++;
     if (slideNumber < html312[lessonNumber].length) {
       document.getElementById('lesson312').innerHTML = html312[lessonNumber][slideNumber];
-      document.getElementById("buttons").addEventListener("click", checkSelection);
-      window.addEventListener("click", checkActiveSelection);
+      focusQuiz();
     }
     else {
-      document.getElementById("buttons").removeEventListener("click", checkSelection);
       changeLesson(true);
 
     }
@@ -587,23 +585,31 @@ function changeQuiz() {
   correct = false;
 }
 
-function checkSelection() {
-  if (document.activeElement.id ==
-    lesson312[lessonNumber][2][slideNumber - lesson312[lessonNumber][1].length + 1][3]) {
-    correct = true;
+
+let selectedbutton = -1;
+function focusQuiz() {
+  selectedbutton = -1;
+  for (let i = 0; i < 2; i++) {
+    if (i == lesson312[lessonNumber][2][slideNumber - lesson312[lessonNumber][1].length + 1][3] - 1) {
+      document.getElementsByClassName("btn0")[i].addEventListener("click", function () {
+        correct = true;
+        selectedbutton = i;
+      });
+    }
+    else {
+      document.getElementsByClassName("btn0")[i].addEventListener("click", function () {
+        correct = false;
+        selectedbutton = i;
+      });
+    }
   }
-  else {
-    correct = false;
-  }
+  window.addEventListener('click', maintainfocus)
 }
 
-function checkActiveSelection() {
-  if (document.activeElement.id !=
-    lesson312[lessonNumber][2][slideNumber - lesson312[lessonNumber][1].length + 1][3]) {
-    correct = false;
-  }
+function maintainfocus() {
+  console.log(selectedbutton)
+  document.getElementsByClassName("btn0")[selectedbutton].focus();
 }
-
 var congrats = `<div class="js-container container-congrats"></div>
 <div id="congrats">
   <div class="checkmark-circle">
@@ -611,8 +617,8 @@ var congrats = `<div class="js-container container-congrats"></div>
     <div class="checkmark draw"></div>
   </div>
   <h1>Congratulations!</h1>
-  <p>You have fully mastered <strong>3.1.1 Newton's Universal Law of Gravitation.</strong> Well done!</p>
-  <p>Now you are going to learn <strong>3.1.2 Problem Solving by using Universal Law of Gravitation</strong>, are you ready?</p>
+  <p>You have fully mastered <strong>3.1.2 Newton's Universal Law of Gravitation (Problem Solving).</strong> Well done!</p>
+  <p>Now you are going to learn <strong>3.2.1 Kepler's Second Law</strong>, are you ready?</p>
   <button class="submit-btn" type="submit" onclick="window.location='lesson321.html'">Yes! I am ready to proceed.</button>
 </div>  
 

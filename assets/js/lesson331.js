@@ -1,15 +1,15 @@
-quiz331a = ["1) What is your observation?", "Satellite moves towards Earth", "Satellite moves away from Earth", "1"];
-quiz331b = ["2) Why satellite moves towards Earth?", "Because Earth attracts satellite", "Because satellite propels towards Earth", "1"];
-quiz331c = ["3) Why Earth attracts satellite?", "Because there exists magnetic force", "Because there exists gravitational force", "2"];
-quiz331d = ["4) What is your observation?", "Satellite still moves towards Earth", "Satellite moves away from Earth", "1"];
-quiz331e = ["5) Why satellite still move towards Earth?", "Because Earth's gravitational force is getting stronger", "Because the satellite velocity is too small", "2"];
-quiz331f = ["6) What is the trajectory of the satellite?", "Straight line", "A little bit curved", "2"];
-quiz331g = ["7) What is your observation?", "Satellite is getting closer to Earth", "Satellite moves in circular orbit", "2"];
-quiz331h = ["8) Why satellite moves in circular orbit?", "Centripetal force is same as gravitational force", "Because satellite likes circle", "1"];
-quiz331i = ["9) What is the orbital velocity for this satellite", "3870 m/s", "1870 m/s", "1"];
-quiz331j = ["10) What is your observation?", "Satellite orbits Earth", "Satellite escape from Earth", "2"];
-quiz331k = ["11) Why satellite escapes from Earth?", "Earth gravitational force become weaker", "Satellite velocity exceeds orbital velocity", "2"];
-quiz331l = ["12 What is your conclusion?", "Satellite moving with orbital velocity will maintain in circular orbit", "Earth's gravity is getting weaker", "1"]
+quiz331a = ["Q1 What is your observation?", "Satellite moves towards Earth", "Satellite moves away from Earth", "1"];
+quiz331b = ["Q2 Why satellite moves towards Earth?", "Because Earth attracts satellite", "Because satellite propels towards Earth", "1"];
+quiz331c = ["Q3 Why Earth attracts satellite?", "Because there exists magnetic force", "Because there exists gravitational force", "2"];
+quiz331d = ["Q4 What is your observation?", "Satellite still moves towards Earth", "Satellite moves away from Earth", "1"];
+quiz331e = ["Q5 Why satellite still move towards Earth?", "Because Earth's gravitational force is getting stronger", "Because the satellite velocity is too small", "2"];
+quiz331f = ["Q6 What is the trajectory of the satellite?", "Straight line", "A little bit curved", "2"];
+quiz331g = ["Q7 What is your observation?", "Satellite is getting closer to Earth", "Satellite moves in circular orbit", "2"];
+quiz331h = ["Q8 Why satellite moves in circular orbit?", "Centripetal force is same as gravitational force", "Because satellite likes circle", "1"];
+quiz331i = ["Q9 What is the orbital velocity for this satellite", "3870 m/s", "1870 m/s", "1"];
+quiz331j = ["Q10 What is your observation?", "Satellite orbits Earth", "Satellite escape from Earth", "2"];
+quiz331k = ["Q11 Why satellite escapes from Earth?", "Earth gravitational force become weaker", "Satellite velocity exceeds orbital velocity", "2"];
+quiz331l = ["Q12 What is your conclusion?", "Satellite moving with orbital velocity will maintain in circular orbit", "Earth's gravity is getting weaker", "1"]
 img331 = ["./assets/img/capture1.jpg", "./assets/img/capture2.jpg", "./assets/img/capture3.jpg", "./assets/img/capture4.jpg"];
 quiz331 = [quiz331a, quiz331b, quiz331c, quiz331d, quiz331e, quiz331f, quiz331g, quiz331h, quiz331i, quiz331j, quiz331k, quiz331l];
 situation = ["Situation 1: Zero Velocity", "Situation 2: Low Velocity", "Situation 3: Orbital Velocity", "Situation 4: High Velocity"];
@@ -264,15 +264,16 @@ var congrats = `<div class="js-container container-congrats"></div>
               <div class="checkmark draw"></div>
             </div>
             <h1>Congratulations!</h1>
-            <p>You have fully mastered <strong>3.1.1 Newton's Universal Law of Gravitation.</strong> Well done!</p>
-            <p>Now you are going to learn <strong>3.1.2 Newton's Universal Law of Gravitation (Problem Solving)</strong>, are you ready?</p>
-            <button class="submit-btn" type="submit" onclick="window.location='lesson312.html'">Yes! I am ready to proceed.</button>
+            <p>You have fully mastered <strong>3.3.1 Orbital Velocity.</strong> Well done!</p>
+            <p>Also, you have fully mastered all the lesson. Do you want back to home?</p>
+            <button class="submit-btn" type="submit" onclick="window.location='index.html'">Back To Home</button>
           </div>  
           
           `
 function displayCongrats() {
     document.getElementById('lesson331').innerHTML = congrats;
     document.getElementById('skipback').style.display = "none";
+    document.getElementById('clappingaudio').play();
     window.scrollTo({
         top: 0,
         behavior: 'smooth'

@@ -5,11 +5,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #0880e8;
+  color: black;
 }
 
 a:hover {
-  color: #2b99f8;
+  color: black;
   text-decoration: none;
 }
 
@@ -442,7 +442,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #f6b024;
+  color: blue;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -2426,6 +2426,9 @@ button::-moz-focus-inner {
 button {
   outline: 0;
   font-family: sans-serif;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
 }
 
 
@@ -2821,6 +2824,8 @@ button:hover {
 .quiz-container .submitquiz button {
   width: 60px;
   text-align: center;
+  position: relative;
+  bottom: 10px;
 }
 
 .quiz-header {
@@ -2891,14 +2896,14 @@ button:hover {
   background-color: none;
   color: black;
   border-color: black;
-  box-shadow: 5px 5px 10px #009900;
+  box-shadow: 5px 5px black;
 
 }
 
 .submit-btn:hover {
-  background-color: green;
+  background-color: black;
+  border-color: black;
   color: white;
-  border-color: green;
   transform: translate(5px, 5px);
   box-shadow: none;
 }
@@ -3021,7 +3026,7 @@ button:hover {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: #00c09d;
+  background: #3CCF4E;
   position: absolute;
 }
 
@@ -4005,7 +4010,9 @@ output {
   display: block;
   margin-top: 20px;
   border-radius: 0px;
-
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
 }
 
 
@@ -4017,7 +4024,7 @@ output {
   padding: 5px 5px 5px 5px;
   width: 640px;
   position: relative;
-  bottom: 22px;
+  bottom: 20px;
   display: flex;
   justify-content: center;
 }
@@ -4028,7 +4035,7 @@ div.glowscript-canvas-wrapper+div {
   padding: 5px 5px 5px 5px;
   width: 640px;
   position: relative;
-  bottom: 74px;
+  bottom: 71px;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -4544,7 +4551,7 @@ range-slider.special3:before {
   .innovations img {
     min-width: 90vw;
     max-width: 90vw;
-    height: 185px;
+    height: 47vw;
     margin-bottom: 20px;
   }
 

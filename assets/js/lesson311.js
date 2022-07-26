@@ -23,9 +23,9 @@ var audio311c = ["", "./assets/Lesson/311c/audio0.mp3", "./assets/Lesson/311c/au
   "./assets/Lesson/311c/audio5.mp3"
 ];
 //<!-- LESSON 311q QUIZ -->
-var quiz311a = ["Question 1: Who formulated the universal law of gravitation?", "Isaac Newton", "Galileo Galilei", "Quah Kah Chun", "Marie Curie", "1"];
-var quiz311b = ["Question 2: Choose the correct statement of Newton's universal law of gravitation?", "When mass of bodies increases, gravitational force increases.", "When distance between two bodies increases, gravitational force increases", "Gravitational force is directly proportional to the product of the distances", "Gravitational force is inversely proportional to the mass", "1"];
-var quiz311c = ["Question 3: Calculate the gravitational force between 3 kg of box and Earth", "10N", "20N", "30N", "SAYA TAK TAHU", "3"];
+var quiz311a = ["Q1: Who formulated the universal law of gravitation?", "Isaac Newton", "Galileo Galilei", "Quah Kah Chun", "Marie Curie", "1"];
+var quiz311b = ["Q2: Choose the correct statement of Newton's universal law of gravitation?", "When mass of bodies increases, gravitational force increases.", "When distance between two bodies increases, gravitational force increases", "Gravitational force is directly proportional to the product of the distances", "Gravitational force is inversely proportional to the mass", "1"];
+var quiz311c = ["Q3: Calculate the gravitational force between 3 kg of box and Earth", "10N", "20N", "30N", "SAYA TAK TAHU", "3"];
 
 var lesson311 = [];
 let html311 = [];
@@ -73,7 +73,7 @@ for (let i = 0; i < lesson311.length; i++) {
 
   else {
     for (let n = 0; n < lesson311[i].length; n++) {
-      html311[3 + n] = `<div class="quiz-container" id="quiz" data-aos="flip-right">
+      html311[3 + n] = `<div class="quiz-container" id="quiz" data-aos="fade-in">
       <div>
       <div class="quiz-header">
         <h2 id="question">${lesson311[i][n][0]} </h2>
