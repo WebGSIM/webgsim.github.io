@@ -3,13 +3,12 @@ document.writeln(` <footer>
   <div class="container" data-aos="zoom-in">
     <div class="clients-slider swiper">
       <div class="swiper-wrapper align-items-center">
-        <div class="swiper-slide"><img src="assets/img/Malaysia.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/KPM.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/logo UPSI.jpg" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/logo_malaysia.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/logo_kpm.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/logo_upsi.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/100UPSI.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/UPSINO1.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/FSM.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/STEM.jpg" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/logo_fsm.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/logo_stem.png" class="img-fluid" alt=""></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>

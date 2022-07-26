@@ -274,8 +274,8 @@ h6 {
   padding: 10px 0;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  background: #161b22;
+  /* box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25); */
   transition: 0.3s;
   border-radius: 8px;
 }
@@ -289,7 +289,7 @@ h6 {
   font-size: 14px;
   font-weight: 500;
   text-transform: none;
-  color: #032e54;
+  color: white;
 }
 
 .navbar .dropdown ul a i {
@@ -299,7 +299,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #0880e8;
+  color: white;
 }
 
 .navbar .dropdown:hover>ul {
@@ -344,7 +344,7 @@ h6 {
 }
 
 .mobile-nav-toggle.bi-x {
-  color: #f6b024;
+  color: blue;
 }
 
 @media (max-width: 991px) {
@@ -364,7 +364,7 @@ h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(5, 74, 133, 0.9);
+  background: #161b22;
   transition: 0.3s;
 }
 
@@ -383,7 +383,7 @@ h6 {
   left: 15px;
   padding: 10px 0;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #0d1117;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -395,8 +395,8 @@ h6 {
 .navbar-mobile a,
 .navbar-mobile a:focus {
   padding: 10px 20px;
-  font-size: 15px;
-  color: #0665b7;
+  font-size: 25px;
+  color: white;
 }
 
 .navbar-mobile a:hover:before,
@@ -408,7 +408,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #f6b024;
+  /* color: blue; */
 }
 
 .navbar-mobile .getstarted,
@@ -423,7 +423,7 @@ h6 {
   padding: 10px 0;
   opacity: 1;
   visibility: visible;
-  background: #fff;
+  background: #161b22;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
@@ -448,6 +448,12 @@ h6 {
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
+
+
+.navbar .dropdown ul a:hover {
+  background-color: #0d1117;
+}
+
 
 /*--------------------------------------------------------------
 # intro Section
@@ -952,7 +958,7 @@ section {
 # About 
 --------------------------------------------------------------*/
 #about {
-  background-color: #161b22;
+  background-color: #0d1117;
   margin-top: 60px;
 
 }
@@ -1081,13 +1087,17 @@ section {
 }
 
 #clients {
-  background-color: #0d1117;
+  background-color: #161b22;
 
 
 }
 
 #swiper-wrapper-633ca888fe8101e10 {
   background-color: #0d1117;
+}
+
+#clients .swiper-slide {
+  background: none;
 }
 
 /*--------------------------------------------------------------
@@ -4390,6 +4400,7 @@ iframe {
   range-slider {
     --element-height: 10px;
     --thumb-size: 17px;
+    --track-height: 7px;
   }
 
   #lesson331 #quiz321 .quiz-container {
@@ -4427,4 +4438,64 @@ range-slider.special2:before {
 
 range-slider.special3:before {
   background: linear-gradient(blue, blue) 0/var(--value-percent, 0) 100% no-repeat #c6afe5
+}
+
+
+.innovation .bx-right-arrow-alt:before {
+  color: blue;
+  font-size: 100px;
+}
+
+
+
+.innovation {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.innovation h1 {
+  color: white;
+  text-align: center;
+  font-weight: 650;
+}
+
+.innovations {
+  background-color: #0d1117;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.innovations img {
+  min-width: 450px;
+  max-width: 450px;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: fill;
+  margin: 50px 20px 50px 20px;
+  box-shadow: 5px 5px grey;
+}
+
+.innovationtext {
+  color: white;
+  padding-left: 15px;
+}
+
+.innovationtext h2 {
+  font-weight: 650;
+}
+
+.innovation button {
+  background-color: white;
+}
+
+.innovation button:hover {
+  background-color: black;
+}
+
+.innovations>img:nth-child(1) {
+  max-width: 380px;
+  min-width: 380px;
+  height: 200px;
 }
