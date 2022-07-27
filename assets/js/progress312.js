@@ -3,8 +3,8 @@ var app = new Vue({
     data: {
         currentStep: null,
         steps: [
-            { label: "Earth mass lossing" },
-            { label: "Effect of mass gravity" },
+            { label: "Mass changing" },
+            { label: "Effect of mass" },
             { label: "Distance changing" },
             { label: "Effect of distance" }
         ]

@@ -20,23 +20,23 @@ quiz312a = `
 <td>&nbsp;Earth & Sun</td>
 </tr>
 <tr>
-<td>&nbsp;5.97 &times; 10<sup>27</sup></td>
-<td>&nbsp; <input type="text" class="newton" placeholder="6.67" id="0">
+<td>&nbsp;5.97 &times; 10<sup>24</sup></td>
+<td>&nbsp; <input type="text" class="newton" placeholder="6.67" id="0" autocomplete="off">
   &times; 10<sup>
-      <input type="text" class="exponent" placeholder="-11" id="0"></sup>
+      <input type="text" class="exponent" placeholder="-11" id="0" autocomplete="off"></sup>
 </td>
-<td>&nbsp; <input type="text" class="newton" id="1"> &times; 10<sup> <input type="text" class="exponent" id="1"></sup>
+<td>&nbsp; <input type="text" class="newton" id="1" autocomplete="off"> &times; 10<sup> <input type="text" class="exponent" id="1" autocomplete="off"></sup>
 </td>
-<td>&nbsp; <input type="text" class="newton" id="2"> &times; 10<sup> <input type="text" class="exponent" id="2"></sup>
+<td>&nbsp; <input type="text" class="newton" id="2" autocomplete="off"> &times; 10<sup> <input type="text" class="exponent" id="2" autocomplete="off"></sup>
 </td>
 </tr>
 <tr>
-<td>&nbsp;5.97 &times; 10<sup>27</sup> &minus; 5.00&times; 10<sup>7</sup> (Mass loss)</td>
-<td>&nbsp; <input type="text" class="newton" id="3"> &times; 10<sup> <input type="text" class="exponent" id="3"></sup>
+<td>&nbsp;5.97 &times; 10<sup>24</sup> &minus; 5.00&times; 10<sup>7</sup> (Mass loss)</td>
+<td>&nbsp; <input type="text" class="newton" id="3" autocomplete="off"> &times; 10<sup> <input type="text" class="exponent" id="3" autocomplete="off"></sup>
 </td>
-<td>&nbsp; <input type="text" class="newton" id="4"> &times; 10<sup> <input type="text" class="exponent" id="4"></sup>
+<td>&nbsp; <input type="text" class="newton" id="4" autocomplete="off"> &times; 10<sup> <input type="text" class="exponent" id="4" autocomplete="off"></sup>
 </td>
-<td>&nbsp; <input type="text" class="newton" id="5"> &times; 10<sup> <input type="text" class="exponent" id="5"></sup>
+<td>&nbsp; <input type="text" class="newton" id="5" autocomplete="off"> &times; 10<sup> <input type="text" class="exponent" id="5" autocomplete="off"></sup>
 </td>
 </tr>
 </table>
@@ -50,12 +50,15 @@ kg<sup>-2</sup>)</p>
 <p>M = mass of Sun (1.99 × 10<sup>30</sup> kg)</p>
 <p>r = distance between apple and banana, banana and Earth surface (1 m)</p>
 <p>R = distance between Earth and Sun (1.50 × 10<sup>11</sup> m)</p>
+<p>r<sub>E</sub> = earth radius (6.37 × 10<sup>6</sup> m)</p>
 </div></td>
-<td ><button class="submit submit312" id="submit" onclick="checkAnswer();">Submit</button></td></tr>
+<td ><div class="tablebutton">
+<button class="submit submit312" id="submit" onclick="checkAnswer();">Submit</button>   <button class="hint" onclick="giveHint();">Hint</button>
+</div></td></tr>
 </table>
 </div>
 </div> 
-<button class="hint" onclick="giveHint();">Answer</button>`
+`
 quiz312b = ["Q1: Based on your findings, when mass decreases, gravitational force will ___________", "Decreases", "Increases", "1"];
 quiz312c = ["Q2: Based on your findings, Earth is lossing mass, but it has no significant impact to us. ", "True", "False", "1"];
 quiz312m = [quiz312a, quiz312b, quiz312c];
@@ -73,16 +76,16 @@ quiz312d = ` <div>
 
 <tr>
     <td>&nbsp;4.06 &times; 10<sup>8</sup></td>
-    <td>&nbsp; <input type="text" class="newton" id="0">
+    <td>&nbsp; <input type="text" class="newton" id="0" autocomplete="off"> 
         &times; 10<sup>
-            <input type="text" class="exponent" id="0"></sup>
+            <input type="text" class="exponent" id="0" autocomplete="off"></sup>
     </td>
 
 </tr>
 <tr>
     <td>&nbsp;3.57 &times; 10<sup>8</sup></td>
-    <td>&nbsp; <input type="text" class="newton" id="3"> &times; 10<sup> <input type="text" class="exponent"
-                id="3"></sup>
+    <td>&nbsp; <input type="text" class="newton" id="3" autocomplete="off"> &times; 10<sup> <input type="text" class="exponent"
+                id="3" autocomplete="off"></sup>
     </td>
 </tr>
 </table>
@@ -95,7 +98,11 @@ quiz312d = ` <div>
 <p>m = mass of seawater (1 kg)</p>
 <p>M = mass of Moon (7.35 × 10<sup>22</sup> kg)</p>
 </div></td>
-<td ><button class="submit submit312" id="submit" onclick="checkAnswer();">Submit</button>   <button class="hint" onclick="giveHint();">Answer</button></td></tr>
+<td>
+<div class="tablebutton">
+<button class="submit submit312" id="submit" onclick="checkAnswer();">Submit</button>   <button class="hint" onclick="giveHint();">Hint</button>
+</div>
+</td></tr>
 </table>
 </div></div>`
 quiz312e = ["Q3: Based on your findings, when distance decreases, gravitational force will ___________", "Decreases", "Increases", "2"];
@@ -486,11 +493,11 @@ function changeLesson(next) {
   }
   if (lessonNumber == 3) {
     ansnewton = [2.97, 3.85];
-    ansexponent = [-5, -5];
+    ansexponent = ['-5', '-5'];
   }
   else {
     ansnewton = [6.67, 9.81, 3.52, 6.67, 9.81, 3.52];
-    ansexponent = [-11, 0, 22, -11, 0, 22];
+    ansexponent = ['-11', '0', '22', '-11', '0', '22'];
   }
 }
 
@@ -543,6 +550,23 @@ function checkAnswer() {
   let newton = document.getElementsByClassName('newton');
   let exponent = document.getElementsByClassName('exponent');
   for (let i = 0; i < newton.length; i++) {
+    if (newton[i].value == ansnewton[i]) {
+      newton[i].classList.remove('wrongans');
+      newton[i].classList.add('correctans');
+    }
+    else {
+      newton[i].classList.remove('correctans');
+      newton[i].classList.add('wrongans');
+    }
+    if (exponent[i].value === ansexponent[i]) {
+      exponent[i].classList.remove('wrongans');
+      exponent[i].classList.add('correctans');
+    }
+    else {
+      console.log(exponent[i].value, ansexponent[i])
+      exponent[i].classList.remove('correctans');
+      exponent[i].classList.add('wrongans');
+    }
     if (newton[i].value == ansnewton[i] && exponent[i].value == ansexponent[i]) {
       correctTable++;
     }
@@ -553,6 +577,7 @@ function checkAnswer() {
   }
 
   else {
+    document.getElementsByClassName('hint')[0].setAttribute('style', 'display:block')
     document.getElementById('wrongaudio').play();
   }
   correctTable = 0;

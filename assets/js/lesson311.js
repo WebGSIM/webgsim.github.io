@@ -23,9 +23,9 @@ var audio311c = ["", "./assets/Lesson/311c/audio0.mp3", "./assets/Lesson/311c/au
   "./assets/Lesson/311c/audio5.mp3"
 ];
 //<!-- LESSON 311q QUIZ -->
-var quiz311a = ["Q1: Who formulated the universal law of gravitation?", "Isaac Newton", "Galileo Galilei", "Quah Kah Chun", "Marie Curie", "1"];
-var quiz311b = ["Q2: Choose the correct statement of Newton's universal law of gravitation?", "When mass of bodies increases, gravitational force increases.", "When distance between two bodies increases, gravitational force increases", "Gravitational force is directly proportional to the product of the distances", "Gravitational force is inversely proportional to the mass", "1"];
-var quiz311c = ["Q3: Calculate the gravitational force between 3 kg of box and Earth", "10N", "20N", "30N", "SAYA TAK TAHU", "3"];
+var quiz311a = ["Q1: Who formulated the Universal Law of Gravitation?", "Isaac Newton", "Galileo Galilei", "Quah Kah Chun", "Marie Curie", "1"];
+var quiz311b = ["Q2: Choose the correct statement of Newton's Universal Law of Gravitation.", "When mass of bodies increases, gravitational force increases.", "When distance between two bodies increases, gravitational force increases", "Gravitational force is directly proportional to the product of the distances", "Gravitational force is inversely proportional to the mass", "1"];
+var quiz311c = ["Q3: Calculate the gravitational force between 3 kg of box and Earth.", "10N", "20N", "30N", "40N", "3"];
 
 var lesson311 = [];
 let html311 = [];

@@ -1426,7 +1426,7 @@ section {
 
 @media (max-width:670px) {
   #skipback button {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   #sublesson h2 {
@@ -2494,9 +2494,9 @@ button:hover {
   animation: none !important;
 }
 
-.ptr-space {
+/* .ptr-space {
   background: url(../img/stardust.jpg) repeat;
-}
+} */
 
 .ptr-shape {
   -webkit-animation: float 3s infinite ease-in-out;
@@ -2800,6 +2800,7 @@ button:hover {
   height: auto;
   max-height: 500px;
   min-height: 400px;
+  overflow: hidden;
 }
 
 #lesson331 .quiz-container {
@@ -3634,7 +3635,7 @@ button:hover {
 
 #lesson312 .texttable {
   position: relative;
-  top: 0px;
+  top: 7px;
 }
 
 #lesson312 .text-problem {
@@ -4555,4 +4556,19 @@ range-slider.special3:before {
     margin-bottom: 20px;
   }
 
+}
+
+
+.correctans {
+  background-color: #3CCF4E !important;
+}
+
+.wrongans {
+  background-color: #D32626 !important;
+}
+
+.tablebutton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
