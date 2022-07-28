@@ -112,7 +112,7 @@ quiz312r = [quiz312d, quiz312e, quiz312f];
 lesson312 = [];
 html312 = [``, [], ``, []];
 
-lesson312[0] = ["./assets/Lesson/312/earthlight.JPG", "./assets/Lesson/312/earthlighter.mp4", "Mass of Earth is decreasing!", `Scientists estimate that the Earth gains about 40,000 tonnes of material each year from the accretion of
+lesson312[0] = ["./assets/Lesson/312/earthlight.jpg", "./assets/Lesson/312/earthlighter.mp4", "Mass of Earth is decreasing!", `Scientists estimate that the Earth gains about 40,000 tonnes of material each year from the accretion of
 meteoric dust and debris
 from space. They also estimate that about 95,000 tonnes of hydrogen gas are lost from the Earth’s
 atmosphere
@@ -122,7 +122,7 @@ Earth’s core (about 160 tonnes a year), and helium loss from the atmosphere (a
 these are small effects. Annually, the amount of mass launched into Earth orbit is negligible by
 comparison, of the order of a few hundred tonnes.`];
 lesson312[1] = [slide312m, text312m, quiz312m];
-lesson312[2] = ["./assets/Lesson/312/apogee.JPG", "./assets/Lesson/312/moonapogee.mp4", "Distance between Earth and Moon is changing!", `The Moon's orbit periodically grows rounder and then more oval; it is never a perfect circle.
+lesson312[2] = ["./assets/Lesson/312/apogee.jpg", "./assets/Lesson/312/moonapogee.mp4", "Distance between Earth and Moon is changing!", `The Moon's orbit periodically grows rounder and then more oval; it is never a perfect circle.
 The point at which it is nearest Earth each month is called its perigee (this varies throughout the year).
 The point at which the Moon is farthest from Earth each month is called its apogee (this varies throughout the year as well).
 In recent times, the news media has taken to calling a full Moon near perigee a “Supermoon” because its nearness to Earth causes the Moon to appear bigger and brighter. This effect can be enhanced by what we call the “Moon Illusion.”`];
@@ -179,7 +179,7 @@ for (let i = 0; i <= 2; i += 2) {
     </div>`
 }
 extraslide312 = [];
-extraslide312[1] = ["./assets/Lesson/312s/slide1.JPG", "./assets/Lesson/312s/slide2.JPG", "./assets/Lesson/312s/slide3.JPG", "./assets/Lesson/312s/slide4.JPG", "./assets/Lesson/312s/slide5.JPG", "./assets/Lesson/312s/slide6.JPG", "./assets/Lesson/312s/slide7.JPG"];
+extraslide312[1] = ["./assets/Lesson/312s/slide1.JPG", "./assets/Lesson/312s/slide2.jpg", "./assets/Lesson/312s/slide3.jpg", "./assets/Lesson/312s/slide4.JPG", "./assets/Lesson/312s/slide5.JPG", "./assets/Lesson/312s/slide6.JPG", "./assets/Lesson/312s/slide7.JPG"];
 extraslide312[3] = ["./assets/Lesson/312/effectdistances/slide1.JPG", "./assets/Lesson/312/effectdistances/slide2.JPG", "./assets/Lesson/312/effectdistances/slide3.JPG", "./assets/Lesson/312/effectdistances/slide4.JPG", "./assets/Lesson/312/effectdistances/slide5.JPG", "./assets/Lesson/312/effectdistances/slide6.JPG"];
 for (let i = 1; i <= 3; i += 2) {
   for (let n = 0; n < lesson312[i][0].length + lesson312[i][2].length; n++) {

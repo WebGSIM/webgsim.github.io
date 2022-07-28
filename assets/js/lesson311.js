@@ -8,7 +8,7 @@ var audio311h = ["", "./assets/Lesson/311h/audio1.mp3", "./assets/Lesson/311h/au
   "./assets/Lesson/311h/audio10.mp3", "./assets/Lesson/311h/audio11.mp3"];
 //<!-- LESSON 311t THEORY -->
 var slide311t = ["./assets/Lesson/311t/slide1.JPG", "./assets/Lesson/311t/slide2.JPG", "./assets/Lesson/311t/slide3.JPG",
-  "./assets/Lesson/311t/slide4.JPG", "./assets/Lesson/311t/slide5.JPG", "./assets/Lesson/311t/slide6.JPG", "./assets/Lesson/311t/slide7.JPG", "./assets/Lesson/311t/slide8.JPG",
+  "./assets/Lesson/311t/slide4.JPG", "./assets/Lesson/311t/slide5.jpg", "./assets/Lesson/311t/slide6.JPG", "./assets/Lesson/311t/slide7.JPG", "./assets/Lesson/311t/slide8.JPG",
   "./assets/Lesson/311t/slide9.JPG", "./assets/Lesson/311t/slide10.JPG"];
 var txt311t = "This section will talk about Newton’s Universal Law of Gravitation.@Newton’s Universal Law of Gravitation states that gravitational force between two bodies is directly proportional to the product of the masses of both bodies and inversely proportional to the square of the distance between the centres of the two bodies.@In layman’s terms, when the masses of objects increase, the gravitational force increases. @When the distance between two objects increase, the gravitational force decreases. @Newton’s Universal Law of Gravitation can be expressed by using this formula. @Where F is the gravitational force between two bodies. @M1 is the mass of first body. @M2 is the mass of second body. @r is the distance between the centre of the first body and the centre of the second body.@G is gravitational constant. "
 var audio311t = ["", "./assets/Lesson/311t/audio1.mp3", "./assets/Lesson/311t/audio2.mp3", "./assets/Lesson/311t/audio3.mp3", "./assets/Lesson/311t/audio4.mp3",
