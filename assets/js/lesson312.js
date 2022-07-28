@@ -1,4 +1,4 @@
-slide312m = ["./assets/Lesson/312/slide1.svg", "./assets/Lesson/312/slide2.jpg", "./assets/Lesson/312/slide3.jpg", "./assets/Lesson/312/slide4.jpg", "./assets/Lesson/312/slide5.jpg", "./assets/Lesson/312/slide6.jpg", "./assets/Lesson/312/slide7.jpg"];
+slide312m = ["./assets/Lesson/312/slide1.svg", "./assets/Lesson/312/slide2.JPG", "./assets/Lesson/312/slide3.JPG", "./assets/Lesson/312/slide4.JPG", "./assets/Lesson/312/slide5.JPG", "./assets/Lesson/312/slide6.JPG", "./assets/Lesson/312/slide7.JPG"];
 text312m = ["Assuming you are a physicist. (Click to continue...)", 'Based on the information given, you know that our Earth is lossing 50,000 tones of mass per year. (Click to continue...)'
   , "Therefore, you are requested to investigate the effect of mass on gravitational force. (Click to continue...)", "First, calculate gravitational force between apple and banana. (Click to continue...)", "Second, calculate gravitational force between apple and banana a year later. (Click to continue...)", "Repeat the calculation for banana and Earth surface. (Click to continue...)", "Repeat the calculation for Earth and Sun. (Click to continue...)"
   , "Fill in your calculation in this table."];
@@ -63,7 +63,7 @@ quiz312b = ["Q1: Based on your findings, when mass decreases, gravitational forc
 quiz312c = ["Q2: Based on your findings, Earth is lossing mass, but it has no significant impact to us. ", "True", "False", "1"];
 quiz312m = [quiz312a, quiz312b, quiz312c];
 
-slide312r = ["./assets/Lesson/312/effectdistance/slide1.jpg", "./assets/Lesson/312/effectdistance/slide2.jpg", "./assets/Lesson/312/effectdistance/slide3.jpg", "./assets/Lesson/312/effectdistance/slide4.jpg", "./assets/Lesson/312/effectdistance/slide5.jpg", "./assets/Lesson/312/effectdistance/slide6.jpg"];
+slide312r = ["./assets/Lesson/312/effectdistance/slide1.JPG", "./assets/Lesson/312/effectdistance/slide2.JPG", "./assets/Lesson/312/effectdistance/slide3.JPG", "./assets/Lesson/312/effectdistance/slide4.JPG", "./assets/Lesson/312/effectdistance/slide5.JPG", "./assets/Lesson/312/effectdistance/slide6.JPG"];
 text312r = ["Assuming you are a scientist.", "You are interested in tidal formation.", "Based on the information just now, you know that distance between Earth and Moon is changing. ", "Therefore, you are requested to investigate the effect of distance on gravitational force. ", "First, calculate the gravitational force between Moon and 1 kg of seawater on Earth when Moon is farthest away from Earth. ", "Second, calculate the gravitational force between Moon and 1 kg of seawater on Earth when Moon is closest to Earth. ", "Fill in your calculation in this table. "];
 quiz312d = ` <div>
 <div class="text-box texttable" id="text-box">
@@ -112,7 +112,7 @@ quiz312r = [quiz312d, quiz312e, quiz312f];
 lesson312 = [];
 html312 = [``, [], ``, []];
 
-lesson312[0] = ["./assets/Lesson/312/earthlight.jpg", "./assets/Lesson/312/earthlighter.mp4", "Mass of Earth is decreasing!", `Scientists estimate that the Earth gains about 40,000 tonnes of material each year from the accretion of
+lesson312[0] = ["./assets/Lesson/312/earthlight.JPG", "./assets/Lesson/312/earthlighter.mp4", "Mass of Earth is decreasing!", `Scientists estimate that the Earth gains about 40,000 tonnes of material each year from the accretion of
 meteoric dust and debris
 from space. They also estimate that about 95,000 tonnes of hydrogen gas are lost from the Earth’s
 atmosphere
@@ -122,7 +122,7 @@ Earth’s core (about 160 tonnes a year), and helium loss from the atmosphere (a
 these are small effects. Annually, the amount of mass launched into Earth orbit is negligible by
 comparison, of the order of a few hundred tonnes.`];
 lesson312[1] = [slide312m, text312m, quiz312m];
-lesson312[2] = ["./assets/Lesson/312/apogee.jpg", "./assets/Lesson/312/moonapogee.mp4", "Distance between Earth and Moon is changing!", `The Moon's orbit periodically grows rounder and then more oval; it is never a perfect circle.
+lesson312[2] = ["./assets/Lesson/312/apogee.JPG", "./assets/Lesson/312/moonapogee.mp4", "Distance between Earth and Moon is changing!", `The Moon's orbit periodically grows rounder and then more oval; it is never a perfect circle.
 The point at which it is nearest Earth each month is called its perigee (this varies throughout the year).
 The point at which the Moon is farthest from Earth each month is called its apogee (this varies throughout the year as well).
 In recent times, the news media has taken to calling a full Moon near perigee a “Supermoon” because its nearness to Earth causes the Moon to appear bigger and brighter. This effect can be enhanced by what we call the “Moon Illusion.”`];
@@ -179,8 +179,8 @@ for (let i = 0; i <= 2; i += 2) {
     </div>`
 }
 extraslide312 = [];
-extraslide312[1] = ["./assets/Lesson/312s/slide1.jpg", "./assets/Lesson/312s/slide2.jpg", "./assets/Lesson/312s/slide3.jpg", "./assets/Lesson/312s/slide4.jpg", "./assets/Lesson/312s/slide5.jpg", "./assets/Lesson/312s/slide6.jpg", "./assets/Lesson/312s/slide7.jpg"];
-extraslide312[3] = ["./assets/Lesson/312/effectdistances/slide1.jpg", "./assets/Lesson/312/effectdistances/slide2.jpg", "./assets/Lesson/312/effectdistances/slide3.jpg", "./assets/Lesson/312/effectdistances/slide4.jpg", "./assets/Lesson/312/effectdistances/slide5.jpg", "./assets/Lesson/312/effectdistances/slide6.jpg"];
+extraslide312[1] = ["./assets/Lesson/312s/slide1.JPG", "./assets/Lesson/312s/slide2.JPG", "./assets/Lesson/312s/slide3.JPG", "./assets/Lesson/312s/slide4.JPG", "./assets/Lesson/312s/slide5.JPG", "./assets/Lesson/312s/slide6.JPG", "./assets/Lesson/312s/slide7.JPG"];
+extraslide312[3] = ["./assets/Lesson/312/effectdistances/slide1.JPG", "./assets/Lesson/312/effectdistances/slide2.JPG", "./assets/Lesson/312/effectdistances/slide3.JPG", "./assets/Lesson/312/effectdistances/slide4.JPG", "./assets/Lesson/312/effectdistances/slide5.JPG", "./assets/Lesson/312/effectdistances/slide6.JPG"];
 for (let i = 1; i <= 3; i += 2) {
   for (let n = 0; n < lesson312[i][0].length + lesson312[i][2].length; n++) {
     if (n < lesson312[i][0].length) {

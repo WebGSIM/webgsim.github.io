@@ -1,22 +1,22 @@
 //<!-- LESSON 311h HISTORY -->
-var slide311h = ["./assets/Lesson/311h/slide1.jpg", "./assets/Lesson/311h/slide2.gif", "./assets/Lesson/311h/slide3.gif", "./assets/Lesson/311h/slide4.gif",
-  "./assets/Lesson/311h/slide5.jpg", "./assets/Lesson/311h/slide6.gif", "./assets/Lesson/311h/slide7.gif", "./assets/Lesson/311h/slide8.jpg", "./assets/Lesson/311h/slide9.jpg",
-  "./assets/Lesson/311h/slide10.jpg", "./assets/Lesson/311h/slide11.gif", "./assets/Lesson/311h/slide12.jpg"];
+var slide311h = ["./assets/Lesson/311h/slide1.JPG", "./assets/Lesson/311h/slide2.gif", "./assets/Lesson/311h/slide3.gif", "./assets/Lesson/311h/slide4.gif",
+  "./assets/Lesson/311h/slide5.JPG", "./assets/Lesson/311h/slide6.gif", "./assets/Lesson/311h/slide7.gif", "./assets/Lesson/311h/slide8.JPG", "./assets/Lesson/311h/slide9.JPG",
+  "./assets/Lesson/311h/slide10.JPG", "./assets/Lesson/311h/slide11.gif", "./assets/Lesson/311h/slide12.JPG"];
 var txt311h = "This section will share the brief history on gravitational theory.@If apples fall.@Does the moon also fall?@Isaac Newton is best known for discovering gravity. @In fact, Isaac Newton is not the first person who discovered gravity.@Things will fall to the ground had been known for thousands upon thousands of years before Isaac Newton.@Also, various attempts had been made to describe the gravity before Isaac Newton. @However, the key achievements of Isaac Newton is he sucessfully quantified and generalised the gravity. @First, Isaac Newton quantified the gravity which allow us to have a formula to calculate the magnitude of gravitational force or even predict how fast an object falls. @Second, Isaac Newton generalised the gravity which allow us to realise that phenomena of gravity on Earth and behaviour of celestial bodies in space are caused by the same type of force, which is gravity. @In short, apples falling from the tree and moon orbiting the Earth are the same thing. @Formulation of Newton’s Universal Law of Gravitation changed the way we understand the universe. "
 var audio311h = ["", "./assets/Lesson/311h/audio1.mp3", "./assets/Lesson/311h/audio2.mp3", "./assets/Lesson/311h/audio3.mp3", "./assets/Lesson/311h/audio4.mp3",
   "./assets/Lesson/311h/audio5.mp3", "./assets/Lesson/311h/audio6.mp3", "./assets/Lesson/311h/audio7.mp3", "./assets/Lesson/311h/audio8.mp3", "./assets/Lesson/311h/audio9.mp3",
   "./assets/Lesson/311h/audio10.mp3", "./assets/Lesson/311h/audio11.mp3"];
 //<!-- LESSON 311t THEORY -->
-var slide311t = ["./assets/Lesson/311t/slide1.jpg", "./assets/Lesson/311t/slide2.jpg", "./assets/Lesson/311t/slide3.jpg",
-  "./assets/Lesson/311t/slide4.jpg", "./assets/Lesson/311t/slide5.jpg", "./assets/Lesson/311t/slide6.jpg", "./assets/Lesson/311t/slide7.jpg", "./assets/Lesson/311t/slide8.jpg",
-  "./assets/Lesson/311t/slide9.jpg", "./assets/Lesson/311t/slide10.jpg"];
+var slide311t = ["./assets/Lesson/311t/slide1.JPG", "./assets/Lesson/311t/slide2.JPG", "./assets/Lesson/311t/slide3.JPG",
+  "./assets/Lesson/311t/slide4.JPG", "./assets/Lesson/311t/slide5.JPG", "./assets/Lesson/311t/slide6.JPG", "./assets/Lesson/311t/slide7.JPG", "./assets/Lesson/311t/slide8.JPG",
+  "./assets/Lesson/311t/slide9.JPG", "./assets/Lesson/311t/slide10.JPG"];
 var txt311t = "This section will talk about Newton’s Universal Law of Gravitation.@Newton’s Universal Law of Gravitation states that gravitational force between two bodies is directly proportional to the product of the masses of both bodies and inversely proportional to the square of the distance between the centres of the two bodies.@In layman’s terms, when the masses of objects increase, the gravitational force increases. @When the distance between two objects increase, the gravitational force decreases. @Newton’s Universal Law of Gravitation can be expressed by using this formula. @Where F is the gravitational force between two bodies. @M1 is the mass of first body. @M2 is the mass of second body. @r is the distance between the centre of the first body and the centre of the second body.@G is gravitational constant. "
 var audio311t = ["", "./assets/Lesson/311t/audio1.mp3", "./assets/Lesson/311t/audio2.mp3", "./assets/Lesson/311t/audio3.mp3", "./assets/Lesson/311t/audio4.mp3",
   "./assets/Lesson/311t/audio5.mp3", "./assets/Lesson/311t/audio6.mp3", "./assets/Lesson/311t/audio7.mp3", "./assets/Lesson/311t/audio8.mp3", "./assets/Lesson/311t/audio9.mp3"
 ];
 //<!-- LESSON 311c CALCULATION -->
-var slide311c = ["./assets/Lesson/311c/slide1.jpg", "./assets/Lesson/311c/slide2.jpg", "./assets/Lesson/311c/slide3.jpg",
-  "./assets/Lesson/311c/slide4.jpg", "./assets/Lesson/311c/slide5.jpg", "./assets/Lesson/311c/slide6.jpg", "./assets/Lesson/311c/slide7.jpg",
+var slide311c = ["./assets/Lesson/311c/slide1.JPG", "./assets/Lesson/311c/slide2.JPG", "./assets/Lesson/311c/slide3.JPG",
+  "./assets/Lesson/311c/slide4.JPG", "./assets/Lesson/311c/slide5.JPG", "./assets/Lesson/311c/slide6.JPG", "./assets/Lesson/311c/slide7.JPG",
 ];
 var txt311c = "This section will discuss how to calculate gravitational force between two bodies by using formula.@This question asks us to calculate the gravitational force between a durian and the Earth.@ Where mass of durian, mass of Earth and distance between durian and Earth are given. @Step one. List all the given information in symbols.@Step two. Identify and write down the formula used.@Step three. Substitute numerical values into the formula and perform the calculations.@Therefore, based on the answer, we know that the gravitational force between durian and Earth is 19.63 newton. "
 var audio311c = ["", "./assets/Lesson/311c/audio0.mp3", "./assets/Lesson/311c/audio1.mp3", "./assets/Lesson/311c/audio2.mp3", "./assets/Lesson/311c/audio3.mp3", "./assets/Lesson/311c/audio4.mp3",
@@ -35,14 +35,14 @@ lesson311[2] = [slide311c, txt311c, audio311c];
 lesson311[3] = [quiz311a, quiz311b, quiz311c];
 let lessonNumber = 0;
 
-var extraslide311h = ["./assets/Lesson/311hs/slide1.jpg", "./assets/Lesson/311hs/slide2.gif", "./assets/Lesson/311hs/slide3.gif", "./assets/Lesson/311hs/slide4.gif",
-  "./assets/Lesson/311hs/slide5.jpg", "./assets/Lesson/311hs/slide6.gif", "./assets/Lesson/311hs/slide7.gif", "./assets/Lesson/311hs/slide8.jpg", "./assets/Lesson/311hs/slide9.jpg",
-  "./assets/Lesson/311hs/slide10.jpg", "./assets/Lesson/311hs/slide11.gif", "./assets/Lesson/311hs/slide12.jpg"];
-var extraslide311t = ["./assets/Lesson/311ts/slide1.jpg", "./assets/Lesson/311ts/slide2.jpg", "./assets/Lesson/311ts/slide3.jpg",
-  "./assets/Lesson/311ts/slide4.jpg", "./assets/Lesson/311ts/slide5.jpg", "./assets/Lesson/311ts/slide6.jpg", "./assets/Lesson/311ts/slide7.jpg", "./assets/Lesson/311ts/slide8.jpg",
-  "./assets/Lesson/311ts/slide9.jpg", "./assets/Lesson/311ts/slide10.jpg"];
-var extraslide311c = ["./assets/Lesson/311cs/slide1.jpg", "./assets/Lesson/311cs/slide2.jpg", "./assets/Lesson/311cs/slide3.jpg",
-  "./assets/Lesson/311cs/slide4.jpg", "./assets/Lesson/311cs/slide5.jpg", "./assets/Lesson/311cs/slide6.jpg", "./assets/Lesson/311cs/slide7.jpg",
+var extraslide311h = ["./assets/Lesson/311hs/slide1.JPG", "./assets/Lesson/311hs/slide2.gif", "./assets/Lesson/311hs/slide3.gif", "./assets/Lesson/311hs/slide4.gif",
+  "./assets/Lesson/311hs/slide5.JPG", "./assets/Lesson/311hs/slide6.gif", "./assets/Lesson/311hs/slide7.gif", "./assets/Lesson/311hs/slide8.JPG", "./assets/Lesson/311hs/slide9.JPG",
+  "./assets/Lesson/311hs/slide10.JPG", "./assets/Lesson/311hs/slide11.gif", "./assets/Lesson/311hs/slide12.JPG"];
+var extraslide311t = ["./assets/Lesson/311ts/slide1.JPG", "./assets/Lesson/311ts/slide2.JPG", "./assets/Lesson/311ts/slide3.JPG",
+  "./assets/Lesson/311ts/slide4.JPG", "./assets/Lesson/311ts/slide5.JPG", "./assets/Lesson/311ts/slide6.JPG", "./assets/Lesson/311ts/slide7.JPG", "./assets/Lesson/311ts/slide8.JPG",
+  "./assets/Lesson/311ts/slide9.JPG", "./assets/Lesson/311ts/slide10.JPG"];
+var extraslide311c = ["./assets/Lesson/311cs/slide1.JPG", "./assets/Lesson/311cs/slide2.JPG", "./assets/Lesson/311cs/slide3.JPG",
+  "./assets/Lesson/311cs/slide4.JPG", "./assets/Lesson/311cs/slide5.JPG", "./assets/Lesson/311cs/slide6.JPG", "./assets/Lesson/311cs/slide7.JPG",
 ];
 
 var extraslide311 = [extraslide311h, extraslide311t, extraslide311c];
