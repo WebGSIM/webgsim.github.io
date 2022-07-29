@@ -63,7 +63,7 @@ quiz312b = ["Q1: Based on your findings, when mass decreases, gravitational forc
 quiz312c = ["Q2: Based on your findings, Earth is lossing mass, but it has no significant impact to us. ", "True", "False", "1"];
 quiz312m = [quiz312a, quiz312b, quiz312c];
 
-slide312r = ["./assets/Lesson/312/effectdistance/slide1.jpg", "./assets/Lesson/312/effectdistance/slide2.JPG", "./assets/Lesson/312/effectdistance/slide3.JPG", "./assets/Lesson/312/effectdistance/slide4.JPG", "./assets/Lesson/312/effectdistance/slide5.JPG", "./assets/Lesson/312/effectdistance/slide6.JPG"];
+slide312r = ["./assets/Lesson/312/effectdistance/slide1.JPG", "./assets/Lesson/312/effectdistance/slide2.JPG", "./assets/Lesson/312/effectdistance/slide3.JPG", "./assets/Lesson/312/effectdistance/slide4.JPG", "./assets/Lesson/312/effectdistance/slide5.JPG", "./assets/Lesson/312/effectdistance/slide6.JPG"];
 text312r = ["Assuming you are a scientist.", "You are interested in tidal formation.", "Based on the information just now, you know that distance between Earth and Moon is changing. ", "Therefore, you are requested to investigate the effect of distance on gravitational force. ", "First, calculate the gravitational force between Moon and 1 kg of seawater on Earth when Moon is farthest away from Earth. ", "Second, calculate the gravitational force between Moon and 1 kg of seawater on Earth when Moon is closest to Earth. ", "Fill in your calculation in this table. "];
 quiz312d = ` <div>
 <div class="text-box texttable" id="text-box">
