@@ -129,7 +129,22 @@ In recent times, the news media has taken to calling a full Moon near perigee a 
 lesson312[3] = [slide312r, text312r, quiz312r];
 
 
+credit312 = ["A video by sciBright from https://www.youtube.com/watch?v=J9jXz2UQaPM", "", "A video by Donnacha O'Driscoll from https://www.youtube.com/watch?v=KvY-17Sqpzo"];
+credit312slide1 = [
+  "A photo by brgfx from https://www.freepik.com/free-vector/isaac-newton-sitting-apple-tree_25536504.htm#page=2&query=isaac%20newton&position=14&from_view=keyword",
+  "A photo by Vadim Sadovski from https://www.shutterstock.com/image-photo/apocalyptic-background-planet-earth-exploding-armageddon-404942299",
+  "A photo by eamesbot from https://www.freepik.com/premium-vector/observation-inspection-find-out-discovery-useful-information-detective-investigate-analyze-data-concept-smart-detective-looking-through-magnifying-glass-search-evidence_24658954.html",
+  "", "", ""
+]
+credit312slide2 = [
+  "A photo by Daniel Feldman from https://eesa.lbl.gov/departments/climate-sciences/",
+  "A photo by Zach Fitzner from https://www.earth.com/news/the-moons-wobbles-will-cause-a-surge-in-coastal-flooding/",
+  "A photo by Suzie Dills from https://www.beaconjournal.com/story/news/local/2020/03/30/what-8217-s-up-in/1440175007/",
+  "A photo by Mark Hemer from http://www.australasianscience.com.au/article/science-and-technology/curious-kids-how-does-moon-being-so-far-away-affect-tides-earth.html", "", ""
 
+]
+
+credit312slide = ["", credit312slide1, "", credit312slide2];
 for (let i = 0; i <= 2; i += 2) {
   html312[i] = `<div class="row videoandtext">
     <div class="col-sm-6 videodiv">
@@ -163,7 +178,7 @@ for (let i = 0; i <= 2; i += 2) {
               <div class="fullscreen-btn video-neu-btn"></div>
             </div>
           </div>
-          <video class="video-element" id="video-element" preload="auto"
+          <video class="video-element" id="video-element" preload="auto" title="${credit312[i]}"
             poster=${lesson312[i][0]}>
             <source src=${lesson312[i][1]}>
           </video>
@@ -187,7 +202,7 @@ for (let i = 1; i <= 3; i += 2) {
       html312[i][n] = `<div data-aos="fade-in" class="centerstory">
       <picture>
       <source media="(max-width:670px)" srcset=${extraslide312[i][n]}>
-      <img src="${lesson312[i][0][n]}">
+      <img src="${lesson312[i][0][n]}" title="${credit312slide[i][n]}">
       </picture>
       <div class="text-box">
           <h1 id="${n}" class="text-problem">

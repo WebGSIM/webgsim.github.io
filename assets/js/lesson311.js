@@ -45,6 +45,25 @@ var extraslide311c = ["./assets/Lesson/311cs/slide1.JPG", "./assets/Lesson/311cs
   "./assets/Lesson/311cs/slide4.JPG", "./assets/Lesson/311cs/slide5.JPG", "./assets/Lesson/311cs/slide6.JPG", "./assets/Lesson/311cs/slide7.JPG",
 ];
 
+credit311h = [""
+  , "A photo from https://tenor.com/view/apple-picking-fall-gif-6183780"
+  , "A photo by Harriette Cassick from https://www.pinterest.com/pin/moon-moving-animated-gif--565624034424674709/"
+  , "A photo by GIPHY from https://www.pinterest.com/pin/360921357643963069/"
+  , "A photo by Betty Baker from https://www.pinterest.com/pin/10-of-the-most-multitalented-people-of-all-time--199073246003208825/"
+  , "A photo by tigatelu from https://www.123rf.com/photo_123719655_stock-vector-vector-illustration-of-ancient-greek-man-cartoon.html"
+  , "A photo by Garth Malcolm from https://www.pinterest.com/pin/johannes-kepler-15711630-german-mathematician-and-astronomer-best-known-for-developing-the-laws--465137467734441781/"
+  , "A photo by Jean-Leon Huens from https://www.nationalgeographic.com/culture/article/100104-isaac-newton-google-doodle-logo-apple"
+  , "A photo by Eugene Brennan from https://owlcation.com/stem/Drag-Force-and-the-Terminal-Velocity-of-a-Human and https://www.timeanddate.no/klokka/alarm"
+  , "A photo by D1min from https://www.shutterstock.com/image-vector/vector-illustration-our-solar-system-gradient-577527586"
+  , "A photo by Jason Major from https://twitter.com/jpmajor/status/1489641632156852231"];
+
+credit311t = ["", "A photo by Rafael Helerbrock from https://brasilescola.uol.com.br/fisica/forca-peso.html", "", "", "", "", "", "", "", ""
+]
+
+credit311c = ["", "", "", "", "", "", "", ""];
+credit311 = [credit311h, credit311t, credit311c];
+
+
 var extraslide311 = [extraslide311h, extraslide311t, extraslide311c];
 for (let i = 0; i < lesson311.length; i++) {
   if (i <= 2) {
@@ -55,7 +74,7 @@ for (let i = 0; i < lesson311.length; i++) {
                               <div class="picture2">
                               <picture>
                               <source media="(max-width:670px)" srcset=${extraslide311[i][n]}>
-                                <img src=${lesson311[i][0][n]} alt="">
+                                <img src=${lesson311[i][0][n]} alt="" title="${credit311[i][n]}">
                                 </picture>
                               </div>
                                 <div class="detail">

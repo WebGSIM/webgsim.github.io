@@ -1,6 +1,6 @@
 document.writeln(`<section class="innovation" data-aos="fade-down">
 <h1>Innovation</h1>
-<div class="innovations" data-aos="fade-right"> <img src="./assets/img/innovation1.JPG">
+<div class="innovations" data-aos="fade-right"> <img src="./assets/img/innovation1.JPG" title="A photo by Asmadi bin Abdullah from form 4 physics textbook">
   <i class="bx bx-right-arrow-alt"></i>
   <img src="./assets/img/innovation2.gif">
   <div class="innovationtext">
@@ -10,7 +10,7 @@ document.writeln(`<section class="innovation" data-aos="fade-down">
   </div>
 </div>
 
-<div class="innovations" data-aos="fade-right"> <img src="./assets/img/innovation3.JPG">
+<div class="innovations" data-aos="fade-right"> <img src="./assets/img/innovation3.JPG" title="A photo by Asmadi bin Abdullah from form 4 physics textbook">
   <i class="bx bx-right-arrow-alt"></i>
   <img src="./assets/img/innovation4.gif">
   <div class="innovationtext">
@@ -20,7 +20,7 @@ document.writeln(`<section class="innovation" data-aos="fade-down">
   </div>
 </div>
 
-<div class="innovations" data-aos="fade-right"> <img src="./assets/img/innovation5.JPG">
+<div class="innovations" data-aos="fade-right"> <img src="./assets/img/innovation5.JPG" title="A photo by Asmadi bin Abdullah from form 4 physics textbook"> 
   <i class="bx bx-right-arrow-alt"></i>
   <img src="./assets/img/innovation6.gif">
   <div class="innovationtext">
@@ -30,7 +30,7 @@ document.writeln(`<section class="innovation" data-aos="fade-down">
   </div>
 </div>
 
-<div class="innovations" data-aos="fade-right"> <img src="./assets/img/innovation7.JPG">
+<div class="innovations" data-aos="fade-right"> <img src="./assets/img/innovation7.JPG" title="A photo by Asmadi bin Abdullah from form 4 physics textbook">
   <i class="bx bx-right-arrow-alt"></i>
   <img src="./assets/img/innovation8.gif">
   <div class="innovationtext">
@@ -40,7 +40,7 @@ document.writeln(`<section class="innovation" data-aos="fade-down">
   </div>
 </div>
 
-<div class="innovations" data-aos="fade-right"> <img src="./assets/img/innovation9.JPG">
+<div class="innovations" data-aos="fade-right"> <img src="./assets/img/innovation9.JPG" title="A photo by Asmadi bin Abdullah from form 4 physics textbook">
   <i class="bx bx-right-arrow-alt"></i>
   <img src="./assets/img/innovation10.gif">
   <div class="innovationtext">
